@@ -126,8 +126,8 @@
   --bs-background-1: #70d69c;
   --bs-background-1-rgb: rgb(112, 214, 156);
   /* COLORS & STYLE THE MIRAGE */
-  --bs-bg-light: #fffaf8;
-  --bs-bg-light-rgb: 255, 250, 248;
+  --bs-bg-light-lm: #fffaf8;
+  --bs-bg-light-lm-rgb: 255, 250, 248;
   --bs-black-lm: #1f2222;
   --bs-black-lm-rgb: 31, 34, 34;
   --bs-blue-lm: #077488;
@@ -203,8 +203,8 @@
   --bs-background-1: rgb(124, 112, 214);
   --bs-background-1-rgb: rgb(124, 112, 214);
   /* COLORS & STYLE THE MIRAGE */
-  --bs-bg-light: #1f2222;
-  --bs-bg-light-rgb: 31, 34, 34;
+  --bs-bg-light-lm: #1f2222;
+  --bs-bg-light-lm-rgb: 31, 34, 34;
   --bs-black-lm: #fffaf8;
   --bs-black-lm-rgb: 255, 250, 248;
   --bs-blue-lm: #69becd;
@@ -8850,9 +8850,9 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-light{
+.bg-light-lm{
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-bg-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-bg-light-lm-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black-lm{
@@ -8880,7 +8880,7 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-darkblue-og-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-lightblue-og{
+.bg-blue-og{
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-lightblue-og-rgb), var(--bs-bg-opacity)) !important;
 }

@@ -55,7 +55,7 @@ p {
 }
 
 body {
-    background-color: var(--bs-bg-light) !important;
+    background-color: var(--bs-bg-light-lm) !important;
 }
 
 section {
