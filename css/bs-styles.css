@@ -8586,6 +8586,16 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-black-lm{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-black-lm-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-light-lm{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-bg-light-lm-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
