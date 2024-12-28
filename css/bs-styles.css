@@ -126,14 +126,22 @@
   --bs-background-1: #70d69c;
   --bs-background-1-rgb: rgb(112, 214, 156);
   /* COLORS & STYLE THE MIRAGE */
-  --bs-bg-light: rgb(255, 250, 248);
-  --bs-black-lm: rgb(31, 34, 34);
-  --bs-blue-lm: rgb(7, 116, 136);
-  --bs-white-og: rgb(255, 250, 248);
-  --bs-black-og: rgb(31, 34, 34);
-  --bs-darkblue-og: rgb(7, 116, 136);
-  --bs-lightblue-og: rgb(105, 190, 205);
-  --bs-yellow-og: rgb(250, 174, 69);
+  --bs-bg-light: #fffaf8;
+  --bs-bg-light-rgb: 255, 250, 248;
+  --bs-black-lm: #1f2222;
+  --bs-black-lm-rgb: 31, 34, 34;
+  --bs-blue-lm: #077488;
+  --bs-blue-lm-rgb: 7, 116, 136;
+  --bs-white-og: #fffaf8;
+  --bs-white-og-rgb: 255, 250, 248;
+  --bs-black-og: #1f2222;
+  --bs-black-og-rgb: 31, 34, 34;
+  --bs-darkblue-og: #077488;
+  --bs-darkblue-og-rgb: 7, 116, 136;
+  --bs-lightblue-og: #69becd;
+  --bs-lightblue-og-rgb: 105, 190, 205;
+  --bs-yellow-og: #faae45;
+  --bs-yellow-og-rgb: 250, 174, 69;
   --bs-font-title: 'Bosch-display';
   --bs-font-body: "Roboto", serif;
 }
@@ -195,14 +203,22 @@
   --bs-background-1: rgb(124, 112, 214);
   --bs-background-1-rgb: rgb(124, 112, 214);
   /* COLORS & STYLE THE MIRAGE */
-  --bs-bg-light: rgb(31, 34, 34);
-  --bs-black-lm: rgb(255, 250, 248);
-  --bs-blue-lm: rgb(105, 190, 205);
-  --bs-white-og: rgb(255, 250, 248);
-  --bs-black-og: rgb(31, 34, 34);
-  --bs-darkblue-og: rgb(7, 116, 136);
-  --bs-lightblue-og: rgb(105, 190, 205);
-  --bs-yellow-og: rgb(250, 174, 69);
+  --bs-bg-light: #1f2222;
+  --bs-bg-light-rgb: 31, 34, 34;
+  --bs-black-lm: #fffaf8;
+  --bs-black-lm-rgb: 255, 250, 248;
+  --bs-blue-lm: #69becd;
+  --bs-blue-lm-rgb: 105, 190, 205;
+  --bs-white-og: #fffaf8;
+  --bs-white-og-rgb: 255, 250, 248;
+  --bs-black-og: #1f2222;
+  --bs-black-og-rgb: 31, 34, 34;
+  --bs-darkblue-og: #077488;
+  --bs-darkblue-og-rgb: 7, 116, 136;
+  --bs-lightblue-og: #69becd;
+  --bs-lightblue-og-rgb: 105, 190, 205;
+  --bs-yellow-og: #faae45;
+  --bs-yellow-og-rgb: 250, 174, 69;
   --bs-font-title: 'Bosch-display';
   --bs-font-body: "Roboto", serif;
 }
@@ -8832,6 +8848,46 @@ textarea.form-control-lg {
 .bg-primary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-light{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-bg-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-black-lm{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-black-lm-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-blue-lm{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-blue-lm-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-white-og{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-og-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-black-og{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-black-og-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-darkblue-og{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-darkblue-og-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-lightblue-og{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-lightblue-og-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-yellow-og{
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-yellow-og-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-secondary {
