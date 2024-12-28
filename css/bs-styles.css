@@ -125,6 +125,17 @@
   --bs-form-invalid-border-color: #dc3545;
   --bs-background-1: #70d69c;
   --bs-background-1-rgb: rgb(112, 214, 156);
+  /* COLORS & STYLE THE MIRAGE */
+  --bs-bg-light: rgb(255, 250, 248);
+  --bs-black-lm: rgb(31, 34, 34);
+  --bs-blue-lm: rgb(7, 116, 136);
+  --bs-white-og: rgb(255, 250, 248);
+  --bs-black-og: rgb(31, 34, 34);
+  --bs-darkblue-og: rgb(7, 116, 136);
+  --bs-lightblue-og: rgb(105, 190, 205);
+  --bs-yellow-og: rgb(250, 174, 69);
+  --bs-font-title: 'Bosch-display';
+  --bs-font-body: "Roboto", serif;
 }
 
 [data-bs-theme=dark] {
@@ -183,6 +194,17 @@
   --bs-form-invalid-border-color: #ea868f;
   --bs-background-1: rgb(124, 112, 214);
   --bs-background-1-rgb: rgb(124, 112, 214);
+  /* COLORS & STYLE THE MIRAGE */
+  --bs-bg-light: rgb(31, 34, 34);
+  --bs-black-lm: rgb(255, 250, 248);
+  --bs-blue-lm: rgb(105, 190, 205);
+  --bs-white-og: rgb(255, 250, 248);
+  --bs-black-og: rgb(31, 34, 34);
+  --bs-darkblue-og: rgb(7, 116, 136);
+  --bs-lightblue-og: rgb(105, 190, 205);
+  --bs-yellow-og: rgb(250, 174, 69);
+  --bs-font-title: 'Bosch-display';
+  --bs-font-body: "Roboto", serif;
 }
 
 *,
