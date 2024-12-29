@@ -11,7 +11,7 @@
 }
 
 /* VARIABLES COLOR & ESTILO WEB
-Los he metido en el archivo css de Bootstrap para facilitar lo del light/dark mode, así que les dejo aquí comentado las variables a usar para los colores. Solo tenemos que crear los html en light mode, ese es el default, así que solo les pondré los colores de ese modo :D 
+Los he metido en el archivo css de Bootstrap para facilitar lo del light/dark mode, así que les dejo aquí comentado las variables a usar para los colores. Solo tenemos que crear los html en light mode, ese es el default, así que solo les pondré los colores de ese modo :D
 Los que terminan en 'lm' son los que cambian de color. 
 
     --bs-bg-white-lm: #fffaf8;
@@ -65,23 +65,11 @@ section {
 
 /* HEADER */
 
-/* INTRO SECTION */
+/* TITLE SECTION */
 
-/* HISTORY SECTION */
+/* EVENTS COLLAPSIBLE SECTION */
 
-/* DIVIDER/LINK TO CARGO SECTION */
-
-/* DRINKS SECTION */
-
-/* EVENTS SECTION */
-
-/* REVIEWS SECTION */
-
-/* DIVIDER 2 SECTION */
-
-/* LASTEST NEWS SECTION */
-
-/* RESERVATION SECTION */
+/* MODAL WINDOW */
 
 /* FOOTER */
 

@@ -126,8 +126,8 @@
   --bs-background-1: #70d69c;
   --bs-background-1-rgb: rgb(112, 214, 156);
   /* COLORS & STYLE THE MIRAGE */
-  --bs-bg-light-lm: #fffaf8;
-  --bs-bg-light-lm-rgb: 255, 250, 248;
+  --bs-bg-white-lm: #fffaf8;
+  --bs-bg-white-lm-rgb: 255, 250, 248;
   --bs-black-lm: #1f2222;
   --bs-black-lm-rgb: 31, 34, 34;
   --bs-blue-lm: #077488;
@@ -203,8 +203,8 @@
   --bs-background-1: rgb(124, 112, 214);
   --bs-background-1-rgb: rgb(124, 112, 214);
   /* COLORS & STYLE THE MIRAGE */
-  --bs-bg-light-lm: #1f2222;
-  --bs-bg-light-lm-rgb: 31, 34, 34;
+  --bs-bg-white-lm: #1f2222;
+  --bs-bg-white-lm-rgb: 31, 34, 34;
   --bs-black-lm: #fffaf8;
   --bs-black-lm-rgb: 255, 250, 248;
   --bs-blue-lm: #69becd;
@@ -3093,6 +3093,44 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-disabled-bg);
   border-color: var(--bs-btn-disabled-border-color);
   opacity: var(--bs-btn-disabled-opacity);
+}
+
+/* BUTTONS THE MIRAGE */
+.btn-fill-lm {
+  --bs-text-opacity: 1;
+  --bs-bg-opacity: 1;
+  border-color: rgba(var(--bs-blue-lm-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-blue-lm-rgb), var(--bs-text-opacity)) !important;
+  background-color: rgba(var(--bs-bg-white-lm-rgb), var(--bs-bg-opacity)) !important;
+  font-family: var(--bs-font-body) !important;
+  border-radius: 0;
+  padding: 0.7em;
+  width: 170px;
+  border-width: 2px;
+}
+
+.btn-modal {
+  --bs-text-opacity: 1;
+  --bs-bg-opacity: 1;
+  border-color: rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
+  background-color: rgba(var(--bs-black-og-rgb), var(--bs-bg-opacity)) !important;
+  font-family: var(--bs-font-title) !important;
+  border-radius: 0;
+  padding: 0.7em;
+  width: 170px;
+  border-width: 2px;
+}
+
+.btn-outline-blue {
+  --bs-text-opacity: 1;
+  border-color: rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
+  background-color: transparent !important;
+  border-radius: 0;
+  border-width: 2px;
+  padding: 0.7em;
+  width: 50px;
 }
 
 .btn-primary {
@@ -8586,14 +8624,45 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
+/* TEXT COLOR THE MIRAGE */
 .text-black-lm{
   --bs-text-opacity: 1;
   color: rgba(var(--bs-black-lm-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-light-lm{
+.text-white-lm{
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-bg-light-lm-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-bg-white-lm-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-blue-lm {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-blue-lm-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-white-og{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-black-og{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-black-og-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-darkblue-og{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-darkblue-og-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-blue-og{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-yellow-og{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-yellow-og-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-white {
@@ -8860,9 +8929,10 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-light-lm{
+/* BG COLORS THE MIRAGE */
+.bg-white-lm{
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-bg-light-lm-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-bg-white-lm-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black-lm{
