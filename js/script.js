@@ -1,28 +1,31 @@
-console.log("me mato, cosorro");
+$(document).ready(function () {
+    const $grid = $('.grid');
 
-/* LIGHT/DARK MODE */
-document.getElementById('switchMode').addEventListener('click',()=>{
-    if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
-        document.documentElement.setAttribute('data-bs-theme','light');
-    }
-    else {
-        document.documentElement.setAttribute('data-bs-theme','dark');
-    }
-  });
-
-
-
-/* Masonry Gallery */
-$(document).ready(function() {
-    var $gallery = $('.gallery');
-    var masonry = new Masonry($gallery[0], {
-        itemSelector: '.item',
-        columnWidth: '.item',
+    // Initialize Masonry
+    $grid.masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
         percentPosition: true,
-        gutter: 20
+        gutter: 20,
     });
-});
 
-$(window).resize(function() {
-    masonry.layout();
+    // Ensure layout after all images are loaded
+    $grid.imagesLoaded().progress(() => {
+        $grid.masonry('layout');
+    });
+
+    // Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                $(entry.target).addClass('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    // Attach observer to each grid item
+    $('.grid-item').each(function () {
+        observer.observe(this);
+    });
 });

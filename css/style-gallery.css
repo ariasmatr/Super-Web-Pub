@@ -63,30 +63,32 @@ section {
     margin: 0 auto;
 }
 
-
-.gallery {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
+/* Grid Styles */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     max-width: 1200px;
+    margin: auto;
 }
 
-.item {
-    margin-bottom: 20px; /* Espacio entre las imágenes */
+.grid-item {
+    width: calc(33.333% - 20px);
+    background-color: #ddd;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.85);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.item img {
+.grid-item img {
     width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* HEADER */
-
-/* EVENT 1 SECTION */
-
-/* EVENT 2 SECTION */
-
-/* EVENT 3 SECTION */
-
-/* FOOTER */
-
-/* MEDIA QUERIES */
+.grid-item.show {
+    transform: scale(1);
+    opacity: 1;
+}

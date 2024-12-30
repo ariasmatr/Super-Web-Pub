@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,118 +10,61 @@
     <!-- TYPOGRAPHY -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- CUSTOM CSS -->
     <link href="./css/style-gallery.css" rel="stylesheet">
-    <!-- <link href="./css/style.css" rel="stylesheet"> -->
 
     <!-- BOOTSTRAP CSS -->
     <link href="./css/bs-styles.css" rel="stylesheet">
 
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- MASONRY LIBRARY -->
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+
+    <!-- IMAGESLOADED -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body>
-    <!-- VARIABLES COLORES
-     Hellooo, aquí les dejo las variables de los colores si quieren ponerlos desde el html. Los que empiezan por .text son los que afectan la propiedad 'color' y los que empiezan por .bg son los que afectan la propiedad 'background-color':
-
-     COLORES QUE CAMBIAN LIGH/DARK MODE:
-     .text-black-lm -> texto negro 
-     .text-white-lm -> texto blanco
-     .text-blue-lm -> lineas azules 
-     .bg-white-lm -> bg color blanco
-     .bg-black-lm -> bg color negro
-     .bg-blue-lm -> bg color azul oscuro
-
-     COLORES QUE NO CAMBIAN:
-     .bg-white-og 
-     .bg-black-og 
-     .bg-darkblue-og 
-     .bg-blue-og 
-     .bg-yellow-og
-     .text-white-og
-     .text-black-og
-     .text-darkblue-og
-     .text-blue-og
-     .text-yellow-og
-
-     DISEÑO BOTONES:
-     .btn-fill-lm (este es el botón primario que usariamos, el que aparece en la home que hicimos en Figma)
-     .btn-modal (este es solo para la modal, el que dice PAGAR)
-     .btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
-    -->
-
     <section id="events">
-        <div data-aos="fade-in" data-aos-duration="1000">
         <div class="container text-center">
             <h1 class="mb-4">Events</h1>
-            <p class="lead mb-4"> Discover our latest events. </p>
+            <p class="lead mb-4">Discover our latest events.</p>
         </div>
-    </div>
     </section>
 
-    
+    <div class="grid">
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 1"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 2"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 3"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 4"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 5"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 6"></div>
+    </div>
+
     <section id="event1">
-        <div data-aos="fade-in" data-aos-duration="1000">
-            <div class="container">
-                <h1 class="">New Year´s</h1>
-                <p class=""> From December 31 of 2024 
-                    <br> to January 1 of 2025. </p>
-            </div>
+        <div class="container">
+            <h1>New Year’s</h1>
+            <p>From December 31 of 2024 to January 1 of 2025.</p>
         </div>
-    <div class="gallery">
-        <div class="item"><img src="media/img/gallery/newyear1.webp" alt="Imagen 1"></div>
-        <div class="item"><img src="media/img/gallery/newyear2.webp" alt="Imagen 2"></div>
-        <div class="item"><img src="media/img/gallery/newyear3.webp" alt="Imagen 3"></div>
-        <div class="item"><img src="media/img/gallery/newyear4.webp" alt="Imagen 4"></div>
-        <div class="item"><img src="media/img/gallery/newyear5.webp" alt="Imagen 5"></div>
-        <div class="item"><img src="media/img/gallery/newyear6.webp" alt="Imagen 6"></div>
-        <div class="item"><img src="media/img/gallery/newyear7.webp" alt="Imagen 7"></div>
-    </div>
+        <div class="grid">
+            <div class="grid-item"><img src="media/img/gallery/newyear1.webp" alt="Image 1"></div>
+            <div class="grid-item"><img src="media/img/gallery/newyear2.webp" alt="Image 2"></div>
+            <div class="grid-item"><img src="media/img/gallery/newyear3.webp" alt="Image 3"></div>
+            <div class="grid-item"><img src="media/img/gallery/newyear4.webp" alt="Image 4"></div>
+            <div class="grid-item"><img src="media/img/gallery/newyear5.webp" alt="Image 5"></div>
+            <div class="grid-item"><img src="media/img/gallery/newyear6.webp" alt="Image 6"></div>
+            <div class="grid-item"><img src="media/img/gallery/newyear7.webp" alt="Image 7"></div>
+        </div>
     </section>
 
-
-    <section id="event2">
-        <div data-aos="fade-in" data-aos-duration="1000">
-            <div class="container">
-                <h1 class="">Juernes</h1>
-                <p class=""> Every Thursday from 19:00 to 24:00. </p>
-            </div>
-        </div>
-    <div class="gallery">
-        <div class="item"><img src="img1.jpg" alt="Imagen 1"></div>
-        <div class="item"><img src="img2.jpg" alt="Imagen 2"></div>
-        <div class="item"><img src="img3.jpg" alt="Imagen 3"></div>
-        <div class="item"><img src="img4.jpg" alt="Imagen 4"></div>
-        <div class="item"><img src="img5.jpg" alt="Imagen 5"></div>
-        <div class="item"><img src="img6.jpg" alt="Imagen 6"></div>
-    </div>
-    </section>
-
-
-    <section id="event3">
-        <div data-aos="fade-in" data-aos-duration="1000">
-            <div class="container">
-                <h1 class="">Vogue Xmas Dinner</h1>
-                <p class=""> December 17, 2024 </p>
-            </div>
-        </div>
-    <div class="gallery">
-        <div class="item"><img src="img1.jpg" alt="Imagen 1"></div>
-        <div class="item"><img src="img2.jpg" alt="Imagen 2"></div>
-        <div class="item"><img src="img3.jpg" alt="Imagen 3"></div>
-        <div class="item"><img src="img4.jpg" alt="Imagen 4"></div>
-        <div class="item"><img src="img5.jpg" alt="Imagen 5"></div>
-        <div class="item"><img src="img6.jpg" alt="Imagen 6"></div>
-    </div>
-    </section>
-
-    
-    
-    
-    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
