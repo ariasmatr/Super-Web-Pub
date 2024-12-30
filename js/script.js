@@ -9,3 +9,20 @@ document.getElementById('switchMode').addEventListener('click',()=>{
         document.documentElement.setAttribute('data-bs-theme','dark');
     }
   });
+
+
+
+/* Masonry Gallery */
+$(document).ready(function() {
+    var $gallery = $('.gallery');
+    var masonry = new Masonry($gallery[0], {
+        itemSelector: '.item',
+        columnWidth: '.item',
+        percentPosition: true,
+        gutter: 20
+    });
+});
+
+$(window).resize(function() {
+    masonry.layout();
+});

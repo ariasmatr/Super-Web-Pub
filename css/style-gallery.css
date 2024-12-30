@@ -63,6 +63,22 @@ section {
     margin: 0 auto;
 }
 
+
+.gallery {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.item {
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+}
+
+.item img {
+    width: 100%;
+}
+
 /* HEADER */
 
 /* EVENT 1 SECTION */
