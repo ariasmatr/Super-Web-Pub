@@ -65,8 +65,14 @@ section {
 
 /* HEADER */
 
-/* EVENT 1 SECTION */
-
+/* EVENT 1 SECTION NEW YEAR */
+.masonry-column {
+    padding: 0 1px;
+  }
+  
+  .masonry-grid > div .thumbnail {
+    margin: 5px 1px;
+  }
 /* EVENT 2 SECTION */
 
 /* EVENT 3 SECTION */
