@@ -64,15 +64,20 @@ section {
 }
 
 /* HEADER */
+.gallery-header {
+    height: 22em;
+}
+
 
 /* EVENT 1 SECTION NEW YEAR */
 .masonry-column {
     padding: 0 1px;
+    padding-bottom: 2em;
   }
-  
-  .masonry-grid > div .thumbnail {
-    margin: 5px 1px;
-  }
+
+.img-gallery  img {
+    padding-bottom: 2em;
+}
 /* EVENT 2 SECTION */
 
 /* EVENT 3 SECTION */
