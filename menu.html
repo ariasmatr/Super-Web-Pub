@@ -28,30 +28,101 @@
      Hellooo, aquí les dejo las variables de los colores si quieren ponerlos desde el html. Los que empiezan por .text son los que afectan la propiedad 'color' y los que empiezan por .bg son los que afectan la propiedad 'background-color':
 
      COLORES QUE CAMBIAN LIGH/DARK MODE:
-     .text-black-lm -> texto negro 
-     .text-white-lm -> texto blanco
-     .text-blue-lm -> lineas azules 
-     .bg-white-lm -> bg color blanco
-     .bg-black-lm -> bg color negro
-     .bg-blue-lm -> bg color azul oscuro
+     text-black-lm -> texto negro 
+     text-white-lm -> texto blanco
+     text-blue-lm -> lineas azules 
+     bg-white-lm -> bg color blanco
+     bg-black-lm -> bg color negro
+     bg-blue-lm -> bg color azul oscuro
 
      COLORES QUE NO CAMBIAN:
-     .bg-white-og 
-     .bg-black-og 
-     .bg-darkblue-og 
-     .bg-blue-og 
-     .bg-yellow-og
-     .text-white-og
-     .text-black-og
-     .text-darkblue-og
-     .text-blue-og
-     .text-yellow-og
+     bg-white-og 
+     bg-black-og 
+     bg-darkblue-og 
+     bg-blue-og 
+     bg-yellow-og
+     text-white-og
+     text-black-og
+     text-darkblue-og
+     text-blue-og
+     text-yellow-og
 
      DISEÑO BOTONES:
-     .btn-fill-lm (este es el botón primario que usariamos, el que aparece en la home que hicimos en Figma)
-     .btn-modal (este es solo para la modal, el que dice PAGAR)
-     .btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
+     btn-fill-lm (este es el botón primario que usariamos, el que aparece en la home que hicimos en Figma)
+     btn-modal (este es solo para la modal, el que dice PAGAR)
+     btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
     -->
+
+    <section id="title">
+        <div class="menu-header d-flex flex-column align-items-center justify-content-center">
+            <div class="header-text d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-white-og">Our Menu</h1>
+                <p class="text-white-og fs-4">Flavor and style in every sip!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-accordion">
+        <div class="container">
+            <div class="item item-1">
+                <div class="word w1">APPETIZERS</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-2.webp" alt="">
+                </div>
+            </div>
+            <div class="item item-2">
+                <div class="word w1">SHARING</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-3.webp" alt="">
+                </div>
+                <div class="word w2">PLATES</div>
+            </div>
+            <div class="item item-3">
+                <div class="word w1">DRINKS</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-4.webp" alt="">
+                </div>
+            </div>
+            <div class="item item-4">
+                <div class="word w1">COCKTAILS</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-5.webp" alt="">
+                </div>
+            </div>
+            <div class="item item-5">
+                <div class="word w1">SIGNATURE</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-6.webp" alt="">
+                </div>
+                <div class="word w2">DRINKS</div>
+            </div>
+            <div class="item item-6">
+                <div class="word w1">SHOTS &</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-7.webp" alt="">
+                </div>
+                <div class="word w2">MIXERS</div>
+            </div>
+        </div>     
+    </section>
+
+    <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
+        <div id="logo-footer" class="">
+            <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
+            <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
+        </div>
+        <div class="divider-footer w-100 bg-blue-lm"></div>
+        <div class="container text-center">
+            <div class="row my-5">
+              <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">Request Information</div>
+              <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">Join the Team</div>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-blue-lm text-center mb-4">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
+            <h5 class="text-blue-lm text-center">Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid. <br> themirage@club.es <br> +34 915 55 25 28</h5>
+        </div>
+    </footer>
 
     <!-- JQUERY -->
     <script src="./libs/jquery.js"></script>

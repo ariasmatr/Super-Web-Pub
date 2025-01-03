@@ -9,3 +9,7 @@ document.getElementById('switchMode').addEventListener('click',()=>{
         document.documentElement.setAttribute('data-bs-theme','dark');
     }
   });
+
+
+ 
+  
