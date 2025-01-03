@@ -10,22 +10,6 @@
     src: url(../types/Bosch-Display.otf) format("opentype");
 }
 
-/* VARIABLES COLOR & ESTILO WEB
-Los he metido en el archivo css de Bootstrap para facilitar lo del light/dark mode, así que les dejo aquí comentado las variables a usar para los colores. Solo tenemos que crear los html en light mode, ese es el default, así que solo les pondré los colores de ese modo :D
-Los que terminan en 'lm' son los que cambian de color. 
-
-    --bs-bg-white-lm: #fffaf8;
-    --bs-black-lm: #1f2222;
-    --bs-blue-lm: #077488;
-    --bs-white-og: #fffaf8;
-    --bs-black-og: #1f2222;
-    --bs-darkblue-og: #077488;
-    --bs-lightblue-og: #69becd;
-    --bs-yellow-og: #faae45;
-    --bs-font-title: 'Bosch-display';
-    --bs-font-body: "Roboto", serif;
-*/
-
 img {
     width: 100%;
     vertical-align: middle;
@@ -42,14 +26,6 @@ h1 {
     font-size: 5em;
 }
 
-h2 {
-    font-size: 4.5em;
-}
-
-h3 {
-    font-size: 3.5em;
-}
-
 p {
     font-family: var(--bs-font-body);
     font-weight: 300;
@@ -59,29 +35,17 @@ body {
     background-color: var(--bs-bg-white-lm) !important;
 }
 
-section {
-    margin: 0 auto;
-}
-
-/* HEADER */
-
-/* TITLE SECTION */
-
-/* EVENTS COLLAPSIBLE SECTION */
-
 .image-container {
     position: relative;
     width: 100%;
-    height: 30%;
+    height: 25%; /* Tamaño original */
     overflow: hidden;
-    transition: height 0.5s ease;
+    transition: height 0.5s ease; /* Transición para la expansión */
 }
 
-.full-width-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+/* Expande el contenedor al hacer hover */
+.image-container:hover {
+    height: 40%; /* Expande el contenedor */
 }
 
 .overlay {
@@ -90,56 +54,48 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
-    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%); /* Degradado de transparente a negro */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center; /* Centra verticalmente */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
     padding: 20px;
-    transition: height 0.5s ease, opacity 0.5s ease;
+    transition: justify-content 0.5s ease; /* Transición de contenido */
 }
 
-.image-container:hover {
-    height: 400px; /* Nueva altura al hacer hover */
-}
-
-.image-container:hover .full-width-image {
-    transform: scale(1.1);
-}
-
-.image-container:hover .overlay {
-    height: 400px;
-}
-
+/* Mantener el título y párrafo en una posición fija */
 .text-content {
-    width: 100%;
+    position: absolute; /* Fija el texto en su lugar */
+    top: 3.5rem; /* Ajusta la posición según lo necesites */
+    left: 5%; /* Mantén la alineación a la izquierda */
+    z-index: 2; /* Asegura que el texto esté por encima de otros elementos */
+    text-align: left; 
+    max-width: 40%;
+    transition: opacity 0.5s ease; /* Transición para desaparecer */
 }
 
-.text-content h1,
-.text-content p {
-    margin-bottom: 10px;
-    opacity: 1; /* Siempre visible */
-    transition: opacity 0.5s ease;
-}
-
-.ticket-info,
-.footer-info {
-    opacity: 0; /* Oculto inicialmente */
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.image-container:hover .ticket-info,
-.image-container:hover .footer-info {
+/* Mantén el texto visible siempre */
+.image-container:hover .text-content {
     opacity: 1;
     visibility: visible;
 }
 
+/* Ticket-info */
 .ticket-info {
+    opacity: 0; /* Invisible inicialmente */
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transición para aparecer */
     width: 100%;
-    margin-top: 10px;
+    margin-top: 6rem;
     text-align: left;
+    padding-left: 4%; /* Alineación igual que el texto inicial */
+    padding-right: 4%; /* Alineación igual que el texto inicial */
+}
+
+/* Aparece la sección de ticket-info al hacer hover */
+.image-container:hover .ticket-info {
+    opacity: 1;
+    visibility: visible; /* Aparece al hacer hover */
 }
 
 .ticket-info h2 {
@@ -163,6 +119,12 @@ section {
     font-size: 0.9rem;
 }
 
+.ticket-details .price-and-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Se agrega un espacio entre los elementos */
+}
+
 .ticket-details .price {
     font-weight: bold;
     font-size: 1rem;
@@ -175,16 +137,19 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3px;
+    /* Elimina esta línea para quitar las esquinas redondeadas */
+    border-radius: 0; /* Asegúrate de que esté en 0 */
 }
 
+/* Footer-info */
 .footer-info {
     position: absolute;
-    bottom: 10px;
-    left: 20px;
+    bottom: 1.5rem;
     display: flex;
     align-items: center;
     font-size: 0.9rem;
+    padding-left: 4.5%; /* Alineación igual que el texto inicial */
+    
 }
 
 .footer-info .divider {
@@ -193,10 +158,3 @@ section {
     background-color: white;
     margin: 0 5px;
 }
-
-
-/* MODAL WINDOW */
-
-/* FOOTER */
-
-/* MEDIA QUERIES */
