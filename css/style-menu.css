@@ -129,17 +129,28 @@ section {
     font-family: var(--bs-font-title);
 }
 
-/* .w1 {
-    text-align: right;
-} */
-
 /* FOOTER */
+#logo-footer {
+    width: 30%;
+}
+
 .divider-footer {
     height: 2px;
 }
 
-#logo-footer {
-    width: 35%;
+.form-info {
+    background-color: transparent !important;
+    border: solid 1.5px var(--bs-lightblue-og) !important;
+    border-radius: 0 !important;
+    color: var(--bs-white-og) !important;
+    font-size: 0.9em !important;
+}
+
+.form-info::placeholder {
+    color: var(--bs-white-og) !important;
+    opacity: 0.8 !important;
+    font-family: var(--bs-font-body) !important;
+    font-size: 0.9em !important;
 }
 
 /* MEDIA QUERIES */

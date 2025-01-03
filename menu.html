@@ -114,14 +114,59 @@
         <div class="divider-footer w-100 bg-blue-lm"></div>
         <div class="container text-center">
             <div class="row my-5">
-              <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">Request Information</div>
-              <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">Join the Team</div>
+              <div class="col-6 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm" data-bs-toggle="modal" data-bs-target="#infoModal">Request Information</button>
+              </div>
+              <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm">Join the Team</button>
+              </div>
             </div>
         </div>
         <div>
-            <h4 class="text-blue-lm text-center mb-4">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
-            <h5 class="text-blue-lm text-center">Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid. <br> themirage@club.es <br> +34 915 55 25 28</h5>
+            <h4 class="text-blue-lm text-center mb-4 fs-5">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
         </div>
+
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <h3 class="modal-title text-white-og" id="infoModalLabel">Let's Get in Touch</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-8">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-info" id="name-info" placeholder="Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control form-info" id="email-info" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control form-info" id="message-info" rows="4" placeholder="Message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn w-100 mt-4">SEND</button>
+                                </form>
+                            </div>
+                            <div class="col-4 px-4">
+                                <div class="div-info text-white-og">
+                                    <p>Our Address</p>
+                                    <p>Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid.</p>
+                                </div>
+                                <div class="div-info text-white-og">
+                                    <p>Our Contacts</p>
+                                    <p>themirage@club.es</p>
+                                    <p>+34 915 55 25 28</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+              </div>
+            </div>
+          </div>
     </footer>
 
     <!-- JQUERY -->
