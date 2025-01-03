@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mirage</title>
-    <link rel="icon" href="media/img/logos/resp-blue.png">
+    <link rel="icon" href="media/img/favicon-bueno.png">
 
     <!-- TYPOGRAPHY -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +20,16 @@
 
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- lOCOMOTION -->
+    <link href="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+" rel="stylesheet">
+
 </head>
 
-<body>
+<body data-scroll-container>
     <!-- VARIABLES COLORES
      Hellooo, aquí les dejo las variables de los colores si quieren ponerlos desde el html. Los que empiezan por .text son los que afectan la propiedad 'color' y los que empiezan por .bg son los que afectan la propiedad 'background-color':
 
@@ -52,13 +59,7 @@
      .btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
     -->
     
-    <h1 class="bg-blue-lm text-white-lm d-flex w-100 justify-content-center">EJEMPLO TAMAÑO H1</h1>
-    <h2 class="bg-black-lm text-white-lm d-flex w-100 justify-content-center">EJEMPLO TAMAÑO H2</h2>
-    <h3 class="bg-white-lm text-black-lm d-flex w-100 justify-content-center">EJEMPLO TAMAÑO H3</h3>
-    <p>Más que una experiencia para el paladar</p>
-    <button id="switchMode" type="button" class="btn btn-fill-lm">Change</button>
-    <button type="button" class="btn btn-outline-blue">H</button>
-    <button type="button" class="btn btn-modal">PAGAR</button>
+    <button id="switchMode" type="button" class="btn btn-fill-lm">Light/Dark theme</button>
 
     <!-- JQUERY -->
     <script src="./libs/jquery.js"></script>
@@ -68,5 +69,10 @@
 
     <!-- CUSTOM JS -->
     <script src="./js/script.js"></script>
+
+    <!-- LOCOMOTIVE -->
+    <script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
 </body>
 </html>
