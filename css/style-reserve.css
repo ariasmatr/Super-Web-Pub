@@ -141,7 +141,6 @@ body {
     border-radius: 0; /* Asegúrate de que esté en 0 */
 }
 
-/* Footer-info */
 .footer-info {
     position: absolute;
     bottom: 1.5rem;
@@ -157,4 +156,153 @@ body {
     width: 1px;
     background-color: white;
     margin: 0 5px;
+}
+
+/* MODALES */
+/* Estilo general del modal */
+.modal-info {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0; /* Sin esquinas redondeadas */
+}
+
+.modal-info .modal-header {
+    border-bottom: none;
+}
+
+.modal-info .modal-header .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal-info .modal-header .btn-close {
+    color: white;
+    opacity: 1;
+}
+
+.modal-info .modal-header .btn-close:hover {
+    color: #007bff; /* Azul al hacer hover */
+}
+
+/* Líneas divisorias */
+.modal-info .horizontal-line {
+    border-top: 1px solid #444;
+    margin: 10px 0;
+}
+
+/* Sección de tickets */
+.modal-info .ticket-info {
+    padding-right: 20px;
+}
+
+.modal-info .ticket-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.modal-info .ticket-details {
+    margin-bottom: 20px;
+}
+
+.modal-info .ticket-details .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.modal-info .ticket-info .btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.modal-info .ticket-info .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Sección de resumen */
+.modal-info .summary {
+    border-left: 1px solid #444;
+    padding-left: 20px;
+}
+
+.modal-info .summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.modal-info .summary .summary-details div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.modal-info .summary .summary-details strong {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.modal-info .summary .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 0;
+    transition: background-color 0.3s;
+}
+
+.modal-info .summary .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-info .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-info .col-8, .modal-info .col-4 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .modal-info .col-4 {
+        margin-top: 1rem;
+    }
+}
+
+
+
+/* FOOTER */
+#logo-footer {
+    width: 30%;
+}
+
+.divider-footer {
+    height: 2px;
+}
+
+.form-info {
+    background-color: transparent !important;
+    border: solid 1.5px var(--bs-lightblue-og) !important;
+    border-radius: 0 !important;
+    color: var(--bs-white-og) !important;
+    font-size: 0.9em !important;
+}
+
+.form-info::placeholder {
+    color: var(--bs-white-og) !important;
+    opacity: 0.8 !important;
+    font-family: var(--bs-font-body) !important;
+    font-size: 0.9em !important;
 }

@@ -72,36 +72,100 @@
                                     <h1 class="text-white mb-2">Pump Gala</h1>
                                     <p class="text-white mb-3">December 17, 2024<br>12:00 - 6:00</p>
                                 </div>   
-                               <div class="ticket-info">
-                                        <h2 class="text-white">Ticket</h2>
-                                        <div class="horizontal-line"></div>
-                                        <div class="ticket-details">
-                                            <p class="text-white">Ticket to event + 2 drinks</p>
-                                            <div class="price-and-btn d-flex align-items-center">
-                                                <span class="price text-white me-3"><p class="text-white">20€</p></span>
-                                                <div class="btn-square">
-                                                    <i class="bi bi-arrow-right text-white"></i>
-                                                </div>
+                                <div class="ticket-info">
+                                    <h2 class="text-white">Ticket</h2>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white me-3"><p class="text-white">20€</p></span>
+                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                                                <i class="bi bi-arrow-right text-white"></i>
                                             </div>
                                         </div>
-                                        <div class="horizontal-line"></div>
                                     </div>
-                                </div>
-                                <div class="footer-info text-white">
-                                    <span>+18</span>
-                                    <div class="divider"></div>
-                                    <span>Casual</span>
+                                    <div class="horizontal-line"></div>
                                 </div>
                             </div>
-                           
-                        </div>
+                            <div class="footer-info text-white">
+                                <span>+18</span>
+                                <div class="divider"></div>
+                                <span>Casual</span>
+                            </div>
+                        </div>  
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
+    <!-- Modal -->
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-info p-3 bg-black-og">
+            <!-- Header -->
+            <div class="modal-header d-flex align-items-start justify-content-between border-bottom-0">
+                <div class="text-content">
+                    <h1 class="text-white mb-2">Pump Gala</h1>
+                    <p class="text-white mb-3">December 17, 2024<br>12:00 - 6:00</p>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body pt-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Sección de tickets (70%) -->
+                        <div class="col-8 ticket-info pe-4">
+                            <h2 class="text-white">Ticket</h2>
+                            <div class="horizontal-line my-3"></div>
+                            <div class="ticket-details mb-4">
+                                <p class="text-white">Ticket to event + 2 drinks</p>
+                                <div class="price-and-btn d-flex align-items-center">
+                                    <span class="price text-white me-3"><p class="text-white">20€</p></span>
+                                </div>
+                            </div>
+                            <div class="horizontal-line my-3"></div>
+                            <p class="text-white mb-2">Select your quantity:</p>
+                            <div class="d-flex align-items-center">
+                                <button class="btn btn-sm btn-outline-light me-2" id="decreaseQuantity">-</button>
+                                <span id="ticketQuantity" class="text-white me-2">1</span>
+                                <button class="btn btn-sm btn-outline-light" id="increaseQuantity">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Resumen (30%) -->
+                        <div class="col-4 summary ps-4">
+                            <h2 class="text-white">Summary</h2>
+                            <div class="horizontal-line my-3"></div>
+                            <div class="summary-details">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-white">Tickets to event:</span>
+                                    <span id="ticketTotal" class="text-white">20€</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <span class="text-white">Booking fees:</span>
+                                    <span class="text-white">0.75€</span>
+                                </div>
+                                <div class="horizontal-line my-3"></div>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <strong class="text-white">TOTAL:</strong>
+                                    <strong id="totalAmount" class="text-white">20.75€</strong>
+                                </div>
+                            </div>
+                            <button class="btn btn-fill-lm w-100 mt-4" id="payButton" data-bs-dismiss="modal">PAY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+        <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
         <div id="logo-footer" class="">
             <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
             <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
