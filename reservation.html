@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
 
     <!-- CUSTOM CSS -->
     <link href="./css/style-reserve.css" rel="stylesheet">
-    <!-- <link href="./css/style.css" rel="stylesheet"> -->
 
     <!-- BOOTSTRAP CSS -->
     <link href="./css/bs-styles.css" rel="stylesheet">
@@ -22,37 +20,7 @@
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
 <body>
-    <!-- VARIABLES COLORES
-     Hellooo, aquí les dejo las variables de los colores si quieren ponerlos desde el html. Los que empiezan por .text son los que afectan la propiedad 'color' y los que empiezan por .bg son los que afectan la propiedad 'background-color':
-
-     COLORES QUE CAMBIAN LIGH/DARK MODE:
-     .text-black-lm -> texto negro 
-     .text-white-lm -> texto blanco
-     .text-blue-lm -> lineas azules 
-     .bg-white-lm -> bg color blanco
-     .bg-black-lm -> bg color negro
-     .bg-blue-lm -> bg color azul oscuro
-
-     COLORES QUE NO CAMBIAN:
-     .bg-white-og 
-     .bg-black-og 
-     .bg-darkblue-og 
-     .bg-blue-og 
-     .bg-yellow-og
-     .text-white-og
-     .text-black-og
-     .text-darkblue-og
-     .text-blue-og
-     .text-yellow-og
-
-     DISEÑO BOTONES:
-     .btn-fill-lm (este es el botón primario que usariamos, el que aparece en la home que hicimos en Figma)
-     .btn-modal (este es solo para la modal, el que dice PAGAR)
-     .btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
-    -->
-
     <section id="reservations">
         <div class="container text-center">
             <h1 class="mb-4">Reservations</h1>
@@ -100,72 +68,72 @@
     </section>
 
     <!-- Modal -->
-<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content modal-info p-3 bg-black-og">
-            <!-- Header -->
-            <div class="modal-header d-flex align-items-start justify-content-between border-bottom-0">
-                <div class="text-content">
-                    <h1 class="text-white mb-2">Pump Gala</h1>
-                    <p class="text-white mb-3">December 17, 2024<br>12:00 - 6:00</p>
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <!-- Body -->
-            <div class="modal-body pt-4">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Sección de tickets (70%) -->
-                        <div class="col-8 ticket-info pe-4">
-                            <h2 class="text-white">Ticket</h2>
-                            <div class="horizontal-line my-3"></div>
-                            <div class="ticket-details mb-4">
-                                <p class="text-white">Ticket to event + 2 drinks</p>
-                                <div class="price-and-btn d-flex align-items-center">
-                                    <span class="price text-white me-3"><p class="text-white">20€</p></span>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 border-end pe-4">
+                                <div class="paying-info">
+                                    <h2 class="text-white">Ticket</h2>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white me-3">
+                                                <p class="text-white">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="horizontal-line my-3"></div>
-                            <p class="text-white mb-2">Select your quantity:</p>
-                            <div class="d-flex align-items-center">
-                                <button class="btn btn-sm btn-outline-light me-2" id="decreaseQuantity">-</button>
-                                <span id="ticketQuantity" class="text-white me-2">1</span>
-                                <button class="btn btn-sm btn-outline-light" id="increaseQuantity">+</button>
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h2 class="text-white">Summary</h2>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-white">Tickets to event:</span>
+                                            <p id="ticketTotal" class="text-white">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="text-white">Booking fees:</span>
+                                            <p id="booking-fee" class="text-white">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-primary mt-3 w-100">PAY</button>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Resumen (30%) -->
-                        <div class="col-4 summary ps-4">
-                            <h2 class="text-white">Summary</h2>
-                            <div class="horizontal-line my-3"></div>
-                            <div class="summary-details">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="text-white">Tickets to event:</span>
-                                    <span id="ticketTotal" class="text-white">20€</span>
-                                </div>
-                                <div class="d-flex justify-content-between mb-4">
-                                    <span class="text-white">Booking fees:</span>
-                                    <span class="text-white">0.75€</span>
-                                </div>
-                                <div class="horizontal-line my-3"></div>
-                                <div class="d-flex justify-content-between mt-3">
-                                    <strong class="text-white">TOTAL:</strong>
-                                    <strong id="totalAmount" class="text-white">20.75€</strong>
-                                </div>
-                            </div>
-                            <button class="btn btn-fill-lm w-100 mt-4" id="payButton" data-bs-dismiss="modal">PAY</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-
-<!-- Footer -->
-        <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
+    <!-- Footer -->
+    <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
         <div id="logo-footer" class="">
             <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
             <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
@@ -184,10 +152,11 @@
         <div>
             <h4 class="text-blue-lm text-center mb-4 fs-5">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
         </div>
+    </footer>
 
-        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-              <div class="modal-content modal-info p-3 bg-black-og">
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
                 <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
                     <h3 class="modal-title text-white-og" id="infoModalLabel">Let's Get in Touch</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -223,16 +192,15 @@
                         </div> 
                     </div> 
                 </div>
-              </div>
             </div>
-          </div>
-    </footer>
-
-    
-    
+        </div>
+    </div>
 
     <!-- JQUERY -->
     <script src="./libs/jquery.js"></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- BOOTSTRAP JS -->
     <script src="./libs/bootstrap.bundle.min.js"></script>

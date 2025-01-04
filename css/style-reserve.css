@@ -158,110 +158,171 @@ body {
     margin: 0 5px;
 }
 
-/* MODALES */
-/* Estilo general del modal */
+/* Modal */
 .modal-info {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 0; /* Sin esquinas redondeadas */
+    border-radius: 0 !important;
+    background-color: #000; /* Fondo negro para el modal */
+    color: #fff; /* Texto blanco */
 }
 
+/* Estilo de la cabecera del modal */
 .modal-info .modal-header {
-    border-bottom: none;
+    border-bottom: 1px solid #444; /* Línea separadora tenue */
+    padding-bottom: 1rem;
 }
 
-.modal-info .modal-header .text-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.modal-info .modal-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
-.modal-info .modal-header .btn-close {
-    color: white;
-    opacity: 1;
-}
-
-.modal-info .modal-header .btn-close:hover {
-    color: #007bff; /* Azul al hacer hover */
-}
-
-/* Líneas divisorias */
-.modal-info .horizontal-line {
-    border-top: 1px solid #444;
-    margin: 10px 0;
-}
-
-/* Sección de tickets */
-.modal-info .ticket-info {
-    padding-right: 20px;
-}
-
-.modal-info .ticket-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.modal-info .ticket-details {
-    margin-bottom: 20px;
-}
-
-.modal-info .ticket-details .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.modal-info .ticket-info .btn {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 0;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 1.5;
-    font-size: 1rem;
-}
-
-.modal-info .ticket-info .btn:hover {
-    background-color: white;
-    color: black;
-}
-
-/* Sección de resumen */
-.modal-info .summary {
-    border-left: 1px solid #444;
-    padding-left: 20px;
-}
-
-.modal-info .summary h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.modal-info .summary .summary-details div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.modal-info .summary .summary-details strong {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.modal-info .summary .btn {
-    background-color: #007bff;
-    color: white;
+/* Botón de cierre del modal */
+.modal-info .btn-close {
+    background-color: transparent; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: white !important; /* El símbolo de la X en blanco */
     border: none;
+    opacity: 1; /* Hace el botón de cierre completamente visible */
+}
+
+.modal-info .btn-close:hover {
+    background-color: #666; /* Efecto hover más claro */
+}
+
+/* Líneas horizontales - Unificadas */
+.horizontal-line {
+    border-top: 1px solid #fff; /* Línea blanca visible */
+    margin: 15px 0; /* Espaciado superior e inferior */
+}
+
+/* Información de pago */
+.paying-info {
+    margin-bottom: 2rem;
+}
+
+.paying-info h2,
+.summary h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Detalles del Ticket */
+.ticket-details {
+    margin-bottom: 1rem;
+}
+
+.ticket-details p {
     font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 0;
+}
+
+.price-and-btn .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Botón */
+.btn {
+    background-color: #007bff; /* Fondo azul */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem;
     transition: background-color 0.3s;
 }
 
-.modal-info .summary .btn:hover {
-    background-color: #0056b3;
+.btn:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+.btn-custom {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+.btn-custom:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn-custom:hover {
+    color: #2f00ff; /* Efecto hover para los botones */
+}
+#quantity {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+/* Zona de contenido del modal */
+.modal-body {
+    font-family: "Roboto", sans-serif; /* Fuente del cuerpo */
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.ticket-info {
+    opacity: 0; /* Invisible inicialmente */
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transición para aparecer */
+    width: 100%;
+    margin-top: 6rem;
+    text-align: left;
+    padding-left: 4%; /* Alineación igual que el texto inicial */
+    padding-right: 4%; /* Alineación igual que el texto inicial */
+}
+
+/* Aparece la sección de ticket-info al hacer hover */
+.modal-body:hover .ticket-info {
+    opacity: 1;
+    visibility: visible; /* Aparece al hacer hover */
+}
+
+/* Estilo adicional de la información */
+.div-info {
+    margin-bottom: 1.5rem;
+}
+
+.div-info p:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.div-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc; /* Texto más claro */
+}
+
+/* Footer */
+#logo-footer {
+    width: 30%;
+}
+
+.divider-footer {
+    height: 2px;
+}
+
+.form-info {
+    background-color: transparent !important;
+    border: solid 1.5px var(--bs-lightblue-og) !important;
+    border-radius: 0 !important;
+    color: var(--bs-white-og) !important;
+    font-size: 0.9em !important;
+}
+
+.form-info::placeholder {
+    color: var(--bs-white-og) !important;
+    opacity: 0.8 !important;
+    font-family: var(--bs-font-body) !important;
+    font-size: 0.9em !important;
 }
 
 /* Responsive */
@@ -280,7 +341,6 @@ body {
         margin-top: 1rem;
     }
 }
-
 
 
 /* FOOTER */
