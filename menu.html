@@ -64,44 +64,103 @@
 
     <section id="menu-accordion">
         <div class="container">
-            <div class="item item-1">
+            <div class="item item-1" data-bs-toggle="collapse" href="#collapseAppetizers" role="button" aria-expanded="false" aria-controls="collapseAppetizers">
                 <div class="word w1">APPETIZERS</div>
                 <div class="img-menu">
                     <img src="media/img/menu/menu-2.webp" alt="">
                 </div>
             </div>
-            <div class="item item-2">
+            <div class="collapse" id="collapseAppetizers">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="element">
+                                    <div class="price">
+                                        <h3>Title</h3>
+                                        <h4>Price</h4>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="element">
+                                    <div class="price">
+                                        <h3>Title</h3>
+                                        <h4>Price</h4>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                                <div class="element">
+                                    <div class="price">
+                                        <h3>Title</h3>
+                                        <h4>Price</h4>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <img src="media/img/menu/menu-8.webp" alt="Appetizers">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-2" data-bs-toggle="collapse" href="#collapseSP" role="button" aria-expanded="false" aria-controls="collapseSP">
                 <div class="word w1">SHARING</div>
                 <div class="img-menu">
                     <img src="media/img/menu/menu-3.webp" alt="">
                 </div>
                 <div class="word w2">PLATES</div>
             </div>
-            <div class="item item-3">
+            <div class="collapse" id="collapseSP">
+                <div class="card card-body card-menu">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
+            <div class="item item-3" data-bs-toggle="collapse" href="#collapseDrinks" role="button" aria-expanded="false" aria-controls="collapseDrinks">
                 <div class="word w1">DRINKS</div>
                 <div class="img-menu">
                     <img src="media/img/menu/menu-4.webp" alt="">
                 </div>
             </div>
-            <div class="item item-4">
+            <div class="collapse" id="collapseDrinks">
+                <div class="card card-body card-menu">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
+            <div class="item item-4" data-bs-toggle="collapse" href="#collapseCocktails" role="button" aria-expanded="false" aria-controls="collapseCocktails">
                 <div class="word w1">COCKTAILS</div>
                 <div class="img-menu">
                     <img src="media/img/menu/menu-5.webp" alt="">
                 </div>
             </div>
-            <div class="item item-5">
+            <div class="collapse" id="collapseCocktails">
+                <div class="card card-body card-menu">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
+            <div class="item item-5" data-bs-toggle="collapse" href="#collapseSD" role="button" aria-expanded="false" aria-controls="collapseSD">
                 <div class="word w1">SIGNATURE</div>
                 <div class="img-menu">
                     <img src="media/img/menu/menu-6.webp" alt="">
                 </div>
                 <div class="word w2">DRINKS</div>
             </div>
-            <div class="item item-6">
+            <div class="collapse" id="collapseSD">
+                <div class="card card-body card-menu">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
+            <div class="item item-6" data-bs-toggle="collapse" href="#collapseShots" role="button" aria-expanded="false" aria-controls="collapseShots">
                 <div class="word w1">SHOTS &</div>
                 <div class="img-menu">
                     <img src="media/img/menu/menu-7.webp" alt="">
                 </div>
                 <div class="word w2">MIXERS</div>
+            </div>
+            <div class="collapse" id="collapseShots">
+                <div class="card card-body card-menu">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
             </div>
         </div>     
     </section>
@@ -115,10 +174,10 @@
         <div class="container text-center">
             <div class="row my-5">
               <div class="col-6 text-blue-lm" style="font-family: var(--bs-font-title);">
-                <button type="button" class="btn fs-2 text-blue-lm" data-bs-toggle="modal" data-bs-target="#infoModal">Request Information</button>
+                <button type="button" class="btn fs-2 text-blue-lm btn-i" data-bs-toggle="modal" data-bs-target="#infoModal">Request Information</button>
               </div>
               <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">
-                <button type="button" class="btn fs-2 text-blue-lm">Join the Team</button>
+                <button type="button" class="btn fs-2 text-blue-lm btn-i">Join the Team</button>
               </div>
             </div>
         </div>
@@ -133,10 +192,10 @@
                     <h3 class="modal-title text-white-og" id="infoModalLabel">Let's Get in Touch</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body pt-4">
+                <div class="modal-body">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-8">
+                        <div class="row justify-content-center">
+                            <div class="col-8 p-4">
                                 <form>
                                     <div class="mb-3">
                                         <input type="text" class="form-control form-info" id="name-info" placeholder="Name" required>
@@ -147,18 +206,19 @@
                                     <div class="mb-3">
                                         <textarea class="form-control form-info" id="message-info" rows="4" placeholder="Message"></textarea>
                                     </div>
-                                    <button type="submit" class="btn w-100 mt-4">SEND</button>
+                                    <button type="submit" class="btn btn-modal w-100">SEND</button>
                                 </form>
                             </div>
-                            <div class="col-4 px-4">
-                                <div class="div-info text-white-og">
-                                    <p>Our Address</p>
-                                    <p>Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid.</p>
+                            <div class="col-1 divider-ver bg-blue-og mx-2"></div>
+                            <div class="col-3 px-3 text-center d-flex flex-column justify-content-center">
+                                <div class="div-info text-white-og mb-4">
+                                    <p class="fs-5" style="font-family: var(--bs-font-title);">Our Address</p>
+                                    <p class="info-text">Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid.</p>
                                 </div>
-                                <div class="div-info text-white-og">
-                                    <p>Our Contacts</p>
-                                    <p>themirage@club.es</p>
-                                    <p>+34 915 55 25 28</p>
+                                <div class="div-info text-white-og mb-3">
+                                    <p class="fs-5" style="font-family: var(--bs-font-title);">Our Contacts</p>
+                                    <p class="info-text">themirage@club.es</p>
+                                    <p class="info-text">+34 915 55 25 28</p>
                                 </div>
                             </div>
                         </div> 
