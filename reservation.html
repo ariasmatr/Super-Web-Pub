@@ -48,7 +48,7 @@
                                         <p class="text-white">Ticket to event + 2 drinks</p>
                                         <div class="price-and-btn d-flex align-items-center">
                                             <span class="price text-white me-3"><p class="text-white">20€</p></span>
-                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal1">
                                                 <i class="bi bi-arrow-right text-white"></i>
                                             </div>
                                         </div>
@@ -79,7 +79,7 @@
                                         <p class="text-white">Ticket to event + 2 drinks</p>
                                         <div class="price-and-btn d-flex align-items-center">
                                             <span class="price text-white me-3"><p class="text-white">20€</p></span>
-                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal2">
                                                 <i class="bi bi-arrow-right text-white"></i>
                                             </div>
                                         </div>
@@ -110,7 +110,7 @@
                                         <p class="text-white">Ticket to event + 2 drinks</p>
                                         <div class="price-and-btn d-flex align-items-center">
                                             <span class="price text-white me-3"><p class="text-white">20€</p></span>
-                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal3">
                                                 <i class="bi bi-arrow-right text-white"></i>
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@
                                         <p class="text-white">Ticket to event + 2 drinks</p>
                                         <div class="price-and-btn d-flex align-items-center">
                                             <span class="price text-white me-3"><p class="text-white">20€</p></span>
-                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal4">
                                                 <i class="bi bi-arrow-right text-white"></i>
                                             </div>
                                         </div>
@@ -172,7 +172,7 @@
                                         <p class="text-white">Ticket to event + 1 drink</p>
                                         <div class="price-and-btn d-flex align-items-center">
                                             <span class="price text-white me-3"><p class="text-white">35€</p></span>
-                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal">
+                                            <div class="btn-square" data-bs-toggle="modal" data-bs-target="#reservationModal5">
                                                 <i class="bi bi-arrow-right text-white"></i>
                                             </div>
                                         </div>
@@ -193,7 +193,8 @@
     </section>
 
     <!-- Modales -->
-    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <!-- Modal 1 -->
+    <div class="modal fade" id="reservationModal1" tabindex="-1" aria-labelledby="reservationModalLabel1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content modal-info p-3 bg-black-og">
                 <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
@@ -252,6 +253,290 @@
                                     <div class="d-flex justify-content-between">
                                         <p class="text-white">TOTAL:</p>
                                         <p id="totalAmount" class="text-white">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-primary mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="reservationModal2" tabindex="-1" aria-labelledby="reservationModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-title">
+                        <h1 class="text-title-modal mb-1">Juernes</h1>
+                        <p class="text-subtitle-modal mb-0">Every Thursday<br>19:00 - 2:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h2 class="text-white">Ticket</h2>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white me-3">
+                                                <p class="text-white">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h2 class="text-white">Summary</h2>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-primary mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="reservationModal3" tabindex="-1" aria-labelledby="reservationModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-title">
+                        <h1 class="text-title-modal mb-1">It´s a Fake Wedding</h1>
+                        <p class="text-subtitle-modal mb-0">January 7, 2025<br>12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h2 class="text-white">Ticket</h2>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white me-3">
+                                                <p class="text-white">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h2 class="text-white">Summary</h2>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-primary mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 4 -->
+    <div class="modal fade" id="reservationModal4" tabindex="-1" aria-labelledby="reservationModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-title">
+                        <h1 class="text-title-modal mb-1">VFNO</h1>
+                        <p class="text-subtitle-modal mb-0">January 20, 2025<br>12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h2 class="text-white">Ticket</h2>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white me-3">
+                                                <p class="text-white">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h2 class="text-white">Summary</h2>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-primary mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+    <div class="modal fade" id="reservationModal5" tabindex="-1" aria-labelledby="reservationModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-title">
+                        <h1 class="text-title-modal mb-1">Los Javis Wrap Party</h1>
+                        <p class="text-subtitle-modal mb-0">February 4, 2025<br>12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h2 class="text-white">Ticket</h2>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white">Ticket to event + 1 drink</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white me-3">
+                                                <p class="text-white">35€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h2 class="text-white">Summary</h2>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white">35€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white">35.75€</p>
                                     </div>
                                     <button id="pay-button" class="btn btn-primary mt-3 w-100" data-bs-dismiss="modal">PAY</button>
                                 </div>
