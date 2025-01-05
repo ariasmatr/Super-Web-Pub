@@ -9,13 +9,13 @@ document.getElementById('switchMode').addEventListener('click',()=>{
         document.documentElement.setAttribute('data-bs-theme','dark');
     }
   });
-
+  console.log("necesito ayuda");
 
   // Escuchamos el evento de clic en las imágenes
-document.querySelectorAll('.img-gallery').forEach((img, index) => {
+document.querySelectorAll('.img-gallery-1').forEach((img, index) => {
     img.addEventListener('click', function () {
       const slideTo = this.getAttribute('data-slide-to'); // Obtenemos el índice de la imagen clicada
-      console.log(`Imagen clicada con índice: ${slideTo}`); // Verificamos el índice correcto
+      console.log("necesito ayuda"); // Verificamos el índice correcto
   
       const modal = document.querySelector('#exampleModal'); // Referencia al modal
       console.log("Modal seleccionado:", modal ? "Sí" : "No"); // Verificamos si el modal existe
