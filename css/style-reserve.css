@@ -15,6 +15,20 @@ img {
     vertical-align: middle;
 }
 
+:root {
+    --bs-bg-white-lm: #fffaf8;
+    --bs-black-lm: #1f2222;
+    --bs-blue-lm: #077488;
+    --bs-white-og: #fffaf8;
+    --bs-black-og: #1f2222;
+    --bs-darkblue-og: #077488;
+    --bs-lightblue-og: #69becd;
+    --bs-yellow-og: #faae45;
+    --bs-font-title: 'Bosch-display';
+    --bs-font-body: "Roboto", serif;
+}
+  
+
 h1,
 h2,
 h3,
@@ -38,14 +52,14 @@ body {
 .image-container {
     position: relative;
     width: 100%;
-    height: 25%; /* Tamaño original */
+    height: 25%; 
     overflow: hidden;
-    transition: height 0.5s ease; /* Transición para la expansión */
+    transition: height 0.5s ease;
 }
 
 /* Expande el contenedor al hacer hover */
 .image-container:hover {
-    height: 40%; /* Expande el contenedor */
+    height: 40%;
 }
 
 .overlay {
@@ -57,21 +71,29 @@ body {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%); /* Degradado de transparente a negro */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: center; 
+    align-items: flex-start; 
     padding: 20px;
-    transition: justify-content 0.5s ease; /* Transición de contenido */
+    transition: justify-content 0.5s ease;
+}
+
+.text-title {
+    color: var(--bs-blue-lm);
+}
+
+.text-subtitle {
+    color: var(--bs-white-og);
 }
 
 /* Mantener el título y párrafo en una posición fija */
 .text-content {
-    position: absolute; /* Fija el texto en su lugar */
-    top: 3.5rem; /* Ajusta la posición según lo necesites */
-    left: 5%; /* Mantén la alineación a la izquierda */
-    z-index: 2; /* Asegura que el texto esté por encima de otros elementos */
+    position: absolute; 
+    top: 3.5rem; 
+    left: 5%; 
+    z-index: 2; 
     text-align: left; 
     max-width: 40%;
-    transition: opacity 0.5s ease; /* Transición para desaparecer */
+    transition: opacity 0.5s ease; 
 }
 
 /* Mantén el texto visible siempre */
@@ -82,20 +104,20 @@ body {
 
 /* Ticket-info */
 .ticket-info {
-    opacity: 0; /* Invisible inicialmente */
+    opacity: 0; 
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transición para aparecer */
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
     width: 100%;
     margin-top: 6rem;
     text-align: left;
-    padding-left: 4%; /* Alineación igual que el texto inicial */
-    padding-right: 4%; /* Alineación igual que el texto inicial */
+    padding-left: 4%; 
+    padding-right: 4%; 
 }
 
 /* Aparece la sección de ticket-info al hacer hover */
 .image-container:hover .ticket-info {
     opacity: 1;
-    visibility: visible; /* Aparece al hacer hover */
+    visibility: visible; 
 }
 
 .ticket-info h2 {
@@ -104,7 +126,7 @@ body {
 }
 
 .ticket-info .horizontal-line {
-    border-top: 1px solid white;
+    border-top: 1px solid var(--bs-blue-lm);
     margin: 10px 0;
 }
 
@@ -122,7 +144,7 @@ body {
 .ticket-details .price-and-btn {
     display: flex;
     align-items: center;
-    gap: 10px; /* Se agrega un espacio entre los elementos */
+    gap: 10px; 
 }
 
 .ticket-details .price {
@@ -131,14 +153,13 @@ body {
 }
 
 .ticket-details .btn-square {
-    border: 1px solid white;
+    border: 1px solid var(--bs-white-og);
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Elimina esta línea para quitar las esquinas redondeadas */
-    border-radius: 0; /* Asegúrate de que esté en 0 */
+    border-radius: 0; 
 }
 
 .footer-info {
@@ -147,27 +168,27 @@ body {
     display: flex;
     align-items: center;
     font-size: 0.9rem;
-    padding-left: 4.5%; /* Alineación igual que el texto inicial */
+    padding-left: 4.5%; 
     
 }
 
 .footer-info .divider {
     height: 16px;
     width: 1px;
-    background-color: white;
+    background-color: var(--bs-white-og);
     margin: 0 5px;
 }
 
 /* Modal */
 .modal-info {
     border-radius: 0 !important;
-    background-color: #000; /* Fondo negro para el modal */
-    color: #fff; /* Texto blanco */
+    background-color: #000; 
+    color: var(--bs-white-og); 
 }
 
 /* Estilo de la cabecera del modal */
 .modal-info .modal-header {
-    border-bottom: 1px solid #444; /* Línea separadora tenue */
+    border-bottom: 1px solid #444; 
     padding-bottom: 1rem;
 }
 
@@ -179,32 +200,28 @@ body {
 
 /* Botón de cierre del modal */
 .modal-info .btn-close {
-    background-color: transparent; /* Sin fondo */
-    border: none; /* Sin borde */
-    color: white !important; /* El símbolo de la X en blanco */
+    background-color: transparent; 
+    border: none; 
+    color: var(--bs-white-og) !important; 
     border: none;
-    opacity: 1; /* Hace el botón de cierre completamente visible */
+    opacity: 1; 
 }
 
 .modal-info .btn-close:hover {
-    background-color: #666; /* Efecto hover más claro */
+    background-color: #666; 
 }
 
-/* Líneas horizontales - Unificadas */
 .horizontal-line {
-    border-top: 1px solid #fff; /* Línea blanca visible */
-    margin: 15px 0; /* Espaciado superior e inferior */
+    border-top: 1px solid var(--bs-blue-lm); 
+    margin: 15px 0; 
 }
 
-/* Información de pago */
 .paying-info {
     margin-bottom: 2rem;
 }
 
 .paying-info h2,
 .summary h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
     margin-bottom: 1rem;
 }
 
@@ -224,8 +241,8 @@ body {
 
 /* Botón */
 .btn {
-    background-color: #007bff; /* Fondo azul */
-    color: #fff;
+    background-color: #007bff; 
+    color: var(--bs-white-og);
     font-size: 1rem;
     font-weight: 500;
     border: none;
@@ -235,14 +252,14 @@ body {
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #0056b3; 
 }
 
 .btn-custom {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 2rem;
+    color: var(--bs-white-og);
+    font-size: 1rem;
     line-height: 1;
     padding: 0 0.5rem;
     cursor: pointer;
@@ -252,36 +269,75 @@ body {
     box-shadow: none;
 }
 .btn-custom:hover {
-    color: #2f00ff; /* Efecto hover para los botones */
+    color: var(--bs-blue-lm); 
 }
 #quantity {
-    font-size: 1.5rem;
-    color: #fff;
+    font-size: 1rem;
+    color: var(--bs-white-og);
     padding: 0 1rem;
 }
 
-/* Zona de contenido del modal */
+.btn-square {
+    border: 1px solid var(--bs-blue-lm) !important; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    text-align: center; 
+    display: inline-block; 
+}
+
+.btn-square:hover {
+    background: var(--bs-blue-lm); 
+}
+
+/* MODAL */
+.modal-header {
+    position: relative; /* Permite ajustes dentro del header */
+}
+
+.modal-title {
+    display: flex;
+    flex-direction: column; /* Asegura que el título y subtítulo estén en columna */
+    align-items: flex-start; /* Alinea ambos al lado izquierdo */
+    padding-left: 1rem;
+}
+
+.text-title-modal {
+    font-size: 3rem; /* Ajusta según tus necesidades */
+    color: var(--bs-white);
+}
+
+.text-subtitle-modal {
+    font-size: 1rem; /* Ajusta según tus necesidades */
+    color: var(--bs-gray-300);
+}
+
 .modal-body {
-    font-family: "Roboto", sans-serif; /* Fuente del cuerpo */
+    font-family: "Roboto", sans-serif; 
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
 .ticket-info {
-    opacity: 0; /* Invisible inicialmente */
+    opacity: 0; 
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transición para aparecer */
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
     width: 100%;
     margin-top: 6rem;
     text-align: left;
-    padding-left: 4%; /* Alineación igual que el texto inicial */
-    padding-right: 4%; /* Alineación igual que el texto inicial */
+    padding-left: 4%; 
+    padding-right: 4%; 
+}
+
+.vertical-custom {
+    border-right: 1px solid var(--bs-blue-lm); 
+    padding-right: 1rem;
+    height: 100%; 
 }
 
 /* Aparece la sección de ticket-info al hacer hover */
 .modal-body:hover .ticket-info {
     opacity: 1;
-    visibility: visible; /* Aparece al hacer hover */
+    visibility: visible; 
 }
 
 /* Estilo adicional de la información */
@@ -298,8 +354,37 @@ body {
 .div-info p {
     margin: 0;
     font-size: 0.9rem;
-    color: #ccc; /* Texto más claro */
+    color: var(--bs-white-og); 
 }
+
+#pay-button {
+    background: none; 
+    border: 1px solid var(--bs-blue-lm); 
+    border-radius: 0; 
+    color: var(--bs-white-og); 
+    font-size: 1rem; 
+    font-family: var(--bs-font-title);
+    text-transform: uppercase; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: 100%; 
+    text-align: center; 
+    display: inline-block; 
+  }
+  
+  #pay-button:hover {
+    background: var(--bs-blue-lm); ; 
+    color: var(--bs-white-og); 
+  }
+
+  .download {
+    color: var(--bs-white-og);
+    font-size: 0.8rem; 
+    font-family: var(--bs-font-title);
+    padding-top: 1.1rem;
+  }
+  
 
 /* Footer */
 #logo-footer {
