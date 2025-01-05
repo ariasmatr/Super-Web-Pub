@@ -79,10 +79,6 @@ section {
     padding-bottom: 2em;
 }
 
-.carousel-item img {
-    max-height: 80vh;
-    object-fit: contain;
-  }
   
 /* EVENT 2 SECTION */
 
