@@ -1,14 +1,14 @@
 console.log("me mato, cosorro");
 
-/* LIGHT/DARK MODE */
-document.getElementById('switchMode').addEventListener('click',()=>{
-    if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
-        document.documentElement.setAttribute('data-bs-theme','light');
-    }
-    else {
-        document.documentElement.setAttribute('data-bs-theme','dark');
-    }
-  });
   console.log("necesito ayuda");
 
- 
+  document.querySelectorAll('.img-gallery-1').forEach((img) => {
+    img.addEventListener('click', function () {
+      const slideTo = this.getAttribute('data-slide-to');
+      const carousel = document.querySelector('#carouselExampleIndicators');
+      const carouselInstance = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+      carouselInstance.to(slideTo);
+    });
+  });
+  
+
