@@ -39,15 +39,15 @@ h4 {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 5em !important;
 }
 
 h2 {
-    font-size: 4.5em;
+    font-size: 4.5em !important;
 }
 
 h3 {
-    font-size: 3.5em;
+    font-size: 3.5em !important;
 }
 
 p {
@@ -74,6 +74,10 @@ section {
     padding: 0 1px;
     padding-bottom: 2em;
   }
+
+.img-gallery-1  img {
+    padding-bottom: 2em;
+}
 
 .img-gallery  img {
     padding-bottom: 2em;
