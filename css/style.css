@@ -83,6 +83,36 @@ section {
 
 /* RESERVATION SECTION */
 
+/* MENU TITLE SECTION */
+
+.home-reservations-header {
+    background-color: var(--bs-blue-lm);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+}
+
+#home-reservations-button {
+    background: none; 
+    border: 1px solid var(--bs-white-og); 
+    border-radius: 0; 
+    color: var(--bs-white-og); 
+    font-family: var(--bs-font-title);
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: 100%; 
+    text-align: center; 
+    display: inline-block; 
+  }
+  
+  #home-reservations-button:hover {
+    background: var(--bs-white-og); 
+    border: 1px solid var(--bs-white-og); 
+    color: var(--bs-blue-lm); 
+  }
+
 /* FOOTER */
 #logo-footer {
     width: 30%;
