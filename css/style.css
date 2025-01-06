@@ -109,81 +109,105 @@ section {
 #home-news-button:hover {
     background: var(--bs-blue-lm); 
     border: 1px solid var(--bs-blue-lm); 
-    color: (--bs-white-og); 
+    color: var(--bs-white-og); 
   }
 
 
-#home-news-images {
+
+
+  #home-news-images {
     display: flex;
-    gap: 16px;
+    margin: 0; 
+    padding: 0; 
   }
   
   .box {
-    position: relative; /* Necesario para posicionar el texto dentro de las cajas */
-    flex: 100% 1 1;
-    border-radius: 8px;
+    position: relative;
+    flex: 1 1 100%; 
+    border-radius: 0px;
     overflow: hidden;
-    border: 1px solid black;
+    border: none;
     transition: all 500ms ease;
-  }
-  
-  .box h1 {
-    text-align: center;
-    margin: 16px 8px;
-    white-space: nowrap;
+    height: 500px; 
   }
   
   .box img {
     display: block;
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; 
   }
   
-  .box.box_1 {
-    flex-basis: 300%;
+  /* Información sobre la imagen que solo se muestra cuando se hace hover */
+  .text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1; 
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s 0.3s; 
   }
   
   /* Efectos al hacer hover en las cajas */
   .box:hover {
     cursor: pointer;
-    flex-basis: 300%;
+    flex: 1 1 300%; 
+    height: 500px; 
+  }
+
+  /* Añadir el fondo degradado al contenedor de la imagen */
+.box:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    z-index: 0; 
   }
   
-  /* Cambio en el comportamiento cuando una caja que no es .box_1 está en hover */
-  main:has(.box:hover:not(.box_1)) .box.box_1 {
-    flex-basis: 100%;
+  /* Mostrar la información al hacer hover sobre la caja */
+  .box:hover .text-overlay {
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 0.3s ease, visibility 0s 0s; 
+  }
+
+  #home-newscard-button {
+    background: none; 
+    border: 1px solid var(--bs-white-og); 
+    border-radius: 0; 
+    color: var(--bs-white-og); 
+    font-family: var(--bs-font-title);
+    cursor: pointer; 
+    transition: all 0.3s ease;  
+    text-align: center; 
+    display: inline-block; 
   }
   
-  /* Responsividad en pantallas pequeñas */
+#home-newscard-button:hover {
+    background: var(--bs-white-og); 
+    border: 1px solid var(--bs-white-og); 
+    color: var(--bs-blue-lm); 
+  }
+
+  
   @media (max-width: 600px) {
-    main {
-      flex-direction: column;
-      height: 600px;
+    #home-news-images {
+      flex-direction: column; 
     }
   }
-  
-  .text-overlay {
-    position: absolute;
-    top: 50%; /* Coloca el texto verticalmente centrado */
-    left: 50%; /* Coloca el texto horizontalmente centrado */
-    transform: translate(-50%, -50%); /* Centra el texto de forma exacta */
-    color: white;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    z-index: 1; /* Asegura que el texto esté encima de la imagen */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para que el texto sea legible */
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-
-
-
-
-
 
 
 
