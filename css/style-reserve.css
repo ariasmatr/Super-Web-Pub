@@ -426,7 +426,7 @@ body {
     font-size: 0.9em !important;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .modal-info .modal-dialog {
         margin: 1rem;
