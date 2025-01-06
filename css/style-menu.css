@@ -129,6 +129,19 @@ section {
     font-family: var(--bs-font-title);
 }
 
+.card-menu {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.food p {
+    font-size: 0.9em;
+}
+
+.price h4 {
+    margin-bottom: 0 !important;
+}
+
 /* FOOTER */
 #logo-footer {
     width: 30%;
