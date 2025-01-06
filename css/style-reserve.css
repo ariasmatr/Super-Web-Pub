@@ -57,6 +57,13 @@ body {
     color: var(--bs-blue-lm);
     font-size: 5rem;
 }
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 60%; 
+    overflow: clip;
+    transition:  0.5s ease;
+}
 
 /* Expande el contenedor al hacer hover */
 .image-container:hover {
