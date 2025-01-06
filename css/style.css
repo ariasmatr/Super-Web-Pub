@@ -127,7 +127,7 @@ section {
 }
 
 .home-reservations-image-background {
-    background-image: url('media/img/home/home-17.webp'); 
+    background-image: url('../media/img/home/home-17.webp'); 
     background-size: cover; 
     background-position: center; 
     width: 100%; 
