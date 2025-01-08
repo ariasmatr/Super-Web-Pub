@@ -11,5 +11,3 @@ document.getElementById('switchMode').addEventListener('click',()=>{
   });
 
 
- 
-  
