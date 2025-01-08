@@ -77,47 +77,54 @@ section {
 
 /* REVIEWS SECTION */
 
-
-/* DIVIDER 2 SECTION */
-
-#text-carousel {
-    width: 100%;
-    position: relative;
+/* Sección principal de Reviews */
+#home-reviews {
+    padding: 5%;
     text-align: center;
 }
 
-.carousel-item {
-    display: none;
-    padding: 20px;
+/* Contenedor de las reviews y los puntos */
+.project-page-reviews {
+    max-width: 900px;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px 0;
+}
+
+/* Texto del carousel */
+.carousel-item h1 {
+    font-size: 1.8em;
+    color: var(--bs-blue-lm);
+    margin-bottom: 10px;
+}
+
+.carousel-item h3 {
     font-size: 1.2em;
-    color: #555;
 }
 
-.carousel-item.active {
-    display: block;
-}
-
-/* Estilos de los puntos */
+/* Puntos indicadores */
 #circles {
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 18%;
+    gap: 10px;
 }
 
 #circles div {
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: 12px;
+    width: 12px;
     background-color: #bbb;
-    margin: 0 5px;
     border-radius: 50%;
     cursor: pointer;
 }
 
 #circles div.active {
-    background-color: #717171;
+    background-color: var(--bs-blue-lm);
 }
 
 
+
+/* DIVIDER 2 SECTION */
 
 .parent {
 	width: 100%;
@@ -148,9 +155,6 @@ section {
     position: absolute; /* Permite posicionar el elemento con top, left */
     padding-left: 35%;
 }
-
-
-
 
 .project-image-hero {
 	grid-area: 4 / 1 / 8 / 13; 
