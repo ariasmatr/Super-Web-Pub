@@ -58,8 +58,46 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
      .btn-modal (este es solo para la modal, el que dice PAGAR)
      .btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
     -->
+
+    <nav class="w-100 d-flex">
+        <div id="menuWindow" class="position-absolute d-flex flex-column w-100 h-100 justify-content-center align-items-center menuHidden">
+            <ul class="d-flex w-100 vh-100 flex-column ps-0 justify-content-around py-5 mt-5 mb-0">
+                <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">Home</h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">History</h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">About us</h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">Menu</h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">Events</h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">News</h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">Reservation</h1></li>
+            </ul>
+        </div>
+
+        <i id="switchMode" class="position-absolute top-0 end-0 mt-2 bi-brightness-low-fill fs-3"></i>
+
+        <div id="navButton" class="p-4 position-absolute top-0 end-0 mt-1 d-flex">
+            <label class="toggle">
+                <input type="checkbox">
+                <div>
+                    <div>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <svg>
+                        <use xlink:href="#path">
+                    </svg>
+                    <svg>
+                        <use xlink:href="#path">
+                    </svg>
+                </div>
+            </label>   
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+                    <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+                </symbol>
+            </svg>
+        </div>
+    </nav>
     
-    <button id="switchMode" type="button" class="btn btn-fill-lm">Light/Dark theme</button>
 
     <!-- JQUERY -->
     <script src="./libs/jquery.js"></script>
