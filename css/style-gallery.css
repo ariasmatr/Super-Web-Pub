@@ -127,3 +127,24 @@ section {
 /* FOOTER */
 
 /* MEDIA QUERIES */
+@media (max-width: 991px) {
+    .masonry-column:nth-child(3) {
+      display: none;
+    }
+
+    .carousel-item img {
+        max-width: 100%; 
+        max-height: 90vh;  
+      }
+    
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        padding: 1em;
+      }
+    
+      .nyear {
+        padding: 1em;
+      }
+  }
+
+  
