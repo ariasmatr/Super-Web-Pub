@@ -21,6 +21,12 @@
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+<!-- Incluyendo jQuery desde CDN -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Conexión a tu archivo script.js -->
+<script src="js/script.js"></script>  <!-- Cambia "js/script.js" por la ruta correcta -->
+
 
     <!-- lOCOMOTION -->
     <link href="
@@ -71,16 +77,24 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
 <!-- Divider 2 Section -->
 <section id="divider2section" class="divider2section"> <div class="parent project-page-parent" style="display: grid;">
-    <div class="project-page-title">
-      <h1>Buckminster Gliding Club Visual Identaty & Branding</h1>
-      <h3>Skills used; Photoshop, Illustrator, Typography, Logo Design, Branding, Packaging Concepts.</h3>
-    </div>
-    <div class="dot-box" style="grid-area: 2 / 2 / 4 / 8; z-index: 3"></div>
+        <div class="project-page-title text-center">
+            <div class="text-carousel">
+                <div class="carousel-item active">Texto 1: Bienvenido a mi web</div>
+                <div class="carousel-item">Texto 2: Diseño moderno y creativo</div>
+                <div class="carousel-item">Texto 3: Soluciones innovadoras para ti</div>
+            </div>
+            <div id="logo-image" class="logo-image">
+                <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
+                <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
+            </div>
+        </div>
+   
 
 
     <div class="project-image-hero">
       <img src="media/img/home/home-12.webp">
     </div>
+      
   </div>
 </section>
 
@@ -221,8 +235,10 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script src="./js/script.js"></script>
 
     <!-- LOCOMOTIVE -->
-    <script src="
-https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
-"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+
 </body>
 </html>

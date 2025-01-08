@@ -80,9 +80,11 @@ section {
 
 /* DIVIDER 2 SECTION */
 
+
+
 .parent {
 	width: 100%;
-    height: 30%;
+    height: 50%;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(6, 1fr);
@@ -102,7 +104,17 @@ section {
 	top: 140px;
 	padding: 0px;
 	z-index: 1;
+    
 }
+
+.logo-image {
+    position: absolute; /* Permite posicionar el elemento con top, left */
+    padding-left: 35%;
+}
+
+
+
+
 .project-image-hero {
 	grid-area: 4 / 1 / 8 / 13; 
 	background-size: cover;
