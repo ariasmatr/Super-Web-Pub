@@ -80,6 +80,43 @@ section {
 
 /* DIVIDER 2 SECTION */
 
+#text-carousel {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-item {
+    display: none;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Estilos de los puntos */
+#circles {
+    text-align: center;
+    padding: 10px;
+}
+
+#circles div {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#circles div.active {
+    background-color: #717171;
+}
+
 
 
 .parent {
