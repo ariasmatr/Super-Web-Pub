@@ -3099,27 +3099,38 @@ textarea.form-control-lg {
 .btn-fill-lm {
   --bs-text-opacity: 1;
   --bs-bg-opacity: 1;
-  border-color: rgba(var(--bs-blue-lm-rgb), var(--bs-text-opacity)) !important;
+  border: 1.5px solid rgba(var(--bs-blue-lm-rgb), var(--bs-text-opacity)) !important;
   color: rgba(var(--bs-blue-lm-rgb), var(--bs-text-opacity)) !important;
-  background-color: rgba(var(--bs-bg-white-lm-rgb), var(--bs-bg-opacity)) !important;
+  background-color: transparent !important;
   font-family: var(--bs-font-body) !important;
   border-radius: 0;
-  padding: 0.7em;
-  width: 170px;
-  border-width: 2px;
+  padding: 0.9em;
+  width: 200px;
+}
+
+.btn-fill-lm:hover {
+  background-color: rgba(var(--bs-blue-lm-rgb), var(--bs-bg-opacity)) !important;
+  color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
+  transition: all 0.6s ease;
 }
 
 .btn-modal {
   --bs-text-opacity: 1;
   --bs-bg-opacity: 1;
-  border-color: rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
+  border: 1.5px solid rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
   color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
-  background-color: rgba(var(--bs-black-og-rgb), var(--bs-bg-opacity)) !important;
+  background-color: transparent !important;
   font-family: var(--bs-font-title) !important;
   border-radius: 0;
-  padding: 0.7em;
-  width: 170px;
-  border-width: 2px;
+  padding: 0.9em;
+  width: 200px;
+}
+
+.btn-modal:hover {
+  background-color: rgba(var(--bs-white-og-rgb), var(--bs-bg-opacity)) !important;
+  border-color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-darkblue-og-rgb), var(--bs-text-opacity)) !important;
+  transition: all 0.6s ease;
 }
 
 .btn-outline-blue {
@@ -3134,6 +3145,12 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn-outline-blue:hover {
+  background-color: rgba(var(--bs-lightblue-og-rgb), var(--bs-bg-opacity)) !important;
+  color: rgba(var(--bs-black-og-rgb), var(--bs-text-opacity)) !important;
+  transition: all 0.6s ease;
 }
 
 .btn-primary {
