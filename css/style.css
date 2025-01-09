@@ -128,7 +128,7 @@ header {
 }
 
 .image-h {
-    width: 90%;
+    width: 100%;
     margin-bottom: 4em;
 }
 
@@ -136,7 +136,69 @@ header {
 
 /* DRINKS SECTION */
 #popular {
-    margin-bottom: 6em;
+    margin: 5em 0;
+}
+
+.cont-pop {
+    width: 100%;
+    padding: 0 2em;
+}
+
+.cont-pop .category {
+    width: 100%;
+    padding: 0.125em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 3.5em;
+    border-top: 1.5px solid var(--bs-blue-lm);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-pop {
+    width: 125px;
+    height: 80px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
+    flex: 0;
+}
+
+.img-pop img {
+    width: 125px;
+    height: auto;
+    object-fit: cover;
+    vertical-align: unset !important;
+}
+
+.category:hover {
+    gap: 20px;
+}
+
+.category:hover .img-pop {
+    flex: 0.15;
+}
+
+.category-6 {
+    border-bottom: 1.5px solid var(--bs-blue-lm);
+}
+
+.word {
+    font-family: var(--bs-font-title);
+}
+
+.card-pop {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.food-pop p {
+    font-size: 0.9em;
+}
+
+.price-pop h4 {
+    margin-bottom: 0 !important;
 }
 
 /* EVENTS SECTION */ 
@@ -180,16 +242,12 @@ header {
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
   }
   
-  .event-info h5 {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: var(--bs-font-title);
+  .event-info h4 {
+    font-size: 1.5em;
   }
   
   .event-info p {
-    margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.9em;
   }
   
 /* REVIEWS SECTION */
