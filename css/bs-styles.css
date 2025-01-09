@@ -3124,13 +3124,16 @@ textarea.form-control-lg {
 
 .btn-outline-blue {
   --bs-text-opacity: 1;
-  border-color: rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
+  border: 1.5px solid rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
   color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
   background-color: transparent !important;
   border-radius: 0;
-  border-width: 2px;
   padding: 0.7em;
-  width: 50px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-primary {
