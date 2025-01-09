@@ -219,6 +219,12 @@ section {
 
 .animate{
     animation: list-show .4s 1 ease-out;
+    z-index: 999;
+}
+
+.menuOption{
+    position: relative;
+    z-index: 999;
 }
 
   @keyframes list-show {
@@ -250,7 +256,6 @@ section {
     color: var(--bs-blue-lm);
     transition: 0.1s ease-in;
 }
-
 
  /* LOADING SCREEN */
 

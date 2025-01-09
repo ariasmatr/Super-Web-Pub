@@ -76,6 +76,7 @@
         function startLoader() {
             let counterElement = document.querySelector(".count p");
             let currentValue = 0;
+    
             function updateCounter() {
                 if (currentValue < 100) {
                     let increment = Math.floor(Math.random() * 10) + 1;
@@ -88,14 +89,22 @@
             }
             updateCounter();
         }
+    
+        // Restablecer estilos antes de iniciar animaciones
         gsap.set(".count", { opacity: 1 });
-        gsap.set(".pre-loader", { scale: 1 });
+        gsap.set(".pre-loader", { scale: 1, display: "block" });
         gsap.set(".loader", { height: "100%" });
         gsap.set(".loader-bg", { height: "100%" });
+    
+        // Iniciar el contador
         startLoader();
+    
+        // Animaciones de salida
         gsap.to(".count", { opacity: 0, delay: 3.5, duration: 0.25 });
+    
         let textWrapper = document.querySelector('.ml16');
         textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
         anime.timeline({ loop: false })
             .add({
                 targets: '.ml16 .letter',
@@ -111,31 +120,40 @@
                 duration: 3000,
                 delay: (el, i) => 2000 + 30 * i
             });
+    
         gsap.to(".count", {
             opacity: 0,
             ease: "power2.inOut",
             duration: 0.5,
             delay: 3.75,
         });
+    
         gsap.to(".pre-loader", {
             scale: 0.5,
             ease: "power4.inOut",
             duration: 2,
             delay: 3,
         });
+    
         gsap.to(".loader", {
             height: "0",
             ease: "power4.inOut",
             duration: 1.5,
             delay: 3.75,
         });
+    
         gsap.to(".loader-bg", {
             height: "0",
             ease: "power4.inOut",
             duration: 1.5,
             delay: 4,
         });
-
+    
+        // Al final de todas las animaciones, ocultar .pre-loader
+        gsap.to(".pre-loader", {
+            display: "none",
+            delay: 4.5, // Ajustar el delay para que ocurra después de que las animaciones hayan terminado
+        });
     }
 
     
