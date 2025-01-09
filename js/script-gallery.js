@@ -2,6 +2,7 @@ console.log("me mato, cosorro");
 
   console.log("necesito ayuda");
 
+  AOS.init();
 
   /* LOADER SCREEN */
 function loadingScreen() {
