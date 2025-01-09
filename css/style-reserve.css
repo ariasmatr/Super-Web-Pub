@@ -10,12 +10,8 @@
     src: url(../types/Bosch-Display.otf) format("opentype");
 }
 
-img {
-    width: 100%;
-    vertical-align: middle;
-}
+/* VARIABLES COLOR & ESTILO WEB
 
-:root {
     --bs-bg-white-lm: #fffaf8;
     --bs-black-lm: #1f2222;
     --bs-blue-lm: #077488;
@@ -26,18 +22,31 @@ img {
     --bs-yellow-og: #faae45;
     --bs-font-title: 'Bosch-display';
     --bs-font-body: "Roboto", serif;
+*/
+
+img {
+    width: 100%;
+    vertical-align: middle;
 }
-  
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
     font-family: var(--bs-font-title);
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 5em !important;
+}
+
+h2 {
+    font-size: 4.5em !important;
+}
+
+h3 {
+    font-size: 3.5em !important;
 }
 
 p {
@@ -49,14 +58,17 @@ body {
     background-color: var(--bs-bg-white-lm) !important;
 }
 
+section {
+    margin: 0 auto;
+}
+
+/* HEADER */
+
 #reservations {
     padding: 20%;
 }
 
-.reservationstitle {
-    color: var(--bs-blue-lm);
-    font-size: 5rem;
-}
+/* EVENTOS */
 .image-container {
     position: relative;
     width: 100%;
@@ -65,15 +77,13 @@ body {
     transition:  0.5s ease;
 }
 
-/* Expande el contenedor al hacer hover */
 .image-container:hover {
     height: 500px;
 }
 
-/* Contenedor de las imágenes */
 #reservationscards .reservationimages .container-fluid .row {
     display: flex;
-    gap: 0; /* Eliminar espacio entre las imágenes */
+    gap: 0;
     padding: 0;
     overflow: hidden;
 }
@@ -84,7 +94,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%); /* Degradado de transparente a negro */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%); 
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -93,15 +103,6 @@ body {
     transition: justify-content 0.5s ease;
 }
 
-.text-title {
-    color: var(--bs-blue-lm);
-}
-
-.text-subtitle {
-    color: var(--bs-white-og);
-}
-
-/* Mantener el título y párrafo en una posición fija */
 .text-content {
     position: absolute; 
     top: 3.5rem; 
@@ -112,7 +113,6 @@ body {
     transition: opacity 0.5s ease; 
 }
 
-/* Mantén el texto visible siempre */
 .image-container:hover .text-content {
     opacity: 1;
     visibility: visible;
@@ -130,52 +130,25 @@ body {
     padding-right: 4%; 
 }
 
-/* Aparece la sección de ticket-info al hacer hover */
 .image-container:hover .ticket-info {
     opacity: 1;
     visibility: visible; 
 }
 
-.ticket-info h2 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
 .ticket-info .horizontal-line {
-    border-top: 1px solid var(--bs-blue-lm);
-    margin: 10px 0;
+    border-top: 1px solid var(--bs-lightblue-og);
+    margin: 15px 0;
 }
 
 .ticket-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .ticket-details p {
     margin: 0;
-    font-size: 0.9rem;
-}
-
-.ticket-details .price-and-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-}
-
-.ticket-details .price {
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.ticket-details .btn-square {
-    border: 1px solid var(--bs-white-og);
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0; 
 }
 
 .footer-info {
@@ -198,37 +171,10 @@ body {
 /* Modal */
 .modal-info {
     border-radius: 0 !important;
-    background-color: #000; 
-    color: var(--bs-white-og); 
-}
-
-/* Estilo de la cabecera del modal */
-.modal-info .modal-header {
-    border-bottom: 1px solid #444; 
-    padding-bottom: 1rem;
-}
-
-.modal-info .modal-title {
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-/* Botón de cierre del modal */
-.modal-info .btn-close {
-    background-color: transparent; 
-    border: none; 
-    color: var(--bs-white-og) !important; 
-    border: none;
-    opacity: 1; 
-}
-
-.modal-info .btn-close:hover {
-    background-color: #666; 
 }
 
 .horizontal-line {
-    border-top: 1px solid var(--bs-blue-lm); 
+    border-top: 1px solid var(--bs-lightblue-og); 
     margin: 15px 0; 
 }
 
@@ -236,41 +182,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.paying-info h2,
-.summary h2 {
-    margin-bottom: 1rem;
-}
-
-/* Detalles del Ticket */
-.ticket-details {
-    margin-bottom: 1rem;
-}
-
-.ticket-details p {
-    font-size: 1rem;
-}
-
-.price-and-btn .price {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
 /* Botón */
-.btn {
-    background-color: #007bff; 
-    color: var(--bs-white-og);
-    font-size: 1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 4px;
-    padding: 0.8rem;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: var(--bs-blue-lm); 
-}
-
 .btn-custom {
     background: none;
     border: none;
@@ -293,70 +205,37 @@ body {
     padding: 0 1rem;
 }
 
-.btn-square {
-    border: 1px solid var(--bs-blue-lm) !important; 
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    text-align: center; 
-    display: inline-block; 
-}
-
-.btn-square:hover {
-    background: var(--bs-blue-lm); 
-}
-
 /* MODAL */
+.modal-info {
+    border-radius: 0 !important;
+}
+
+.horizontal-line {
+    border-top: 1px solid var(--bs-lightblue-og); 
+    margin: 15px 0; 
+}
+
+.paying-info {
+    margin-bottom: 2rem;
+}
+
 .modal-header {
-    position: relative; /* Permite ajustes dentro del header */
+    position: relative; 
 }
 
 .modal-title {
     display: flex;
-    flex-direction: column; /* Asegura que el título y subtítulo estén en columna */
-    align-items: flex-start; /* Alinea ambos al lado izquierdo */
+    flex-direction: column; 
+    align-items: flex-start; 
     padding-left: 1rem;
 }
 
-.text-title-modal {
-    font-size: 3rem; /* Ajusta según tus necesidades */
-    color: var(--bs-white);
-}
-
-.text-subtitle-modal {
-    font-size: 1rem; /* Ajusta según tus necesidades */
-    color: var(--bs-gray-300);
-}
-
-.modal-body {
-    font-family: "Roboto", sans-serif; 
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.ticket-info {
-    opacity: 0; 
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease; 
-    width: 100%;
-    margin-top: 6rem;
-    text-align: left;
-    padding-left: 4%; 
-    padding-right: 4%; 
-}
-
 .vertical-custom {
-    border-right: 1px solid var(--bs-blue-lm); 
+    border-right: 1px solid var(--bs-lightblue-og); 
     padding-right: 1rem;
     height: 100%; 
 }
 
-/* Aparece la sección de ticket-info al hacer hover */
-.modal-body:hover .ticket-info {
-    opacity: 1;
-    visibility: visible; 
-}
-
-/* Estilo adicional de la información */
 .div-info {
     margin-bottom: 1.5rem;
 }
@@ -373,74 +252,11 @@ body {
     color: var(--bs-white-og); 
 }
 
-#pay-button {
-    background: none; 
-    border: 1px solid var(--bs-blue-lm); 
-    border-radius: 0; 
-    color: var(--bs-white-og); 
-    font-size: 1rem; 
-    font-family: var(--bs-font-title);
-    text-transform: uppercase; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-    transition: all 0.3s ease; 
-    width: 100%; 
-    text-align: center; 
-    display: inline-block; 
-  }
-  
-  #pay-button:hover {
-    background: var(--bs-blue-lm); ; 
-    color: var(--bs-white-og); 
-  }
-
-  .download {
+.download {
     color: var(--bs-white-og);
     font-size: 0.8rem; 
     font-family: var(--bs-font-title);
     padding-top: 1.1rem;
-  }
-  
-
-/* Footer */
-#logo-footer {
-    width: 30%;
-}
-
-.divider-footer {
-    height: 2px;
-}
-
-.form-info {
-    background-color: transparent !important;
-    border: solid 1.5px var(--bs-lightblue-og) !important;
-    border-radius: 0 !important;
-    color: var(--bs-white-og) !important;
-    font-size: 0.9em !important;
-}
-
-.form-info::placeholder {
-    color: var(--bs-white-og) !important;
-    opacity: 0.8 !important;
-    font-family: var(--bs-font-body) !important;
-    font-size: 0.9em !important;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .modal-info .modal-dialog {
-        margin: 1rem;
-    }
-
-    .modal-info .col-8, .modal-info .col-4 {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .modal-info .col-4 {
-        margin-top: 1rem;
-    }
 }
 
 
@@ -501,4 +317,22 @@ body {
 
 .btn-close {
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fffaf8' %3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .modal-info .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-info .col-8, .modal-info .col-4 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .modal-info .col-4 {
+        margin-top: 1rem;
+    }
 }
