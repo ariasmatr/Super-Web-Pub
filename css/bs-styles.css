@@ -3104,8 +3104,8 @@ textarea.form-control-lg {
   background-color: transparent !important;
   font-family: var(--bs-font-body) !important;
   border-radius: 0;
-  padding: 0.7em;
-  width: 170px;
+  padding: 0.9em;
+  width: 200px;
   border-width: 2px;
 }
 
@@ -3123,8 +3123,8 @@ textarea.form-control-lg {
   background-color: transparent !important;
   font-family: var(--bs-font-title) !important;
   border-radius: 0;
-  padding: 0.7em;
-  width: 170px;
+  padding: 0.9em;
+  width: 200px;
   border-width: 2px;
 }
 
