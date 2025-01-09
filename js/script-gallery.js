@@ -96,6 +96,7 @@ function getInitialTheme() {
   }
   return 'light';
 }
+
 function updateIcon(theme) {
   const switchModeIcon = document.getElementById('switchMode');
   if (theme === 'dark') {
@@ -105,22 +106,33 @@ function updateIcon(theme) {
       switchModeIcon.classList.remove('bi-moon-fill','fs-4');
       switchModeIcon.classList.add('bi-brightness-low-fill','fs-3');
   }
+  updateLogoSrc(theme); // Llama a la función para actualizar la imagen del logo
 }
+
+function updateLogoSrc(theme) {
+  const logoImage = document.querySelector('img.position-fixed');
+  if (theme === 'dark') {
+      logoImage.src = './media/img/logos/resp-skyblue.png'; // Ruta del logo para tema oscuro
+  } else {
+      logoImage.src = './media/img/logos/resp-blue.png'; // Ruta del logo para tema claro
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const initialTheme = getInitialTheme();
   document.documentElement.setAttribute('data-bs-theme', initialTheme);
   updateIcon(initialTheme);
-  loadingScreen()
+  loadingScreen();
 });
+
 document.getElementById('switchMode').addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-bs-theme');
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-bs-theme', newTheme);
   localStorage.setItem('data-bs-theme', newTheme);
   updateIcon(newTheme);
-  loadingScreen()
+  loadingScreen();
 });
-
 
 /* NAV BUTTON */
 let menuOpener = document.getElementById('navButton');
