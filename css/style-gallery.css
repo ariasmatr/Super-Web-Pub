@@ -81,7 +81,7 @@ section {
 }
 
 .img-gallery-1  img:hover {
-  transform: scale(1.04); 
+  transform: scale(1.03); 
 }
 
 /* MODAL NEW YEAR */
@@ -126,7 +126,7 @@ section {
 }
 
 .img-gallery-2  img:hover {
-  transform: scale(1.04); 
+  transform: scale(1.03); 
 }
 
 /* EVENT 3 SECTION */
@@ -136,7 +136,7 @@ section {
 }
 
 .img-gallery-3  img:hover {
-  transform: scale(1.04); 
+  transform: scale(1.03); 
 }
 
 /* FOOTER */
