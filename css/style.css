@@ -471,3 +471,136 @@ section {
 }
 
 /* MEDIA QUERIES */
+
+/* Estilos específicos para pantallas mayores a 1600px */
+
+
+/* Estilos para pantallas menores a 800px */
+@media (max-width: 900px) {
+    #home-reviews {
+        padding-top: 15%;
+        padding-bottom: 15%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+
+    #circles {
+        padding-top: 26%;
+    }
+
+    .home-news-header {
+        height: 32em;
+    }
+
+    .home-reservations-header {
+
+        height: 32em;
+    }
+}
+
+/* Estilos para pantallas menores a 800px */
+@media (max-width: 700px) {
+    #home-reviews {
+        padding-top: 15%;
+        padding-bottom: 15%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+
+    #circles {
+        padding-top: 30%;
+    }
+
+    .home-news-header {
+        height: 32em;
+    }
+
+    .home-reservations-header {
+
+        height: 32em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+
+    .text-white-og {
+        font-size: 1.8rem;
+    }
+
+    #home-reviews {
+        padding-top: 30%;
+        padding-top: 30%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+    #circles {
+        padding-top: 40%;
+    }
+
+    .home-news-header {
+        height: 40em;
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .div-info {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #home-cargodivider {
+        padding-top: 75%;
+        padding-bottom: 75%;
+    }
+
+    .text-white-og {
+        font-size: 1.2rem;
+    }
+
+    #home-reviews {
+        padding-top: 48%;
+        padding-bottom: 48%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+    #circles {
+        padding-top: 75%;
+    }
+
+    .home-news-header {
+        height: 40em;
+    }
+
+    .box img {
+        display: block;
+        width: 140%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .div-info {
+        font-size: 0.6rem;
+    }
+
+}
