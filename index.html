@@ -21,10 +21,393 @@
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- lOCOMOTION -->
+    <link href="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+" rel="stylesheet">
+
+<!-- JS SCROLL -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
-<body class="bg-white-lm">
-    <!-- VARIABLES COLORES
+<body data-scroll-container>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- VARIABLES COLORES
      Hellooo, aquí les dejo las variables de los colores si quieren ponerlos desde el html. Los que empiezan por .text son los que afectan la propiedad 'color' y los que empiezan por .bg son los que afectan la propiedad 'background-color':
 
      COLORES QUE CAMBIAN LIGH/DARK MODE:
@@ -52,360 +435,198 @@
      .btn-modal (este es solo para la modal, el que dice PAGAR)
      .btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
     -->
+    
+    <button id="switchMode" type="button" class="btn btn-fill-lm">Light/Dark theme</button>
 
-    <div class="bg-video">
-      <video src="media/video/videowebpub.webm" type="video/mp4" loop autoplay muted></video>
+<!-- DIVIDER/LINK TO CARGO SECTION -->
+<section id="home-cargodivider">
+                    <div class="home-cargo d-flex flex-column align-items-center justify-content-center">
+                        <div class="cargo-text d-flex flex-column justify-content-center align-items-center">
+                            <h1 class="text-white-og">By day, a sophisticated haven.<br>By night, the epicenter of entertainment.</h1>
+                            <button id="home-cargo-button" class="btn btn-primary mt-3" onclick="location.href=''">Learn more</button> <!-- LINK A CARGO -->
+                        </div>
+                        </div>
+</section>
+
+
+
+<!-- Reviews -->
+<section id="home-reviews">
+    <div class="project-page-reviews text-center">
+        <div class="carousel-group">
+            <div id="text-carousel">
+                <div class="carousel-item active">
+                    <h1>"The trendiest spot in the capital, with international artists and offers the best cocktails in the city."</h1>
+                    <h2>- Vogue Magazine</h2>
+                </div>
+                <div class="carousel-item">
+                    <h1>"The design of the place captures the heart of the city: elegant but fun."</h1>
+                    <h2>- Architectural Digest</h2>
+                </div>
+                <div class="carousel-item">
+                    <h1>"The perfect place for a drink and to have the best night of your life."</h1>
+                    <h2>- Harpers Bazaar</h2>
+                </div>
+            </div>
+            
+            <!-- Puntos indicadores -->
+            <div id="circles">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </div>
 
-    <header>
-
-    </header>
-
-    <section id="intro">
-        <div class="container py-4">
-            <div class="row d-flex justify-content-start">
-                <div class="col-1 text-left d-flex justify-content-end" style="margin-top: 5em;">
-                  <h4 class="fs-3 me-2 text-black-lm">Since <br> 1989</h4>
-                </div>
-                <div class="col-4 text-left">
-                    <h4 class="fs-3 mb-3 text-black-lm">Salamanca, <br> Madrid</h4>
-                  <div class="image-container-1">
-                    <img src="media/img/home/home-1.webp" alt="cocktail" class="img-fluid">
-                  </div>
-                </div>
-                <div class="col-6 text-center general-cont">
-                  <div class="image-container">
-                    <img src="media/img/home/home-2.webp" alt="booth" class="img-fluid">
-                  </div>
-                  <div class="logo-container">
-                    <img src="media/img/logos/logo-blue.png" alt="logo-blue">
-                  </div>
-                </div>
-              </div>
-        </div>
-    </section>
-
-    <section id="history">
-      <div class="container">
-        <div class="row">
-          <div class="col-8 text">
-            <p class="fs-2 text-black-lm" style="font-family: var(--bs-font-title);">In the heart of Madrid's exclusive Salamanca neighborhood lies The Mirage, a venue designed to redefine luxury and entertainment. Since its opening in 1989, this iconic space has been much more than just a bar or nightclub; it is a must-visit destination for those seeking a unique and sophisticated experience. Renowned for its elegance and avant-garde ambiance, The Mirage has been featured in prestigious publications such as Vogue Magazine and has established itself as the go-to venue for exclusive events in the capital.</p>
-          </div>
-          <div class="col-4 p-4 d-flex justify-content-end align-items-end">
-            <div class="image-h">
-              <img src="media/img/home/home-3.webp">
+</section>
+<!--
+Divider 2 Section 
+<section id="divider2section" class="divider2section"> <div class="parent project-page-parent" style="display: grid;">
+    <div class="project-page-title text-center">
+      
+        <div style="margin-top: 30px;"> 
+            <div id="logo-image" class="logo-image">
+                <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
+                <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
             </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-7 d-flex justify-content-start">
-            <div>
-              <img src="media/img/home/home-4.webp">
-            </div>
-          </div>
-          <div class="col-5 text">
-            <p class="fs-2 text-black-lm" style="font-family: var(--bs-font-title);">Famous for attracting international artists, celebrities, and influential figures, its stage has witnessed unforgettable nights where live music and renowned DJ sets set the tone. By day, it transforms into a haven for brunches and private gatherings, while at night, its vibrant energy and curated selection of signature cocktails make it the epicenter of Madrid's glamour.</p>
-          </div>
+    </div>
+
+    <div class="project-image-hero">
+      <img src="media/img/home/home-12.webp">
+    </div>
+
+</div>-->
+
+</section> 
+
+
+<!-- Latest News -->
+<section id="home-news">
+    <div class="home-news-header d-flex flex-column align-items-center justify-content-center">
+        <div class="header-text d-flex flex-column justify-content-center align-items-center">
+            <h1 class="home-news-header-title">Latest News</h1>
+            <p class="home-news-header-text">Don´t miss a thing, join our blog.</p>
+            <button id="home-news-button" class="btn btn-primary mt-3 w-100" onclick="location.href='news.html'">Learn more</button> <!-- AQUÍ VA EL CARGO -->
         </div>
+</section>
+<section id="home-news-images">
+    <div class="box box_1">
+      <img src="media/img/home/home-13.webp" alt="">
+      <div class="text-overlay">
+        <h1>New Drinks</h1>
+        <p>Discover new flavors</p>
+        <button id="home-newscard-button" class="btn btn-primary mt-3" style="width: 25%;" onclick="location.href='reservation.html'">Learn More</button> <!-- AQUÍ VA EL CARGO -->
       </div>
-    </section>
-
-    <section id="popular">
-      <div class="container d-flex flex-column justify-content-center cont-pop">
-        <div class="text-end mb-5">
-          <h2 class="text-blue-lm">Most Popular</h2>
-          <p class="subtitle text-black-lm">More than a culinary experience</p>
-          <a href="menu.html" class="btn btn-fill-lm mt-5">View Menu</a>
-        </div>
-
-        <div class="category" data-bs-toggle="collapse" href="#collapseApp" role="button" aria-expanded="false" aria-controls="collapseApp">
-          <div class="word w1 text-black-lm">APPETIZERS</div>
-          <div class="img-pop">
-              <img src="media/img/home/popular-1.webp" alt="">
-          </div>
-        </div>
-        <div class="collapse" id="collapseApp">
-          <div class="card card-body card-pop">
-              <div class="container">
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-4 pb-4 d-flex align-items-center justify-content-center">
-                      <div class="imgFood-pop"><img src="media/img/home/popular-1.webp" alt="Fries"></div>
-                    </div>
-                      <div class="col-5">
-                          <div class="food-pop d-flex flex-column mt-3 px-4 text-black-lm">
-                              <div class="price-pop d-flex flex-row align-items-center justify-content-between w-100">
-                                  <h4>Truffle Parmesan Fries</h4>
-                                  <h4><i>6€</i></h4>
-                              </div>
-                              <p>Hand-cut fries tossed with truffle oil, grated Parmesan, and fresh parsley.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="category" data-bs-toggle="collapse" href="#collapseSign" role="button" aria-expanded="false" aria-controls="collapseSign">
-          <div class="word w1 text-black-lm">SIGNATURE</div>
-          <div class="img-pop">
-              <img src="media/img/home/popular-6.webp" alt="">
-          </div>
-          <div class="word w2 text-black-lm">DRINKS</div>
-        </div>
-        <div class="collapse" id="collapseSign">
-          <div class="card card-body card-pop">
-              <div class="container">
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-4 pb-4 d-flex align-items-center justify-content-center">
-                      <div class="imgFood-pop"><img src="media/img/home/popular-6.webp" alt="Ruby Berry"></div>
-                    </div>
-                      <div class="col-5">
-                          <div class="food-pop d-flex flex-column mt-3 px-4 text-black-lm">
-                              <div class="price-pop d-flex flex-row align-items-center justify-content-between w-100">
-                                  <h4>Ruby Berry Smash</h4>
-                                  <h4><i>12€</i></h4>
-                              </div>
-                              <p>A mix of muddled red berries, gin, lemon juice, and a hint of rosemary syrup, served over crushed ice and topped with soda.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="category" data-bs-toggle="collapse" href="#collapseShots" role="button" aria-expanded="false" aria-controls="collapseShots">
-          <div class="word w1 text-black-lm">SHOTS &</div>
-          <div class="img-pop">
-              <img src="media/img/home/popular-3.webp" alt="">
-          </div>
-          <div class="word w2 text-black-lm">MIXERS</div>
-        </div>
-        <div class="collapse" id="collapseShots">
-          <div class="card card-body card-pop">
-              <div class="container">
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-4 pb-4 d-flex align-items-center justify-content-center">
-                      <div class="imgFood-pop"><img src="media/img/home/popular-3.webp" alt="Shot"></div>
-                    </div>
-                      <div class="col-5">
-                          <div class="food-pop d-flex flex-column mt-3 px-4 text-black-lm">
-                              <div class="price-pop d-flex flex-row align-items-center justify-content-between w-100">
-                                  <h4>Blazing Mirage</h4>
-                                  <h4><i>6€</i></h4>
-                              </div>
-                              <p>Spiced rum, a touch of cinnamon schnapps, and a splash of overproof rum, topped with a flame that dances like a desert mirage.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="category" data-bs-toggle="collapse" href="#collapseGins" role="button" aria-expanded="false" aria-controls="collapseGins">
-          <div class="word w1 text-black-lm">GINS</div>
-          <div class="img-pop">
-              <img src="media/img/home/popular-2.webp" alt="">
-          </div>
-        </div>
-        <div class="collapse" id="collapseGins">
-          <div class="card card-body card-pop">
-              <div class="container">
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-4 pb-4 d-flex align-items-center justify-content-center">
-                      <div class="imgFood-pop"><img src="media/img/home/popular-2.webp" alt="Gin Tonic"></div>
-                    </div>
-                      <div class="col-5">
-                          <div class="food-pop d-flex flex-column mt-3 px-4 text-black-lm">
-                              <div class="price-pop d-flex flex-row align-items-center justify-content-between w-100">
-                                  <h4>Classic Gin & Tonic</h4>
-                                  <h4><i>10€</i></h4>
-                              </div>
-                              <p>Premium gin with tonic water, served over ice and garnished with a twist of lime or a sprig of fresh herbs to elevate the aroma.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="category" data-bs-toggle="collapse" href="#collapseMart" role="button" aria-expanded="false" aria-controls="collapseMart">
-          <div class="word w1 text-black-lm">MARTINIS</div>
-          <div class="img-pop">
-              <img src="media/img/home/popular-4.webp" alt="">
-          </div>
-        </div>
-        <div class="collapse" id="collapseMart">
-          <div class="card card-body card-pop">
-              <div class="container">
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-4 pb-4 d-flex align-items-center justify-content-center">
-                      <div class="imgFood-pop"><img src="media/img/home/popular-4.webp" alt="Martini"></div>
-                    </div>
-                      <div class="col-5">
-                          <div class="food-pop d-flex flex-column mt-3 px-4 text-black-lm">
-                              <div class="price-pop d-flex flex-row align-items-center justify-content-between w-100">
-                                  <h4>Classic Dry Martini</h4>
-                                  <h4><i>10€</i></h4>
-                              </div>
-                              <p>Refined blend of gin or vodka and dry vermouth, stirred or shaken to perfection and served ice-cold in a chilled martini glass.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="category category-6" data-bs-toggle="collapse" href="#collapseOld" role="button" aria-expanded="false" aria-controls="collapseOld">
-          <div class="word w1 text-black-lm">COCKTAILS</div>
-          <div class="img-pop">
-              <img src="media/img/home/popular-5.webp" alt="">
-          </div>
-        </div>
-        <div class="collapse" id="collapseOld">
-          <div class="card card-body card-pop">
-              <div class="container">
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-4 pb-4 d-flex align-items-center justify-content-center">
-                      <div class="imgFood-pop"><img src="media/img/home/popular-5.webp" alt="Aperol Spritz"></div>
-                    </div>
-                      <div class="col-5">
-                          <div class="food-pop d-flex flex-column mt-3 px-4 text-black-lm">
-                              <div class="price-pop d-flex flex-row align-items-center justify-content-between w-100">
-                                  <h4>Aperol Spritz</h4>
-                                  <h4><i>8€</i></h4>
-                              </div>
-                              <p>A refreshing and vibrant cocktail made with Aperol, Prosecco, and a splash of soda, garnished with an orange slice.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
+    </div>
+    <div class="box">
+      <img src="media/img/home/home-14.webp" alt="">
+      <div class="text-overlay">
+        <h1>Juernes are Back</h1>
+        <p>Every Thursday from 19:00 to 02:00</p>
+        <button id="home-newscard-button" class="btn btn-primary mt-3" style="width: 25%;" onclick="location.href='reservation.html'">Learn More</button> <!-- AQUÍ VA EL CARGO -->
       </div>
-    </section>
-
-    <section id="events">
-      <div class="container">
-        <div class="text-start mb-4">
-          <h2 class="text-blue-lm">Exclusive Events</h2>
-          <p class="subtitle text-black-lm">The perfect place for your special event.</p>
-          <a href="#" class="btn btn-fill-lm mt-5">Learn More</a>
-        </div>
-        
-        <div class="row g-4 row-events">
-          <div class="col-4 align-self-center mt-0">
-            <div class="event-card">
-              <div class="gradient"></div>
-              <img src="media/img/home/home-6.webp" alt="Vogue's Xmas Dinner" class="img-fluid">
-              <div class="event-info text-white-og">
-                <h4 class="m-0">Pump Gala</h4>
-                <p class="m-0">June 14, 2024</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4 align-self-end mt-0">
-            <div class="event-card mb-4">
-              <div class="gradient"></div>
-              <img src="media/img/home/home-7.webp" alt="Runway Gala" class="img-fluid">
-              <div class="event-info text-white-og">
-                <h4 class="m-0">Los Javis Wrap Party</h4>
-                <p class="m-0">August 23, 2025</p>
-              </div>
-            </div>
-            <div class="event-card">
-              <div class="gradient"></div>
-              <img src="media/img/home/home-9.webp" alt="Los Lavis Wrap Party" class="img-fluid">
-              <div class="event-info text-white-og">
-                <h4 class="m-0">It's a Fake Wedding</h4>
-                <p class="m-0">November 1, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4 align-self-start mt-0">
-            <div class="event-card mb-4">
-              <div class="gradient"></div>
-              <img src="media/img/home/home-8.webp" alt="It's a Luxe Wedding" class="img-fluid">
-              <div class="event-info text-white-og">
-                <h4 class="m-0">Vogue's Xmas Dinner</h4>
-                <p class="m-0">December 20, 2025</p>
-              </div>
-            </div>
-            <div class="event-card">
-              <div class="gradient"></div>
-              <img src="media/img/home/home-10.webp" alt="Cheers Night" class="img-fluid">
-              <div class="event-info text-white-og">
-                <h4 class="m-0">Juernes</h4>
-                <p class="m-0">Every Thursday from 19:00 to 24:00</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="box">
+      <img src="media/img/home/home-15.webp" alt="">
+      <div class="text-overlay">
+        <h1>Let´s get it Started</h1>
+        <p>Gallery from our latest events</p>
+        <button id="home-newscard-button" class="btn btn-primary mt-3" style="width: 25%;" onclick="location.href='reservation.html'">Learn More</button> <!-- AQUÍ VA EL CARGO -->
       </div>
-    </section>
+    </div>
+    <div class="box">
+      <img src="media/img/home/home-16.webp" alt="">
+      <div class="text-overlay">
+        <h1>Private Events</h1>
+        <p>Reservations for your special moments</p>
+        <button id="home-newscard-button" class="btn btn-primary mt-3" style="width: 25%;" onclick="location.href='reservation.html'">Learn More</button> <!-- AQUÍ VA EL CARGO -->
+      </div>
+    </div>
+  </section>
 
+<!-- Reservations -->
+    <section id="home-reservations">
+        <div class="home-reservations-header d-flex flex-column align-items-center justify-content-center">
+            <div class="header-text d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-white-og">Reservations</h1>
+                <button id="home-reservations-button" class="btn btn-primary mt-3 w-100" onclick="location.href='reservation.html'">Book your table</button>
+            </div>
+            </div>
+    </section>
+    <section id="home-reservations-image">
+        <div class="home-reservations-image-container">
+            <div class="home-reservations-image-background"></div>
+        </div>
+    </section>
+   
+    
+    <!-- Footer -->
     <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
-      <div id="logo-footer" class="">
-          <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
-          <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
-      </div>
-      <div class="divider-footer w-100 bg-blue-lm"></div>
-      <div class="container text-center">
-          <div class="row my-5">
-            <div class="col-6 text-blue-lm" style="font-family: var(--bs-font-title);">
-              <button type="button" class="btn fs-2 text-blue-lm btn-i" data-bs-toggle="modal" data-bs-target="#infoModal">Request Information</button>
-            </div>
-            <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">
-              <button type="button" class="btn fs-2 text-blue-lm btn-i">Join the Team</button>
-            </div>
-          </div>
-      </div>
-      <div>
-          <h4 class="text-blue-lm text-center mb-4 fs-5">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
-      </div>
-
-      <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content modal-info p-3 bg-black-og">
-              <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
-                  <h3 class="modal-title text-white-og" id="infoModalLabel">Let's Get in Touch</h3>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  <div class="container-fluid">
-                      <div class="row justify-content-center">
-                          <div class="col-8 p-4">
-                              <form>
-                                  <div class="mb-3">
-                                      <input type="text" class="form-control form-info" id="name-info" placeholder="Name" required>
-                                  </div>
-                                  <div class="mb-3">
-                                      <input type="email" class="form-control form-info" id="email-info" placeholder="Email" required>
-                                  </div>
-                                  <div class="mb-3">
-                                      <textarea class="form-control form-info" id="message-info" rows="4" placeholder="Message"></textarea>
-                                  </div>
-                                  <button type="submit" class="btn btn-modal w-100">SEND</button>
-                              </form>
-                          </div>
-                          <div class="col-1 divider-ver bg-blue-og mx-2"></div>
-                          <div class="col-3 px-3 text-center d-flex flex-column justify-content-center">
-                              <div class="div-info text-white-og mb-4">
-                                  <p class="fs-5" style="font-family: var(--bs-font-title);">Our Address</p>
-                                  <p class="info-text">Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid.</p>
-                              </div>
-                              <div class="div-info text-white-og mb-3">
-                                  <p class="fs-5" style="font-family: var(--bs-font-title);">Our Contacts</p>
-                                  <p class="info-text">themirage@club.es</p>
-                                  <p class="info-text">+34 915 55 25 28</p>
-                              </div>
-                          </div>
-                      </div> 
-                  </div> 
-              </div>
-            </div>
-          </div>
+        <div id="logo-footer" class="">
+            <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
+            <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
         </div>
-  </footer>
+        <div class="divider-footer w-100 bg-blue-lm"></div>
+        <div class="container text-center">
+            <div class="row my-5">
+              <div class="col-6 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm" data-bs-toggle="modal" data-bs-target="#infoModal">Request Information</button>
+              </div>
+              <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm">Join the Team</button>
+              </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-blue-lm text-center mb-4 fs-5">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <h3 class="modal-title text-white-og" id="infoModalLabel">Let's Get in Touch</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-8">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-info" id="name-info" placeholder="Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control form-info" id="email-info" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control form-info" id="message-info" rows="4" placeholder="Message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn w-100 mt-4">SEND</button>
+                                </form>
+                            </div>
+                            <div class="col-4 px-4">
+                                <div class="div-info text-white-og">
+                                    <p>Our Address</p>
+                                    <p>Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid.</p>
+                                </div>
+                                <div class="div-info text-white-og">
+                                    <p>Our Contacts</p>
+                                    <p>themirage@club.es</p>
+                                    <p>+34 915 55 25 28</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- JQUERY -->
     <script src="./libs/jquery.js"></script>
@@ -416,7 +637,11 @@
     <!-- CUSTOM JS -->
     <script src="./js/script.js"></script>
 
-    <!-- GSAP LIBRARY -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- LOCOMOTIVE -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+
 </body>
 </html>
