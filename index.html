@@ -29,7 +29,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
 </head>
 
-<body data-scroll-container>
+<body>
     <!-- VARIABLES COLORES
      Hellooo, aquí les dejo las variables de los colores si quieren ponerlos desde el html. Los que empiezan por .text son los que afectan la propiedad 'color' y los que empiezan por .bg son los que afectan la propiedad 'background-color':
 
@@ -71,9 +71,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 <li id="" class="menuItem"><h1 class="w-auto text-center mb-0">Reservation</h1></li>
             </ul>
         </div>
-
         <i id="switchMode" class="position-absolute top-0 end-0 mt-2 bi-brightness-low-fill fs-3"></i>
-
         <div id="navButton" class="p-4 position-absolute top-0 end-0 mt-1 d-flex">
             <label class="toggle">
                 <input type="checkbox">
@@ -96,8 +94,22 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 </symbol>
             </svg>
         </div>
-    </nav>
+      </nav>
+
+    <div class="container m-0 p-0">
+        <div class="pre-loader">
+          <div class="loader"></div>
+          <div class="loader-bg"></div>
+        </div>
+        <div class="loader-content">
+          <div class="count"><p>0</p></div>
+          <div class="copy"><h1 class="ml16 text-nowrap">TheMirage<h1></div>
+        </div>
+      </div>
+      
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
 
     <!-- JQUERY -->
     <script src="./libs/jquery.js"></script>
@@ -109,8 +121,9 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script src="./js/script.js"></script>
 
     <!-- LOCOMOTIVE -->
-    <script src="
-https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
-"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+
+
 </body>
 </html>

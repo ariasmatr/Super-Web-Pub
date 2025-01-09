@@ -59,6 +59,7 @@ p {
 body {
     background-color: var(--bs-bg-white-lm) !important;
     min-height: 100vh;
+    width: 100vw;
 }
 
 section {
@@ -198,7 +199,6 @@ section {
 .toggle input:checked + div svg:nth-child(3) {
     transform: rotate(270deg);
 }
-
 .menuHidden{
     top: -100% !important;
     transition: 0.5s ease-in;
@@ -211,7 +211,6 @@ section {
     backdrop-filter: blur(6px);
     opacity: 1;
 }
-
 .menuItem {
     transform: translateY(20px);
     visibility: hidden;
@@ -250,4 +249,59 @@ section {
     -moz-osx-font-smoothing: grayscale;
     color: var(--bs-blue-lm);
     transition: 0.1s ease-in;
+}
+
+
+ /* LOADING SCREEN */
+
+.pre-loader {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background:black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.loader-content {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-45%, -50%);
+    display: flex;
+    z-index: 2;
+    color: #fff;
+}
+.count {
+    flex: 2;
+    text-align: right;
+    line-height: 1;
+    padding: 0 1em;
+}
+.copy {
+    text-transform: uppercase;
+}
+.ml16 {
+    overflow: hidden;
+}
+.ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.loader-bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bs-blue-lm);
+    z-index: -1;
 }
