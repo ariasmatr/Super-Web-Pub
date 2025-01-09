@@ -64,8 +64,8 @@ section {
 }
 
 /* HEADER */
-.gallery-header {
-    height: 22em;
+.header-text {
+  min-height: 100vh;
 }
 
 
