@@ -130,26 +130,6 @@ section {
     height: 100%;
 }
 
-.video-text {
-    position: absolute;
-    color: white;
-    z-index: 1;
-    font-size: 0.6rem;
-  }
-  
-  .video-text-top-left {
-    top: 80px; /* Ajusta el margen superior */
-    left: 20px; /* Ajusta el margen izquierdo */
-    text-align: left;
-  }
-  
-  .video-text-bottom-right {
-    bottom: 10px; /* Ajusta el margen inferior */
-    right: 20px; /* Ajusta el margen derecho */
-    text-align: right;
-  }
-
-
 @media (min-aspect-ratio: 16/9) {
     .bg-video > video {
         height: 300%;
@@ -167,6 +147,31 @@ section {
 /* HEADER */
 header {
     height: 100vh;
+}
+
+.video-text {
+    position: absolute;
+    z-index: 1;
+}
+
+.title-header {
+    font-size: 7em !important;
+}
+
+.text-header {
+    font-size: 3em !important;
+}
+  
+.video-text-top-left {
+    top: 120px; 
+    left: 20px; 
+    text-align: left;
+}
+  
+.video-text-bottom-right {
+    bottom: 40px; 
+    right: 20px; 
+    text-align: right;
 }
 
 #logo-nav {
@@ -1347,6 +1352,14 @@ header {
     .image-container-reserve:hover {
         height: 330px;
     }
+
+    #home-reservations-image {
+        margin-bottom: 4em !important;
+    }
+
+    #logo-footer {
+        width: 50%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1426,6 +1439,14 @@ header {
 }
 
 @media (max-width: 768px) {
+    .title-header {
+        font-size: 5.5em !important;
+    }
+    
+    .text-header {
+        font-size: 2.3em !important;
+    }
+
     #history .container .row:first-child {
         display: flex;
         flex-direction: column-reverse !important;
@@ -1450,7 +1471,7 @@ header {
     }
 
     .img-hist-2 {
-        margin: 2.5em !important;
+        margin: 2.5em 0 !important;
     }
 
     .text-hist {
@@ -1494,7 +1515,7 @@ header {
 
     .div-info-cont {
         width: 100% !important;
-        margin-top: 1.2em !important;
+        padding-top: 1.7em !important;
     }
 
     h3 {
@@ -1548,6 +1569,10 @@ header {
     .cargo-text h1 {
         font-size: 2.7em !important;
     }
+
+    .cont-buttons .fs-2 {
+        font-size: 1.5em !important;
+    }
 }
 
 @media (max-width: 650px) {
@@ -1557,6 +1582,29 @@ header {
         background-position: center;
         background-size: cover;
         width: 100%;
+    }
+
+    .titles-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .video-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: initial;
+        text-align: center;
+    }
+    
+    .title-header {
+        font-size: 6em !important;
+    }
+    
+    .text-header {
+        font-size: 2.5em !important;
     }
 
     .container {
@@ -1703,10 +1751,12 @@ header {
        padding-right: 10px;
     }
 
+    #logo-footer {
+        width: 60%;
+    }
 }
 
 @media (max-width: 500px) {  
-
     .break {
         display: none !important;
     }
@@ -1735,7 +1785,7 @@ header {
     .row-events {
         display: flex;
         flex-direction: column !important;
-        height: 240vh !important;
+        height: 210vh !important;
         flex-wrap: nowrap !important;
         padding-top: 30px;
     }
@@ -1778,40 +1828,61 @@ header {
         height: 42em;
     }
 
+    .event-info h4 {
+        font-size: 0.9em;
+    }
+
     .div-info {
         font-size: 1rem;
     }
 
-    .bg-black-og {
+   /*  .bg-black-og {
        padding-right: 10px;
-    }
-
+    } */
 }
 
 @media (max-width: 450px) {
+    #intro {
+        height: 90vh;
+    }
+
+    .text-hist {
+        font-size: 1em !important;
+    }
+
+    .img-hist {
+        width: 85% !important;
+    }
 
     #home-cargodivider {
         padding-top: 75%;
         padding-bottom: 75%;
     }
 
-    .text-white-og {
-        font-size: 1.2rem;
+    .cont-pop .category {
+        font-size: 1.7em;
     }
 
-    #home-reviews {
-        padding-top: 48%;
-        padding-bottom: 48%;
-        padding-right: 12%;
-        padding-left: 12%;
+    .category:hover .img-pop {
+        flex: 0;
     }
+
+    .col-card {
+        width: 100% !important;
+    }
+
+    .row-events {
+        height: 190vh !important;
+    }
+
     #circles {
-        padding-top: 75%;
+        padding-top: 55%;
     }
 
     .container {
         max-width: 400px !important;
     }
+
     .home-news-header {
         height: 40em;
     }
@@ -1832,8 +1903,8 @@ header {
         height: 42em;
     }
 
-    .div-info {
-        font-size: 0.6rem;
+    #infoModalLabel {
+        font-size: 2.5em !important;
     }
 
 }

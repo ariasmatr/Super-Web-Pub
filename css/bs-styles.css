@@ -3174,8 +3174,8 @@ textarea.form-control-lg {
 .btn-black {
   --bs-text-opacity: 1;
   --bs-bg-opacity: 1;
-  border: 1.5px solid rgba(var(--bs-black-og-rgb), var(--bs-text-opacity)) !important;
-  color: rgba(var(--bs-black-og-rgb), var(--bs-text-opacity)) !important;
+  border: 1.5px solid rgba(var(--bs-bg-white-lm-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-bg-white-lm-rgb), var(--bs-text-opacity)) !important;
   background-color: transparent !important;
   font-family: var(--bs-font-body) !important;
   border-radius: 0;
@@ -3184,8 +3184,8 @@ textarea.form-control-lg {
 }
 
 .btn-black:hover {
-  background-color: rgba(var(--bs-black-og-rgb), var(--bs-bg-opacity)) !important;
-  color: rgba(var(--bs-lightblue-og-rgb), var(--bs-text-opacity)) !important;
+  background-color: rgba(var(--bs-bg-white-lm-rgb), var(--bs-bg-opacity)) !important;
+  color: rgba(var(--bs-blue-lm-rgb), var(--bs-text-opacity)) !important;
   transition: all 0.6s ease;
 }
 
