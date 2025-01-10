@@ -23,26 +23,50 @@ $(document).ready(function () {
 });
 
 
+const quantityDetailsElements = document.querySelectorAll('.calculation');
+quantityDetailsElements.forEach((element) => {
+    const quantityText = element.querySelector('#quantity');
+    const decreaseBtn = element.querySelector('#decrease-btn');
+    const increaseBtn = element.querySelector('#increase-btn');
+    const ticketPriceElement = element.querySelector('#ticketTotal');
+    const bookingFeeElement = element.querySelector('#booking-fee');
+    const totalAmountElement = element.querySelector('#totalAmount');
+    const payBtn = element.querySelector('#pay-button');
+    let ticketPrice = parseFloat(ticketPriceElement.textContent.replace('€', ''));
+    let bookingFee = parseFloat(bookingFeeElement.textContent.replace('€', ''));
+
+    function updateTotal() {
+        let quantity = parseInt(quantityText.textContent, 10);
+        let total = (ticketPrice * quantity) + bookingFee;
+        totalAmountElement.textContent = `${total.toFixed(2)}€`;
+    }
+
+    decreaseBtn.addEventListener('click', () => {
+        let quantity = parseInt(quantityText.textContent, 10);
+        if (quantity > 1) {
+            quantityText.textContent = quantity - 1;
+            updateTotal();
+        }
+    });
+
+    increaseBtn.addEventListener('click', () => {
+        let quantity = parseInt(quantityText.textContent, 10);
+        quantityText.textContent = quantity + 1;
+        updateTotal();
+    });
+
+    payBtn.addEventListener('click', () => {
+        quantityText.textContent = '1';
+        setTimeout(() => {
+            updateTotal();
+        }, 1000);
+    });
+
+    updateTotal();
+});
 
 
 
-// RESERVATIONS: Botón cantidad de entradas
-
-const decreaseBtn = document.getElementById('decrease-btn');
-        const increaseBtn = document.getElementById('increase-btn');
-        const quantityElement = document.getElementById('quantity');
-
-        decreaseBtn.addEventListener('click', () => {
-            let quantity = parseInt(quantityElement.textContent);
-            if (quantity > 1) {
-                quantityElement.textContent = quantity - 1;
-            }
-        });
-
-        increaseBtn.addEventListener('click', () => {
-            let quantity = parseInt(quantityElement.textContent);
-            quantityElement.textContent = quantity + 1;
-        });
 
 
  /* LOADER SCREEN */

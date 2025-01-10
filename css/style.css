@@ -4,6 +4,10 @@
     scroll-behavior: smooth;
 }
 
+.modal-dialog{
+    pointer-events:all !important;
+}
+
 /* FONT TITLES */
 @font-face {
     font-family: Bosch-display;
@@ -1082,7 +1086,7 @@ header {
     position: absolute; 
     top: 3.5rem; 
     left: 5%; 
-    z-index: 2; 
+    
     text-align: left; 
     max-width: 40%;
     transition: opacity 0.5s ease; 
@@ -1756,14 +1760,48 @@ header {
     }
 }
 
+@media (max-width: 585px) {  
+
+    #reservations {
+        padding: 0 !important;
+    }
+
+    .text-title {
+        font-size: 1.6rem !important;
+    }
+
+    .text-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .age-info {
+        font-size: 0.8rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+      }
+}
+
 @media (max-width: 500px) {  
+
     .break {
         display: none !important;
+    }
+
+    .vertical-custom {
+        border-right: none !important;
+    }
+
+    .ticket-details {
+        font-size: 0.8rem !important;
     }
 
     .col-lugar h4 {
         text-align: start !important;
     }
+   
 
     #intro .container .row-intro .general-cont {
         width: 90% !important;
@@ -1772,6 +1810,14 @@ header {
         justify-content: center;
         align-items: center;
         margin-top: 2em !important;
+    }
+
+    .image-container-reserve {
+       height: 160px !important;
+    }
+
+    .image-container-reserve:hover {
+        height: 220px !important;
     }
 
     .cargo-text h1 {
@@ -1799,10 +1845,6 @@ header {
     #home-cargodivider {
         padding-top: 50%;
         padding-bottom: 50%;
-    }
-
-    .text-white-og {
-        font-size: 1.8rem;
     }
    
     #circles {
@@ -1841,6 +1883,127 @@ header {
     } */
 }
 
+
+@media (max-width: 500px) {  
+
+    #reservations {
+        padding: 0 !important;
+    }
+
+    .text-title {
+        font-size: 1.2rem !important;
+    }
+
+    .text-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .age-info {
+        font-size: 0.5rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+      }
+
+    .break {
+        display: none !important;
+    }
+
+    .vertical-custom {
+        border-right: none !important;
+    }
+
+    .ticket-details {
+        font-size: 0.8rem !important;
+    }
+
+    .col-lugar h4 {
+        text-align: start !important;
+    }
+
+    #intro .container .row-intro .general-cont {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em !important;
+    }
+
+    .image-container-reserve {
+       height: 140px !important;
+    }
+
+    .image-container-reserve:hover {
+        height: 180px !important;
+    }
+
+    .cargo-text h1 {
+        font-size: 2.3em !important;
+    }
+
+    .container {
+        max-width: 450px !important;
+    }
+
+    .row-events {
+        display: flex;
+        flex-direction: column !important;
+        height: 240vh !important;
+        flex-wrap: nowrap !important;
+        padding-top: 30px;
+    }
+
+    .row-events .col-4 {
+        align-self: center !important;
+        margin-bottom: 1.5em !important;
+        width: 75% !important;
+    }
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+   
+    #circles {
+        padding-top: 50%;
+    }
+
+    #home-news-images {
+        flex-direction: column; 
+    }
+
+    .modal-dialog {
+        max-width: var(--bs-modal-width) !important; 
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .event-info h4 {
+        font-size: 0.9em;
+    }
+
+    .div-info {
+        font-size: 1rem;
+    }
+
+   /*  .bg-black-og {
+       padding-right: 10px;
+    } */
+}
+
+
 @media (max-width: 450px) {
     #intro {
         height: 90vh;
@@ -1854,9 +2017,17 @@ header {
         width: 85% !important;
     }
 
-    #home-cargodivider {
-        padding-top: 75%;
-        padding-bottom: 75%;
+    #reservations {
+        padding: 0 !important;
+    }
+
+    .text-title {
+        font-size: 1rem !important;
+    }
+
+    .text-subtitle {
+        font-size: 0.6rem !important;
+        margin-bottom: 8px !important;
     }
 
     .cont-pop .category {
@@ -1877,10 +2048,48 @@ header {
 
     #circles {
         padding-top: 55%;
+
+    .age-info {
+        font-size: 0.5rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+      }
     }
 
-    .container {
-        max-width: 400px !important;
+    .break {
+        display: none !important;
+    }
+
+    .vertical-custom {
+        border-right: none !important;
+    }
+
+    .ticket-details {
+        font-size: 0.8rem !important;
+    }
+
+    .col-lugar h4 {
+        text-align: start !important;
+    }
+
+    #intro .container .row-intro .general-cont {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em !important;
+    }
+
+    .image-container-reserve {
+       height: 120px !important;
+    }
+
+    .image-container-reserve:hover {
+        height: 160px !important;
     }
 
     .home-news-header {
@@ -1888,13 +2097,47 @@ header {
     }
 
     .cargo-text h1 {
-        padding-right: 10%;
-        padding-left: 10%;
+        font-size: 2.3em !important;
+    }
+
+    .container {
+        max-width: 450px !important;
+    }
+
+    .row-events {
+        display: flex;
+        flex-direction: column !important;
+        height: 240vh !important;
+        flex-wrap: nowrap !important;
+        padding-top: 30px;
+    }
+
+    .row-events .col-4 {
+        align-self: center !important;
+        margin-bottom: 1.5em !important;
+        width: 75% !important;
+    }
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+   
+    #circles {
+        padding-top: 50%;
+    }
+
+    #home-news-images {
+        flex-direction: column; 
+    }
+
+    .modal-dialog {
+        max-width: var(--bs-modal-width) !important; 
     }
 
     .box img {
         display: block;
-        width: 140%;
+        width: 100%;
         height: 100%;
         object-fit: cover;
     }
@@ -1907,4 +2150,15 @@ header {
         font-size: 2.5em !important;
     }
 
+    .div-info {
+        font-size: 0.6rem;
+    }
+
+    .bg-black-og {
+       padding-right: 10px;
+    }
+
 }
+
+
+   

@@ -415,3 +415,24 @@ li .text-center{
         margin-bottom: 50px;
     }
 }
+
+@media (max-width: 600px) {  
+
+    .ticket-details {
+        margin-bottom: 0;
+    }
+
+    .ticket-info .horizontal-line {
+        border-top: 1px solid var(--bs-lightblue-og);
+        margin: 5px 0;
+    }
+
+    .horizontal-line {
+        border-top: 1px solid var(--bs-lightblue-og); 
+        margin: 5px 0; 
+    }
+
+    .image-container-reserve:hover .ticket-info {
+        margin-bottom: 50px;
+    }
+}
