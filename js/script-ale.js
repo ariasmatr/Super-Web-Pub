@@ -23,29 +23,6 @@ $(document).ready(function () {
 });
 
 
-
-// const quantityDetailsElements = document.querySelectorAll('.quantity-details');
-// quantityDetailsElements.forEach((element) => {
-//     const quantityText = element.querySelector('#quantity');
-//     const decreaseBtn = element.querySelector('#decrease-btn');
-//     const increaseBtn = element.querySelector('#increase-btn');
-    
-//     decreaseBtn.addEventListener('click', () => {
-//         let quantity = parseInt(quantityText.textContent, 10);
-//         if (quantity > 1) {
-//             quantityText.textContent = quantity - 1;
-//         }
-//     });
-    
-//     increaseBtn.addEventListener('click', () => {
-//         let quantity = parseInt(quantityText.textContent, 10);
-//         quantityText.textContent = quantity + 1;
-//     });
-// });
-
-// Selecciona todos los elementos div con la clase 'quantity-details'
-
-
 const quantityDetailsElements = document.querySelectorAll('.calculation');
 quantityDetailsElements.forEach((element) => {
     const quantityText = element.querySelector('#quantity');
@@ -54,6 +31,7 @@ quantityDetailsElements.forEach((element) => {
     const ticketPriceElement = element.querySelector('#ticketTotal');
     const bookingFeeElement = element.querySelector('#booking-fee');
     const totalAmountElement = element.querySelector('#totalAmount');
+    const payBtn = element.querySelector('#pay-button');
     let ticketPrice = parseFloat(ticketPriceElement.textContent.replace('€', ''));
     let bookingFee = parseFloat(bookingFeeElement.textContent.replace('€', ''));
 
@@ -75,6 +53,13 @@ quantityDetailsElements.forEach((element) => {
         let quantity = parseInt(quantityText.textContent, 10);
         quantityText.textContent = quantity + 1;
         updateTotal();
+    });
+
+    payBtn.addEventListener('click', () => {
+        quantityText.textContent = '1';
+        setTimeout(() => {
+            updateTotal();
+        }, 1000);
     });
 
     updateTotal();
