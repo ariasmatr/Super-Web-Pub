@@ -1315,6 +1315,10 @@ header {
     .nyear {
         padding: 1em;
     }
+
+    .modal-dialog {
+        max-width: 600px !important;
+    }
 }
 
 @media (max-width: 950px) {    
@@ -1391,6 +1395,54 @@ header {
         margin: 2.5em !important;
     }
 
+    .text-hist {
+        text-align: justify;
+    }
+
+    .cont-pop .category {
+        font-size: 2.7em;
+    }
+
+    h2 {
+        font-size: 3.7em !important;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    .category:hover .img-pop {
+        flex: 0.7;
+    }
+
+    .container {
+        max-width: 650px !important;
+    }
+
+    .carousel-item h1,
+    .text-overlay h1 {
+        font-size: 2em !important;
+    }
+
+    .home-reservations-header {
+        height: 22em;
+    }
+
+    .divider-ver {
+        width: 100% !important;
+        height: 1.5px;
+        margin-top: 1.2em !important;
+    }
+
+    .div-info-cont {
+        width: 100% !important;
+        margin-top: 1.2em !important;
+    }
+
+    h3 {
+        font-size: 3em !important;
+    }
+
     .modal-info .modal-dialog {
         margin: 1rem;
     }
@@ -1406,30 +1458,56 @@ header {
     }
 }
 
-/* Estilos para pantallas menores a 800px */
 @media (max-width: 700px) {
+    .row-intro {
+        justify-content: center !important;
+    }
+
     #home-reviews {
-        padding-top: 15%;
-        padding-bottom: 15%;
-        padding-right: 12%;
-        padding-left: 12%;
+        padding: 4em 2.5em 3em 2.5em;
     }
 
     #circles {
         padding-top: 30%;
     }
 
-    .home-news-header {
-        height: 32em;
+    .text-overlay h1 {
+        font-size: 1.7em !important;
     }
 
-    .home-reservations-header {
+    .text-overlay p {
+        font-size: 0.8em !important;
+    }
 
-        height: 32em;
+    .cargo-text h1 {
+        font-size: 2.7em !important;
     }
 }
 
 @media (max-width: 600px) {
+    #intro {
+        height: 100vh;
+    }
+
+    #intro .container .row-intro {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #intro .container .row-intro .col-since {
+        text-align: start !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+    }
+
+    #intro .container .row-intro .col-lugar {
+        width: 75% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     #home-cargodivider {
         padding-top: 50%;
@@ -1439,19 +1517,9 @@ header {
     .text-white-og {
         font-size: 1.8rem;
     }
-
-    #home-reviews {
-        padding-top: 30%;
-        padding-top: 30%;
-        padding-right: 12%;
-        padding-left: 12%;
-    }
+   
     #circles {
         padding-top: 40%;
-    }
-
-    .home-news-header {
-        height: 40em;
     }
 
     #home-news-images {
