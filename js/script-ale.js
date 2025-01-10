@@ -45,7 +45,7 @@ const decreaseBtn = document.getElementById('decrease-btn');
         });
 
 
-        /* LOADER SCREEN */
+ /* LOADER SCREEN */
 function loadingScreen() {
     function startLoader() {
         let counterElement = document.querySelector(".count p");
@@ -64,6 +64,7 @@ function loadingScreen() {
         updateCounter();
     }
 
+    gsap.set(".loader-content", { display: "block" });
     gsap.set(".count", { opacity: 1 });
     gsap.set(".pre-loader", { scale: 1, display: "block" });
     gsap.set(".loader", { height: "100%" });
@@ -123,6 +124,11 @@ function loadingScreen() {
     gsap.to(".pre-loader", {
         display: "none",
         delay: 4.5, 
+    });
+
+    gsap.to(".loader-content", {
+        display: "none",
+        delay: 4.5,
     });
 }
 
