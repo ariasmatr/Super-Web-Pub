@@ -342,8 +342,9 @@ header {
 /* INTRO SECTION */
 #intro {
     margin: 6em 0;
-    height: 100vh;
+    height: 80vh;
     display: flex;
+    align-items: center;
 }
 
 .general-cont {
@@ -370,6 +371,10 @@ header {
 /* HISTORY SECTION */
 #history {
     padding: 6em 0;
+}
+
+.text-hist {
+    font-size: 2em !important;
 }
 
 .image-h {
@@ -669,6 +674,7 @@ header {
     width: 100%; 
     margin: 0; 
     padding: 0; 
+    margin-bottom: 6em !important;
 }
 
 .home-reservations-image-container {
@@ -1175,40 +1181,123 @@ header {
     padding-top: 1.1rem;
 }
 
-/* MEDIA QUERIES */
+/* ------- MEDIA QUERIES RESPONSIVE ------- */
 @media (max-width: 1920px) {
+    .row-events {
+        height: 110vh;
+    }
+
     #reservations {
         padding: 23%;
     }
 }
 
+@media (max-width: 1400px) {
+    #intro {
+        height: 70vh;
+    }
+
+    #intro .container {
+        width: 80%;
+    }
+
+    #history .container {
+        width: 90%;
+    }
+
+    .row-events {
+        height: 100vh;
+    }
+}
+
 @media (max-width: 1333px) {
-    .image-container {
+    .image-container-reserve {
         height: 300px; 
     }
     
-    .image-container:hover {
+    .image-container-reserve:hover {
         height: 400px;
     }
 }
 
+@media (max-width: 1200px) {
+    #intro {
+        height: 60vh;
+    }
+
+    .text-hist {
+        font-size: 1.5em !important;
+    }
+
+    h1 {
+        font-size: 3.7em !important;
+    }
+
+    .row-events {
+        height: 80vh;
+    }
+
+    .home-news-header {
+        height: 18em;
+    }
+}
+
 @media (max-width: 1080px) {
+    #logo-nav {
+        width: 9% !important;
+    }
     .text-title {
         font-size: 3em !important;
     }
 }
 
 @media (max-width: 1068px) {
-    .image-container {
+    .image-container-reserve {
         height: 250px; 
     }
     
-    .image-container:hover {
+    .image-container-reserve:hover {
         height: 355px;
     }
 }
-/* Estilos para pantallas menores a 800px */
+
+@media (max-width: 1000px) {
+    #intro {
+        height: 50vh;
+    }
+
+    .text-hist {
+        font-size: 1.2em !important;
+    }
+
+    .category:hover .img-pop {
+        flex: 0.3;
+    }
+}
+
+/* APROX MEDIDA TABLET */
 @media (max-width: 991px) {
+    #logo-nav {
+        width: 10% !important;
+    }
+
+    #history {
+        padding: 4em 0;
+    }
+
+    .card-pop .container .row {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .col-card {
+        width: 75% !important;
+    }
+
+    .row-events {
+        height: 60vh;
+    }
+
     .masonry-column:nth-child(3) {
       display: none;
     }
@@ -1218,28 +1307,25 @@ header {
         max-height: 90vh;  
       }
     
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
         padding: 1em;
-      }
+    }
     
-      .nyear {
+    .nyear {
         padding: 1em;
-      }
+    }
 }
 
 @media (max-width: 950px) {    
-    .image-container:hover {
+    .image-container-reserve:hover {
         height: 330px;
     }
 }
 
 @media (max-width: 900px) {
     #home-reviews {
-        padding-top: 15%;
-        padding-bottom: 15%;
-        padding-right: 12%;
-        padding-left: 12%;
+        padding: 4.5em 3em 3.5em 3em;
     }
 
     #circles {
@@ -1247,12 +1333,19 @@ header {
     }
 
     .home-news-header {
-        height: 32em;
+        height: 22em;
+    }
+
+    .text-overlay h1 {
+        font-size: 2.2em !important;
+    }
+
+    .text-overlay .btn {
+        width: 50% !important;
     }
 
     .home-reservations-header {
-
-        height: 32em;
+        height: 28em;
     }
 
     .ticket-details {
@@ -1271,6 +1364,33 @@ header {
 }
 
 @media (max-width: 768px) {
+    #history .container .row:first-child {
+        display: flex;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+    }
+
+    #history .container .row:last-child {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text {
+        width: 100% !important;
+    }
+
+    .img-hist {
+        width: 75% !important;
+    }
+
+    .image-h {
+        margin-bottom: 2em;
+    }
+
+    .img-hist-2 {
+        margin: 2.5em !important;
+    }
+
     .modal-info .modal-dialog {
         margin: 1rem;
     }

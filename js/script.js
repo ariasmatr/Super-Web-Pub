@@ -2,7 +2,6 @@ console.log("me mato, cosorro");
 
 /* LOADER SCREEN */
 function loadingScreen() {
-    console.log("pruebaaaaa");
     function startLoader() {
         let counterElement = document.querySelector(".count p");
         let currentValue = 0;
@@ -148,7 +147,6 @@ let toggle = document.querySelector('.toggle input')
 let clickCount = 0;
 const menuItems = document.querySelectorAll("li.menuItem");
 menuOpener.addEventListener('click',()=>{
-    console.log('asdaddfsadf')
     clickCount++;
     if (clickCount % 2 === 0) {
     if (menuWin.classList.contains('menuHidden')) {
