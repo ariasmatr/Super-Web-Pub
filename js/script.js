@@ -129,8 +129,9 @@ function closeMenu(){
     }, 400);
 }
 
-/* JS ALE */
+AOS.init();
 
+/* JS ALE */
 $(document).ready(function () {
     "use strict";
     let indice = 1;
