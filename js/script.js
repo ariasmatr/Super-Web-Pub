@@ -81,63 +81,6 @@ function loadingScreen() {
     });
 }
 
-/* LIGHT/DARK THEME */
-function getInitialTheme() {
-    const savedTheme = localStorage.getItem('data-bs-theme');
-    if (savedTheme) {
-        return savedTheme;
-    }
-    if (window.matchMedia) {
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        return prefersDarkScheme ? 'dark' : 'light';
-    }
-    return 'light';
-}
-
-function updateIcon(theme) {
-    const switchModeIcon = document.getElementById('switchMode');
-    if (theme === 'dark') {
-        switchModeIcon.classList.remove('bi-brightness-low-fill','fs-3');
-        switchModeIcon.classList.add('bi-moon-fill','fs-4');
-    } else {
-        switchModeIcon.classList.remove('bi-moon-fill','fs-4');
-        switchModeIcon.classList.add('bi-brightness-low-fill','fs-3');
-    }
-    updateLogoSrc(theme); // Llama a la función para actualizar las imágenes del logo
-}
-
-function updateLogoSrc(theme) {
-    const logoImageFixed = document.querySelector('img.position-fixed');
-    const logoImageLight = document.getElementById('logo-light');
-    const logoImageIntro = document.getElementById('logo-intro');
-    
-    if (theme === 'dark') {
-        logoImageFixed.src = './media/img/logos/resp-skyblue.png'; // Ruta del logo fijo para tema oscuro
-        logoImageLight.src = './media/img/logos/logo-skyblue.png'; // Ruta del logo light para tema oscuro
-        logoImageIntro.src = './media/img/logos/logo-skyblue.png';
-        
-    } else {
-        logoImageFixed.src = './media/img/logos/resp-blue.png'; // Ruta del logo fijo para tema claro
-        logoImageLight.src = './media/img/logos/logo-blue.png'; // Ruta del logo light para tema claro
-        logoImageIntro.src = './media/img/logos/logo-blue.png';
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const initialTheme = getInitialTheme();
-    document.documentElement.setAttribute('data-bs-theme', initialTheme);
-    updateIcon(initialTheme);
-    loadingScreen();
-});
-
-document.getElementById('switchMode').addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-bs-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-bs-theme', newTheme);
-    localStorage.setItem('data-bs-theme', newTheme);
-    updateIcon(newTheme);
-    loadingScreen();
-});
 
 
 /* NAV BUTTON */
@@ -206,4 +149,60 @@ $(document).ready(function () {
 
 
 
+        /* LIGHT/DARK THEME */
+function getInitialTheme() {
+    const savedTheme = localStorage.getItem('data-bs-theme');
+    if (savedTheme) {
+        return savedTheme;
+    }
+    if (window.matchMedia) {
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return prefersDarkScheme ? 'dark' : 'light';
+    }
+    return 'light';
+}
+
+function updateIcon(theme) {
+    const switchModeIcon = document.getElementById('switchMode');
+    if (theme === 'dark') {
+        switchModeIcon.classList.remove('bi-brightness-low-fill','fs-3');
+        switchModeIcon.classList.add('bi-moon-fill','fs-4');
+    } else {
+        switchModeIcon.classList.remove('bi-moon-fill','fs-4');
+        switchModeIcon.classList.add('bi-brightness-low-fill','fs-3');
+    }
+    updateLogoSrc(theme); // Llama a la función para actualizar las imágenes del logo
+}
+
+function updateLogoSrc(theme) {
+    const logoImageFixed = document.querySelector('img.position-fixed');
+    const logoImageLight = document.getElementById('logo-light');
+    // const logoImageIntro = document.getElementById('logo-intro');
+    
+    if (theme === 'dark') {
+        logoImageFixed.src = './media/img/logos/resp-skyblue.png'; // Ruta del logo fijo para tema oscuro
+        logoImageLight.src = './media/img/logos/logo-skyblue.png'; // Ruta del logo light para tema oscuro
+        // logoImageIntro.src = './media/img/logos/logo-skyblue.png';
         
+    } else {
+        logoImageFixed.src = './media/img/logos/resp-blue.png'; // Ruta del logo fijo para tema claro
+        logoImageLight.src = './media/img/logos/logo-blue.png'; // Ruta del logo light para tema claro
+        // logoImageIntro.src = './media/img/logos/logo-blue.png';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const initialTheme = getInitialTheme();
+    document.documentElement.setAttribute('data-bs-theme', initialTheme);
+    updateIcon(initialTheme);
+    loadingScreen();
+});
+
+document.getElementById('switchMode').addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-bs-theme', newTheme);
+    localStorage.setItem('data-bs-theme', newTheme);
+    updateIcon(newTheme);
+    loadingScreen();
+});
