@@ -149,6 +149,9 @@ header {
     height: 100vh;
 }
 
+#logo-nav {
+    width: 7% !important;
+}
 .toggle {
     display: block;
     cursor: pointer;
@@ -273,7 +276,28 @@ header {
     transform: translateY(20px);
     visibility: hidden;
     opacity: 0;
-  }
+}
+
+.navItem {
+    text-decoration: none;
+    position: relative;
+}
+
+.navItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bs-yellow-og);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+.navItem:hover::after {
+    transform: scale(1, 1);
+}
 
 .animate {
     animation: list-show .4s 1 ease-out;
@@ -340,7 +364,7 @@ header {
     transform: translate(-50%, -50%);
     width: 60% !important;
     height: auto;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* HISTORY SECTION */
@@ -776,8 +800,440 @@ header {
   transform: translate3d(0, 0, 0);
 } */
 
+/* ------- HTML MENU ------- */
+/* MENU TITLE SECTION */
+.menu-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/img/menu/menu-1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+}
+
+/* MENU COLLAPSIBLE SECTION */
+#menu-accordion {
+    margin: 5em 0;
+}
+
+.cont-menu {
+    width: 100%;
+    padding: 0 2em;
+}
+
+.cont-menu .item {
+    width: 100%;
+    padding: 0.125em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 3.5em;
+    border-top: 1.5px solid var(--bs-blue-lm);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.item-8 {
+    border-bottom: 1.5px solid var(--bs-blue-lm);
+}
+
+.img-menu {
+    width: 125px;
+    height: 80px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
+    flex: 0;
+}
+
+.img-menu img {
+    width: 125px;
+    height: auto;
+    object-fit: cover;
+    vertical-align: unset !important;
+}
+
+.item:hover {
+    gap: 20px;
+}
+
+.item:hover .img-menu {
+    flex: 0.15;
+}
+
+.word {
+    font-family: var(--bs-font-title);
+}
+
+.card-menu {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.food p {
+    font-size: 0.9em;
+}
+
+.price h4 {
+    margin-bottom: 0 !important;
+}
+
+/* CARDS MOST POPULAR */
+#cards-pop {
+    margin-bottom: 6em;
+}
+
+.popular-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.popular-img:hover img {
+    transform: scale(1.05);
+}
+
+.popular-img:hover .item-info {
+    opacity: 1;
+}
+
+.item-info {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item-info h4 {
+    font-size: 1.3em;
+}
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, var(--bs-black-og), transparent);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ------- HTML GALLERY ------- */
+/* HEADER */
+#header-text {
+    min-height: 100vh;
+}
+  
+  
+/* EVENT 1 SECTION NEW YEAR */
+.masonry-column {
+    padding: 0 1px;
+    padding-bottom: 2em;
+}
+  
+.img-gallery-1  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+  
+.img-gallery-1  img:hover {
+    transform: scale(1.03); 
+}
+  
+/* MODAL NEW YEAR */
+.modal-content-img {
+    overflow: hidden;
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+.carousel-item img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 90%; 
+    max-height: 80vh; 
+    object-fit: contain; 
+}
+  
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    color: var(--bs-white-og);
+}
+  
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    padding: 1.5em;
+}
+  
+.nyear {
+    padding: 1.5em;
+}
+    
+  
+/* EVENT 2 SECTION */
+.img-gallery-2  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+  
+.img-gallery-2  img:hover {
+    transform: scale(1.03); 
+}
+  
+/* EVENT 3 SECTION */
+.img-gallery-3  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+  
+.img-gallery-3  img:hover {
+    transform: scale(1.03); 
+}
+
+/* ------- HTML RESERVATION ------- */
+/* HEADER */
+#reservations {
+    height: 100vh;
+}
+
+/* EVENTOS */
+.image-container-reserve {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+    transition:  0.5s ease;
+}
+
+.image-container-reserve:hover {
+    height: 500px;
+}
+
+#reservationscards .reservationimages .container-fluid .row {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.r-cards {
+    margin-bottom: 6em !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 20px;
+    transition: justify-content 0.5s ease;
+}
+
+.text-content {
+    position: absolute; 
+    top: 3.5rem; 
+    left: 5%; 
+    z-index: 2; 
+    text-align: left; 
+    max-width: 40%;
+    transition: opacity 0.5s ease; 
+}
+
+.image-container-reserve:hover .text-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ticket-info {
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
+    width: 100%;
+    margin-top: 9rem;
+    text-align: left;
+    padding-left: 4%; 
+    padding-right: 4%; 
+}
+
+.image-container-reserve:hover .ticket-info {
+    opacity: 1;
+    visibility: visible; 
+}
+
+.ticket-info .horizontal-line {
+    border-top: 1.5px solid var(--bs-lightblue-og);
+    margin: 15px 0;
+}
+
+.ticket-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ticket-details p {
+    margin: 0;
+}
+
+.age-info {
+    position: absolute;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    padding-left: 4.5%; 
+    
+}
+
+.age-info .divider {
+    height: 16px;
+    width: 1px;
+    background-color: var(--bs-white-og);
+    margin: 0 5px;
+}
+
+.icon-ticket::before {
+    margin: 0 !important;
+    color: var(--bs-white-og) !important;
+}
+
+/* Modal */
+.modal-info {
+    border-radius: 0 !important;
+}
+
+.horizontal-line {
+    border-top: 1.5px solid var(--bs-lightblue-og); 
+    margin: 15px 0; 
+}
+
+.paying-info {
+    margin-bottom: 2rem;
+}
+
+/* Botón */
+.btn-custom {
+    background: none;
+    border: none;
+    color: var(--bs-white-og);
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+.btn-custom:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn-custom:hover {
+    color: var(--bs-blue-lm); 
+}
+#quantity {
+    font-size: 1rem;
+    color: var(--bs-white-og);
+    padding: 0 1rem;
+}
+
+.modal-header {
+    position: relative; 
+}
+
+.modal-titles {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding-left: 1rem;
+}
+
+.vertical-custom {
+    border-right: 1.5px solid var(--bs-lightblue-og); 
+    padding-right: 1rem;
+    height: 100%; 
+}
+
+.download {
+    color: var(--bs-white-og);
+    font-size: 0.8rem; 
+    font-family: var(--bs-font-title);
+    padding-top: 1.1rem;
+}
+
 /* MEDIA QUERIES */
+@media (max-width: 1920px) {
+    #reservations {
+        padding: 23%;
+    }
+}
+
+@media (max-width: 1333px) {
+    .image-container {
+        height: 300px; 
+    }
+    
+    .image-container:hover {
+        height: 400px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .text-title {
+        font-size: 3em !important;
+    }
+}
+
+@media (max-width: 1068px) {
+    .image-container {
+        height: 250px; 
+    }
+    
+    .image-container:hover {
+        height: 355px;
+    }
+}
 /* Estilos para pantallas menores a 800px */
+@media (max-width: 991px) {
+    .masonry-column:nth-child(3) {
+      display: none;
+    }
+
+    .carousel-item img {
+        max-width: 100%; 
+        max-height: 90vh;  
+      }
+    
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        padding: 1em;
+      }
+    
+      .nyear {
+        padding: 1em;
+      }
+}
+
+@media (max-width: 950px) {    
+    .image-container:hover {
+        height: 330px;
+    }
+}
+
 @media (max-width: 900px) {
     #home-reviews {
         padding-top: 15%;
@@ -797,6 +1253,36 @@ header {
     .home-reservations-header {
 
         height: 32em;
+    }
+
+    .ticket-details {
+        margin-bottom: 0;
+    }
+
+    .ticket-info .horizontal-line {
+        border-top: 1px solid var(--bs-lightblue-og);
+        margin: 5px 0;
+    }
+
+    .horizontal-line {
+        border-top: 1px solid var(--bs-lightblue-og); 
+        margin: 5px 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-info .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-info .col-8, .modal-info .col-4 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .modal-info .col-4 {
+        margin-top: 1rem;
     }
 }
 

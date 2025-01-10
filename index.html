@@ -71,16 +71,15 @@
       <nav class="w-100 d-flex z-2 position-fixed">
         <div id="menuWindow" class="position-fixed d-flex flex-column w-100 h-100 justify-content-center align-items-center menuHidden">
             <ul class="d-flex w-100 vh-100 flex-column ps-0 justify-content-around py-5 mt-5 mb-0">
-                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">Home</h1></li>
-                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">History</h1></li>
-                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">About us</h1></li>
-                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">Menu</h1></li>
-                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">Events</h1></li>
-                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">News</h1></li>
-                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">Reservation</h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="#" class="navItem text-black-lm">Home</a></h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="#" class="navItem text-black-lm">About Us</a></h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="#" class="navItem text-black-lm">Menu</a></h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="#" class="navItem text-black-lm">Events</a></h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="#" class="navItem text-black-lm">News</a></h1></li>
+                <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="#" class="navItem text-black-lm">Reservation</a></h1></li>
             </ul>
         </div>
-        <img src="./media/img/logos/resp-blue.png" class="position-fixed top-0 start-0 w-10 ms-2 mt-2" alt="">
+        <a href="#"><img src="./media/img/logos/resp-blue.png" class="position-fixed top-0 start-0 ms-2 mt-2" alt="" id="logo-nav"></a>
         <i id="switchMode" class="position-fixed top-0 end-0 mt-2 bi-brightness-low-fill fs-3"></i>
         <div id="navButton" class="p-4 position-fixed top-0 end-0 mt-1 d-flex">
             <label class="toggle">
@@ -124,7 +123,7 @@
                     <img src="media/img/home/home-2.webp" alt="booth" class="img-fluid z-1">
                   </div>
                   <div class="logo-container">
-                    <img src="media/img/logos/logo-blue.png" alt="logo-blue">
+                    <img id="logo-intro" src="media/img/logos/logo-blue.png" alt="logo-blue">
                   </div>
                 </div>
               </div>
@@ -494,7 +493,7 @@
     <section id="home-reservations">
       <div class="home-reservations-header d-flex flex-column align-items-center justify-content-center">
         <div class="header-text d-flex flex-column justify-content-center align-items-center">
-          <h1 class="text-white-og">Reservations</h1>
+          <h1 class="text-white-lm">Reservations</h1>
           <button class="btn btn-white mt-3 w-100" onclick="location.href='reservation.html'">Book your table</button>
         </div>
       </div>

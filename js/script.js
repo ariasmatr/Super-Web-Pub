@@ -2,6 +2,7 @@ console.log("me mato, cosorro");
 
 /* LOADER SCREEN */
 function loadingScreen() {
+    console.log("pruebaaaaa");
     function startLoader() {
         let counterElement = document.querySelector(".count p");
         let currentValue = 0;
@@ -81,6 +82,7 @@ function loadingScreen() {
     });
 }
 
+/* LIGHT/DARK THEME */
 function getInitialTheme() {
     const savedTheme = localStorage.getItem('data-bs-theme');
     if (savedTheme) {
@@ -108,13 +110,17 @@ function updateIcon(theme) {
 function updateLogoSrc(theme) {
     const logoImageFixed = document.querySelector('img.position-fixed');
     const logoImageLight = document.getElementById('logo-light');
+    const logoImageIntro = document.getElementById('logo-intro');
     
     if (theme === 'dark') {
         logoImageFixed.src = './media/img/logos/resp-skyblue.png'; // Ruta del logo fijo para tema oscuro
         logoImageLight.src = './media/img/logos/logo-skyblue.png'; // Ruta del logo light para tema oscuro
+        logoImageIntro.src = './media/img/logos/logo-skyblue.png';
+        
     } else {
         logoImageFixed.src = './media/img/logos/resp-blue.png'; // Ruta del logo fijo para tema claro
         logoImageLight.src = './media/img/logos/logo-blue.png'; // Ruta del logo light para tema claro
+        logoImageIntro.src = './media/img/logos/logo-blue.png';
     }
 }
 

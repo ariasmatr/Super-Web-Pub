@@ -63,9 +63,9 @@ section {
 }
 
 /* HEADER */
-
 #reservations {
     padding: 20%;
+    height: 100vh;
 }
 
 /* EVENTOS */
