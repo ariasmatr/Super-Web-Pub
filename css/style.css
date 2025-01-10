@@ -1550,6 +1550,18 @@ header {
     }
 }
 
+@media (max-width: 650px) {
+    .header-home {
+      background-image: url(../media/img/extras/extra-8.webp);
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+      width: 100%;
+    }
+  
+  }
+
 @media (max-width: 600px) {  
 
     #intro {
@@ -1660,15 +1672,7 @@ header {
 
 }
 
-@media (max-width: 650px) {
-    .header-home {
-        background-image: url(../media/img/extras/extra-8.webp);
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-    }
-}
+
 
 @media (max-width: 500px) {  
 
