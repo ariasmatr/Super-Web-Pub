@@ -130,7 +130,6 @@ function closeMenu(){
 }
 
 /* JS ALE */
-
 $(document).ready(function () {
     "use strict";
     let indice = 1;

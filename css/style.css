@@ -586,8 +586,6 @@ header {
     background-color: var(--bs-blue-lm);
 }
 
-/* DIVIDER 2 SECTION */
-
 /* LASTEST NEWS SECTION */
 .home-news-header {
     background-position: center;
@@ -782,60 +780,6 @@ header {
     --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fffaf8' %3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
     filter: none !important;
 }
-
-/* DIVIDER 2 SECTION */
-
-/* .parent {
-	width: 100%;
-    height: 50%;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(6, 1fr);
-	grid-column-gap: 64px;
-	grid-row-gap: 80px;
-}
-.parent img {
-	width: 100%;
-	object-fit: cover;
-	transition: transform .2s;
-}
-
-.project-page-title {
-	grid-area: 2 / 1 / 5 / 10;
-	position: sticky;
-	position: -webkit-sticky;
-	top: 140px;
-	padding: 0px;
-	z-index: 1;
-    
-}
-
-.logo-image {
-    position: absolute; 
-    padding-left: 35%;
-}
-
-.project-image-hero {
-	grid-area: 4 / 1 / 8 / 13; 
-	background-size: cover;
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-color: var(--bs-blue-lm);
-	transition: 0.5s ease-in;
-  transform: background-image 0.25s ease-in;
-	animation-name: StartAnimationBottom;
-	animation-duration: 1s;
-	z-index: 2;
-	min-height: 100%;
-  overflow: hidden;
-}
-.project-image-hero img {
-	width: 100%;
-	height: 100%;
-	object-position: top;
-  position: relative;
-  transform: translate3d(0, 0, 0);
-} */
 
 /* ------- HTML MENU ------- */
 /* MENU TITLE SECTION */
@@ -1304,6 +1248,14 @@ header {
     .category:hover .img-pop {
         flex: 0.3;
     }
+
+    .cont-menu .item {
+        font-size: 3.2em !important;
+    }
+
+    .item:hover .img-menu {
+        flex: 0.27;
+    }
 }
 
 /* APROX MEDIDA TABLET */
@@ -1349,6 +1301,23 @@ header {
 
     .modal-dialog {
         max-width: 600px !important;
+    }
+
+    .cont-menu,
+    #cards-pop .container {
+        max-width: 900px !important;
+    }
+
+    .card-menu .container .row .col-6 {
+        padding: 2rem !important;
+    }
+
+    .price h4 {
+        font-size: 1.2em !important;
+    }
+
+    .food p {
+        font-size: 0.7em !important;
     }
 }
 
@@ -1404,6 +1373,10 @@ header {
         border-top: 1px solid var(--bs-lightblue-og); 
         margin: 5px 0; 
     }
+
+    .cont-menu, #cards-pop .container {
+        max-width: 800px !important;
+    }
 }
 
 @media (max-width: 885px){
@@ -1439,6 +1412,18 @@ header {
 
     .text-content {
         top: 2rem;
+    }
+
+    .cont-menu, #cards-pop .container {
+        max-width: 700px !important;
+    }
+
+    .cont-menu .item {
+        font-size: 2.7em !important;
+    }
+
+    .item:hover .img-menu {
+        flex: 0.4;
     }
 }
 
@@ -1577,6 +1562,10 @@ header {
     .cont-buttons .fs-2 {
         font-size: 1.5em !important;
     }
+
+    #cards-pop .container {
+        max-width: 650px !important;
+    }
 }
 
 @media (max-width: 650px) {
@@ -1621,6 +1610,39 @@ header {
 
     #home-reservations-image {
         margin-bottom: 3em !important;
+    }
+
+    .card-menu .container .row {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .card-menu .container .row .col-6:first-child {
+        width: 100% !important;
+    }
+
+    .card-menu .container .row .col-6:last-child {
+        display: none !important;
+    }
+
+    .cont-menu .item {
+        font-size: 2em !important;
+    }
+
+    .item:hover .img-menu {
+        flex: 0.5;
+    }
+
+    #cards-pop .container .row {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    #cards-pop .container .row .col-6 {
+        width: 75% !important;
     }
 }
 
@@ -1751,10 +1773,6 @@ header {
         font-size: 1rem;
     }
 
-    .bg-black-og {
-       padding-right: 10px;
-    }
-
     #logo-footer {
         width: 60%;
     }
@@ -1785,6 +1803,26 @@ header {
 }
 
 @media (max-width: 500px) {  
+    #reservations {
+        padding: 0 !important;
+    }
+
+    .text-title {
+        font-size: 1.2rem !important;
+    }
+
+    .text-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .age-info {
+        font-size: 0.5rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+    }
 
     .break {
         display: none !important;
@@ -1801,7 +1839,6 @@ header {
     .col-lugar h4 {
         text-align: start !important;
     }
-   
 
     #intro .container .row-intro .general-cont {
         width: 90% !important;
@@ -1875,134 +1912,17 @@ header {
     }
 
     .div-info {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
-   /*  .bg-black-og {
-       padding-right: 10px;
-    } */
+    .cont-pop .category {
+        font-size: 1.7em;
+    }
+
+    .category:hover .img-pop {
+        flex: 0.55;
+    }
 }
-
-
-@media (max-width: 500px) {  
-
-    #reservations {
-        padding: 0 !important;
-    }
-
-    .text-title {
-        font-size: 1.2rem !important;
-    }
-
-    .text-subtitle {
-        font-size: 0.8rem !important;
-    }
-
-    .age-info {
-        font-size: 0.5rem !important;
-        top: 5px; 
-        right: 8%; 
-        left: auto; 
-        transform: none; 
-        text-align: right; 
-      }
-
-    .break {
-        display: none !important;
-    }
-
-    .vertical-custom {
-        border-right: none !important;
-    }
-
-    .ticket-details {
-        font-size: 0.8rem !important;
-    }
-
-    .col-lugar h4 {
-        text-align: start !important;
-    }
-
-    #intro .container .row-intro .general-cont {
-        width: 90% !important;
-        display: flex;
-        flex-direction: column !important;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2em !important;
-    }
-
-    .image-container-reserve {
-       height: 140px !important;
-    }
-
-    .image-container-reserve:hover {
-        height: 180px !important;
-    }
-
-    .cargo-text h1 {
-        font-size: 2.3em !important;
-    }
-
-    .container {
-        max-width: 450px !important;
-    }
-
-    .row-events {
-        display: flex;
-        flex-direction: column !important;
-        height: 240vh !important;
-        flex-wrap: nowrap !important;
-        padding-top: 30px;
-    }
-
-    .row-events .col-4 {
-        align-self: center !important;
-        margin-bottom: 1.5em !important;
-        width: 75% !important;
-    }
-
-    #home-cargodivider {
-        padding-top: 50%;
-        padding-bottom: 50%;
-    }
-   
-    #circles {
-        padding-top: 50%;
-    }
-
-    #home-news-images {
-        flex-direction: column; 
-    }
-
-    .modal-dialog {
-        max-width: var(--bs-modal-width) !important; 
-    }
-
-    .box img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .home-reservations-header {
-        height: 42em;
-    }
-
-    .event-info h4 {
-        font-size: 0.9em;
-    }
-
-    .div-info {
-        font-size: 1rem;
-    }
-
-   /*  .bg-black-og {
-       padding-right: 10px;
-    } */
-}
-
 
 @media (max-width: 450px) {
     #intro {
@@ -2150,15 +2070,8 @@ header {
         font-size: 2.5em !important;
     }
 
-    .div-info {
-        font-size: 0.6rem;
-    }
-
-    .bg-black-og {
-       padding-right: 10px;
+    .container {
+        max-width: 400px !important;
     }
 
 }
-
-
-   
