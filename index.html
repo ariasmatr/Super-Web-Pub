@@ -52,12 +52,12 @@
      .btn-modal (este es solo para la modal, el que dice PAGAR)
      .btn-outline-blue (este es para la sección de Reserva, el que tiene una flecha dentro)
     -->
-    <div class="container m-0 p-0">
+    <div class="container m-0 p-0 position-fixed z-3">
       <div class="pre-loader">
         <div class="loader"></div>
         <div class="loader-bg"></div>
       </div>
-      <div class="loader-content">
+      <div class="loader-content position-fixed">
         <div class="count"><p>0</p></div>
         <div class="copy"><h1 class="ml16 text-nowrap">The Mirage</h1></div>
       </div>
@@ -68,7 +68,7 @@
     </div>
 
     <header>
-      <nav class="w-100 d-flex">
+      <nav class="w-100 d-flex z-2 position-fixed">
         <div id="menuWindow" class="position-fixed d-flex flex-column w-100 h-100 justify-content-center align-items-center menuHidden">
             <ul class="d-flex w-100 vh-100 flex-column ps-0 justify-content-around py-5 mt-5 mb-0">
                 <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">Home</h1></li>
@@ -80,6 +80,7 @@
                 <li id="" class="menuItem"><h1 class="w-auto menuOption text-center mb-0">Reservation</h1></li>
             </ul>
         </div>
+        <img src="./media/img/logos/resp-blue.png" class="position-fixed top-0 start-0 w-10 ms-2 mt-2" alt="">
         <i id="switchMode" class="position-fixed top-0 end-0 mt-2 bi-brightness-low-fill fs-3"></i>
         <div id="navButton" class="p-4 position-fixed top-0 end-0 mt-1 d-flex">
             <label class="toggle">
@@ -104,7 +105,6 @@
             </svg>
         </div>
       </nav>
-
     </header>
 
     <section id="intro">
@@ -116,12 +116,12 @@
                 <div class="col-4 text-left">
                     <h4 class="fs-3 mb-3 text-black-lm">Salamanca, <br> Madrid</h4>
                   <div class="image-container-1">
-                    <img src="media/img/home/home-1.webp" alt="cocktail" class="img-fluid">
+                    <img src="media/img/home/home-1.webp" alt="cocktail" class="img-fluid z-1">
                   </div>
                 </div>
                 <div class="col-6 text-center general-cont">
                   <div class="image-container">
-                    <img src="media/img/home/home-2.webp" alt="booth" class="img-fluid">
+                    <img src="media/img/home/home-2.webp" alt="booth" class="img-fluid z-1">
                   </div>
                   <div class="logo-container">
                     <img src="media/img/logos/logo-blue.png" alt="logo-blue">
@@ -351,7 +351,7 @@
           <div class="col-4 align-self-center mt-0">
             <div class="event-card">
               <div class="gradient"></div>
-              <img src="media/img/home/home-6.webp" alt="Vogue's Xmas Dinner" class="img-fluid">
+              <img src="media/img/home/home-6.webp" alt="Vogue's Xmas Dinner" class="img-fluid z-1">
               <div class="event-info text-white-og">
                 <h4 class="m-0">Pump Gala</h4>
                 <p class="m-0">June 14, 2024</p>
@@ -361,7 +361,7 @@
           <div class="col-4 align-self-end mt-0">
             <div class="event-card mb-4">
               <div class="gradient"></div>
-              <img src="media/img/home/home-7.webp" alt="Runway Gala" class="img-fluid">
+              <img src="media/img/home/home-7.webp" alt="Runway Gala" class="img-fluid z-1">
               <div class="event-info text-white-og">
                 <h4 class="m-0">Los Javis Wrap Party</h4>
                 <p class="m-0">August 23, 2025</p>
@@ -369,7 +369,7 @@
             </div>
             <div class="event-card">
               <div class="gradient"></div>
-              <img src="media/img/home/home-9.webp" alt="Los Lavis Wrap Party" class="img-fluid">
+              <img src="media/img/home/home-9.webp" alt="Los Lavis Wrap Party" class="img-fluid z-1">
               <div class="event-info text-white-og">
                 <h4 class="m-0">It's a Fake Wedding</h4>
                 <p class="m-0">November 1, 2025</p>
@@ -379,7 +379,7 @@
           <div class="col-4 align-self-start mt-0">
             <div class="event-card mb-4">
               <div class="gradient"></div>
-              <img src="media/img/home/home-8.webp" alt="It's a Luxe Wedding" class="img-fluid">
+              <img src="media/img/home/home-8.webp" alt="It's a Luxe Wedding" class="img-fluid z-1">
               <div class="event-info text-white-og">
                 <h4 class="m-0">Vogue's Xmas Dinner</h4>
                 <p class="m-0">December 20, 2025</p>
@@ -387,7 +387,7 @@
             </div>
             <div class="event-card">
               <div class="gradient"></div>
-              <img src="media/img/home/home-10.webp" alt="Cheers Night" class="img-fluid">
+              <img src="media/img/home/home-10.webp" alt="Cheers Night" class="img-fluid z-1">
               <div class="event-info text-white-og">
                 <h4 class="m-0">Juernes</h4>
                 <p class="m-0">Every Thursday from 19:00 to 24:00</p>
@@ -509,7 +509,6 @@
     <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
       <div id="logo-footer" class="">
           <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
-          <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
       </div>
       <div class="divider-footer w-100 bg-blue-lm"></div>
       <div class="container text-center">
