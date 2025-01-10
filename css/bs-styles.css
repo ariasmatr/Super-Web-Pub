@@ -3153,6 +3153,24 @@ textarea.form-control-lg {
   transition: all 0.6s ease;
 }
 
+.btn-white {
+  --bs-text-opacity: 1;
+  --bs-bg-opacity: 1;
+  border: 1.5px solid rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-white-og-rgb), var(--bs-text-opacity)) !important;
+  background-color: transparent !important;
+  font-family: var(--bs-font-body) !important;
+  border-radius: 0;
+  padding: 0.9em;
+  width: 200px;
+}
+
+.btn-white:hover {
+  background-color: rgba(var(--bs-white-og-rgb), var(--bs-bg-opacity)) !important;
+  color: rgba(var(--bs-darkblue-og-rgb), var(--bs-text-opacity)) !important;
+  transition: all 0.6s ease;
+}
+
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;

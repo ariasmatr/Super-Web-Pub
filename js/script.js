@@ -165,7 +165,7 @@ $(document).ready(function () {
     let indice = 1;
     
     function setImagen() {
-        console.log("set. indice=" + indice);
+       
         $(".carousel-item").css("display", "none");
         $("#circles > div").attr("class", "");
 
