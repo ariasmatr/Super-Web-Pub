@@ -129,7 +129,6 @@ function closeMenu(){
     }, 400);
 }
 
-AOS.init();
 
 /* JS ALE */
 $(document).ready(function () {
