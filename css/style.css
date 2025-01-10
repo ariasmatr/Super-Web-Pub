@@ -1,0 +1,2164 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.modal-dialog{
+    pointer-events:all !important;
+}
+
+/* FONT TITLES */
+@font-face {
+    font-family: Bosch-display;
+    src: url(../types/Bosch-Display.otf) format("opentype");
+}
+
+/* VARIABLES COLOR & ESTILO WEB
+Los he metido en el archivo css de Bootstrap para facilitar lo del light/dark mode, así que les dejo aquí comentado las variables a usar para los colores. Solo tenemos que crear los html en light mode, ese es el default, así que solo les pondré los colores de ese modo :D 
+Los que terminan en 'lm' son los que cambian de color. 
+
+    --bs-bg-white-lm: #fffaf8;
+    --bs-black-lm: #1f2222;
+    --bs-blue-lm: #077488;
+    --bs-white-og: #fffaf8;
+    --bs-black-og: #1f2222;
+    --bs-darkblue-og: #077488;
+    --bs-lightblue-og: #69becd;
+    --bs-yellow-og: #faae45;
+    --bs-font-title: 'Bosch-display';
+    --bs-font-body: "Roboto", serif;
+*/
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--bs-font-title);
+}
+
+h1 {
+    font-size: 5em !important;
+}
+
+h2 {
+    font-size: 4.5em !important;
+}
+
+h3 {
+    font-size: 3.5em !important;
+}
+
+p {
+    font-family: var(--bs-font-body);
+    font-weight: 300 !important;
+}
+
+section {
+    margin: 0 auto;
+}
+
+/* LOADING SCREEN */
+.pre-loader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background:var(--bs-black-og);
+    color: var(--bs-white-og);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000 !important;
+}
+.loader-content {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-45%, -50%);
+    display: flex;
+    z-index: 2;
+    color: var(--bs-white-og);
+}
+.count {
+    flex: 2;
+    text-align: right;
+    line-height: 1;
+    padding: 0 1em;
+}
+.copy {
+    text-transform: uppercase;
+}
+.ml16 {
+    overflow: hidden;
+}
+.ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.loader-bg {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bs-blue-lm);
+    z-index: -1;
+}
+
+/* BG VIDEO HEADER */
+.bg-video {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg-video > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .bg-video > video {
+        height: 300%;
+        top: -100%;
+    }
+}
+  
+@media (max-aspect-ratio: 16/9) {
+    .bg-video > video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+/* HEADER */
+header {
+    height: 100vh;
+}
+
+.video-text {
+    position: absolute;
+    z-index: 1;
+}
+
+.title-header {
+    font-size: 7em !important;
+}
+
+.text-header {
+    font-size: 3em !important;
+}
+  
+.video-text-top-left {
+    top: 120px; 
+    left: 20px; 
+    text-align: left;
+}
+  
+.video-text-bottom-right {
+    bottom: 40px; 
+    right: 20px; 
+    text-align: right;
+}
+
+#logo-nav {
+    width: 7% !important;
+}
+.toggle {
+    display: block;
+    cursor: pointer;
+}
+.toggle input {
+    display: none;
+}
+.toggle input + div {
+    width: 20px;
+    height: 14px;
+    position: relative;
+}
+.toggle input + div div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: transform 0.5s ease;
+}
+.toggle input + div div span {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.toggle input + div div span:first-child {
+    top: 0;
+}
+.toggle input + div div span:first-child:before, .toggle input + div div span:first-child:after {
+    top: 0;
+}
+.toggle input + div div span:last-child {
+    bottom: 0;
+}
+.toggle input + div div span:last-child:before, .toggle input + div div span:last-child:after {
+    bottom: 0;
+}
+.toggle input + div div span:before, .toggle input + div div span:after {
+    content: '';
+    display: block;
+    width: 47%;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--bs-blue-lm);
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.5s ease, border-radius 0.3s ease, background 0.4s ease;
+}
+.toggle input + div div span:before {
+    left: 0;
+    transform-origin: 0 50%;
+    transform: translate(1px, 0) scaleX(1.1);
+}
+.toggle input + div div span:after {
+    right: 0;
+    transform-origin: 100% 50%;
+    transform: translate(-1px, 0) scaleX(1.1);
+}
+.toggle input + div svg {
+    display: block;
+    fill: none;
+    stroke: var(--bs-blue-lm);
+    stroke-width: 2px;
+    width: 44px;
+    height: 44px;
+    stroke-linecap: round;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -22px 0 0 -22px;
+    stroke-dasharray: 0 82.801 8 82.801;
+    stroke-dashoffset: 82.801;
+    transform-origin: 50% 50%;
+    -webkit-backface-visibility: hidden;
+    transform: scale(1);
+    transition: stroke-dashoffset 0.5s ease, stroke-dasharray 0.6s ease, transform 0.5s ease, stroke 0.4s ease;
+}
+.toggle input + div svg:nth-child(3) {
+    transform: rotate(180deg) scale(1);
+}
+.toggle input:checked + div div {
+    transform: rotate(90deg);
+}
+.toggle input:checked + div div span:before, .toggle input:checked + div div span:after {
+    background: var(--bs-blue-lm);
+}
+.toggle input:checked + div div span:first-child:before {
+    transform: rotate(45deg) translate(2.2px, -3px) scaleX(1.05);
+}
+.toggle input:checked + div div span:first-child:after {
+    transform: rotate(-45deg) translate(-2.2px, -3px) scaleX(1.05);
+}
+.toggle input:checked + div div span:last-child:before {
+    transform: rotate(-45deg) translate(2.2px, 3px) scaleX(1.05);
+}
+.toggle input:checked + div div span:last-child:after {
+    transform: rotate(45deg) translate(-2.2px, 3px) scaleX(1.05);
+}
+.toggle input:checked + div svg {
+    stroke-dashoffset: 62;
+    stroke-dasharray: 0 82.801 62 82.801;
+    transform: rotate(90deg);
+    stroke: var(--bs-blue-lm);
+}
+.toggle input:checked + div svg:nth-child(3) {
+    transform: rotate(270deg);
+}
+.menuHidden {
+    top: -100% !important;
+    transition: 0.5s ease-in;
+    backdrop-filter: blur(30px);
+    background-color: rgba(var(--bs-bg-white-lm-rgb), 0.4);
+    opacity: 0;
+}
+.menuShown {
+    top: 0% !important;
+    transition: 0.5s ease-in;
+    backdrop-filter: blur(30px);
+    background-color: rgba(var(--bs-bg-white-lm-rgb), 0.4);
+    opacity: 1;
+}
+.menuItem {
+    transform: translateY(20px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.navItem {
+    text-decoration: none;
+    position: relative;
+}
+
+.navItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bs-yellow-og);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+.navItem:hover::after {
+    transform: scale(1, 1);
+}
+
+.animate {
+    animation: list-show .4s 1 ease-out;
+    z-index: 900;
+}
+
+.menuOption {
+    position: relative;
+    z-index: 900;
+}
+
+@keyframes list-show {
+      from {
+          visibility: hidden;
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+      }
+}
+  
+#switchMode .bi::before,[class*=" bi-"]::before,[class^=bi-]::before {
+    display: inline-block;
+    font-family: bootstrap-icons!important;
+    font-style: normal;
+    font-weight: 400!important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    margin-top: 15px;
+    margin-right: 80px ;
+    vertical-align: 0 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--bs-blue-lm);
+    transition: 0.1s ease-in;
+}
+
+/* INTRO SECTION */
+#intro {
+    margin: 6em 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.general-cont {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container {
+    display: block;
+    width: 90% !important;
+    height: auto;
+}
+
+.logo-container {
+    position: absolute;
+    top: 95%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 60% !important;
+    height: auto;
+    z-index: 1;
+}
+
+/* HISTORY SECTION */
+#history {
+    padding: 6em 0;
+}
+
+.text-hist {
+    font-size: 2em !important;
+}
+
+.image-h {
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+/* DIVIDER */
+#home-cargodivider {
+    padding-top: 30%;
+    padding-bottom: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/img/home/home-5.webp);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+.cargo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+}
+
+/* DRINKS SECTION */
+#popular {
+    margin: 5em 0;
+}
+
+.cont-pop {
+    width: 100%;
+    padding: 0 2em;
+}
+
+.cont-pop .category {
+    width: 100%;
+    padding: 0.125em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 3.5em;
+    border-top: 1.5px solid var(--bs-blue-lm);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-pop {
+    width: 125px;
+    height: 80px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
+    flex: 0;
+}
+
+.img-pop img {
+    width: 125px;
+    height: auto;
+    object-fit: cover;
+    vertical-align: unset !important;
+}
+
+.category:hover {
+    gap: 20px;
+}
+
+.category:hover .img-pop {
+    flex: 0.15;
+}
+
+.category-6 {
+    border-bottom: 1.5px solid var(--bs-blue-lm);
+}
+
+.word {
+    font-family: var(--bs-font-title);
+}
+
+.card-pop {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.price-pop h4 {
+    margin-bottom: 0 !important;
+}
+
+/* EVENTS SECTION */ 
+.subtitle {
+    font-size: 1.3em;
+  }
+
+.row-events {
+    height: 150vh;
+}
+  
+.event-card {
+    position: relative;
+    overflow: hidden;
+}
+  
+.event-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+  
+.event-card:hover img {
+    transform: scale(1.05);
+}
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, var(--bs-black-og), transparent);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+.event-info {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+  
+.event-info h4 {
+    font-size: 1.5em;
+}
+  
+.event-info p {
+    font-size: 0.9em;
+}
+  
+/* REVIEWS SECTION */
+#home-reviews {
+    padding: 5%;
+    text-align: center;
+}
+
+.project-page-reviews {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 20px 0;
+}
+
+.carousel-item h1 {
+    font-size: 2.5em !important;
+    color: var(--bs-blue-lm);
+    margin-bottom: 10px;
+}
+
+#circles {
+    display: flex;
+    justify-content: center;
+    padding-top: 18%;
+    gap: 10px;
+}
+
+#circles div {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-color: var(--bs-black-lm);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#circles div.active {
+    background-color: var(--bs-blue-lm);
+}
+
+/* DIVIDER 2 SECTION */
+
+/* LASTEST NEWS SECTION */
+.home-news-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+}
+
+.home-news-header-title {
+    color: var(--bs-blue-lm);
+}
+
+#home-news-images {
+    display: flex;
+    margin: 0; 
+    padding: 0; 
+}
+  
+.box {
+    position: relative;
+    flex: 1 1 100%; 
+    border-radius: 0px;
+    overflow: hidden;
+    border: none;
+    transition: all 500ms ease;
+    height: 500px; 
+}
+  
+.box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+  
+ 
+.text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1; 
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s 0.3s; 
+}
+  
+
+.box:hover {
+    cursor: pointer;
+    flex: 1 1 300%; 
+    height: 500px; 
+}
+
+
+.box:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+  
+ 
+.box:hover .text-overlay {
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 0.3s ease, visibility 0s 0s; 
+}
+
+.text-overlay h1 {
+    font-size: 3em !important;
+}
+
+/* RESERVATION SECTION */
+.home-reservations-header {
+    background-color: var(--bs-blue-lm);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+}
+
+#home-reservations-button {
+    background: none; 
+    border: 1px solid var(--bs-white-og); 
+    border-radius: 0; 
+    color: var(--bs-white-og); 
+    font-family: var(--bs-font-title);
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: 100%; 
+    text-align: center; 
+    display: inline-block; 
+  }
+  
+#home-reservations-button:hover {
+    background: var(--bs-white-og); 
+    border: 1px solid var(--bs-white-og); 
+    color: var(--bs-blue-lm); 
+  }
+
+#home-reservations-image {
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+    margin-bottom: 6em !important;
+}
+
+.home-reservations-image-container {
+    width: 100%; 
+    height: 400px; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.home-reservations-image-background {
+    background-image: url('../media/img/home/home-17.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* FOOTER */
+#logo-footer {
+    width: 30%;
+    margin: 1.2em 0;
+}
+
+.divider-footer {
+    height: 1.5px;
+}
+
+.btn {
+    position: relative;
+}
+
+.btn-i::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bs-blue-lm);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+.btn-i:hover::after {
+    transform: scale(1, 1);
+}
+
+.form-info {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: solid 1.5px var(--bs-lightblue-og) !important;
+    border-radius: 0 !important;
+    color: var(--bs-white-og) !important;
+    font-size: 0.9em !important;
+}
+
+.form-info::placeholder {
+    color: var(--bs-white-og) !important;
+    opacity: 0.8 !important;
+    font-family: var(--bs-font-body) !important;
+    font-size: 0.9em !important;
+}
+
+.divider-ver {
+    width: 1.5px !important;
+    padding: 0 !important;
+}
+
+.info-text {
+    font-size: 0.8em;
+}
+
+.btn-close {
+    --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fffaf8' %3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+    filter: none !important;
+}
+
+/* DIVIDER 2 SECTION */
+
+/* .parent {
+	width: 100%;
+    height: 50%;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 64px;
+	grid-row-gap: 80px;
+}
+.parent img {
+	width: 100%;
+	object-fit: cover;
+	transition: transform .2s;
+}
+
+.project-page-title {
+	grid-area: 2 / 1 / 5 / 10;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 140px;
+	padding: 0px;
+	z-index: 1;
+    
+}
+
+.logo-image {
+    position: absolute; 
+    padding-left: 35%;
+}
+
+.project-image-hero {
+	grid-area: 4 / 1 / 8 / 13; 
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: var(--bs-blue-lm);
+	transition: 0.5s ease-in;
+  transform: background-image 0.25s ease-in;
+	animation-name: StartAnimationBottom;
+	animation-duration: 1s;
+	z-index: 2;
+	min-height: 100%;
+  overflow: hidden;
+}
+.project-image-hero img {
+	width: 100%;
+	height: 100%;
+	object-position: top;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+} */
+
+/* ------- HTML MENU ------- */
+/* MENU TITLE SECTION */
+.menu-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/img/menu/menu-1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+}
+
+/* MENU COLLAPSIBLE SECTION */
+#menu-accordion {
+    margin: 5em 0;
+}
+
+.cont-menu {
+    width: 100%;
+    padding: 0 2em;
+}
+
+.cont-menu .item {
+    width: 100%;
+    padding: 0.125em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 3.5em;
+    border-top: 1.5px solid var(--bs-blue-lm);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.item-8 {
+    border-bottom: 1.5px solid var(--bs-blue-lm);
+}
+
+.img-menu {
+    width: 125px;
+    height: 80px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
+    flex: 0;
+}
+
+.img-menu img {
+    width: 125px;
+    height: auto;
+    object-fit: cover;
+    vertical-align: unset !important;
+}
+
+.item:hover {
+    gap: 20px;
+}
+
+.item:hover .img-menu {
+    flex: 0.15;
+}
+
+.word {
+    font-family: var(--bs-font-title);
+}
+
+.card-menu {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.food p {
+    font-size: 0.9em;
+}
+
+.price h4 {
+    margin-bottom: 0 !important;
+}
+
+/* CARDS MOST POPULAR */
+#cards-pop {
+    margin-bottom: 6em;
+}
+
+.popular-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.popular-img:hover img {
+    transform: scale(1.05);
+}
+
+.popular-img:hover .item-info {
+    opacity: 1;
+}
+
+.item-info {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.item-info h4 {
+    font-size: 1.3em;
+}
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, var(--bs-black-og), transparent);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ------- HTML GALLERY ------- */
+/* HEADER */
+#header-text {
+    min-height: 100vh;
+}
+  
+  
+/* EVENT 1 SECTION NEW YEAR */
+.masonry-column {
+    padding: 0 1px;
+    padding-bottom: 2em;
+}
+  
+.img-gallery-1  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+  
+.img-gallery-1  img:hover {
+    transform: scale(1.03); 
+}
+  
+/* MODAL NEW YEAR */
+.modal-content-img {
+    overflow: hidden;
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    
+.carousel-item img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 90%; 
+    max-height: 80vh; 
+    object-fit: contain; 
+}
+  
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    color: var(--bs-white-og);
+}
+  
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    padding: 1.5em;
+}
+  
+.nyear {
+    padding: 1.5em;
+}
+    
+  
+/* EVENT 2 SECTION */
+.img-gallery-2  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+  
+.img-gallery-2  img:hover {
+    transform: scale(1.03); 
+}
+  
+/* EVENT 3 SECTION */
+.img-gallery-3  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+  
+.img-gallery-3  img:hover {
+    transform: scale(1.03); 
+}
+
+/* ------- HTML RESERVATION ------- */
+/* HEADER */
+#reservations {
+    height: 100vh;
+}
+
+/* EVENTOS */
+.image-container-reserve {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+    transition:  0.5s ease;
+}
+
+.image-container-reserve:hover {
+    height: 500px;
+}
+
+#reservationscards .reservationimages .container-fluid .row {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.r-cards {
+    margin-bottom: 6em !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 20px;
+    transition: justify-content 0.5s ease;
+}
+
+.text-content {
+    position: absolute; 
+    top: 3.5rem; 
+    left: 5%; 
+    
+    text-align: left; 
+    max-width: 40%;
+    transition: opacity 0.5s ease; 
+}
+
+.image-container-reserve:hover .text-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ticket-info {
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
+    width: 100%;
+    margin-top: 9rem;
+    text-align: left;
+    padding-left: 4%; 
+    padding-right: 4%; 
+}
+
+.image-container-reserve:hover .ticket-info {
+    opacity: 1;
+    visibility: visible; 
+}
+
+.ticket-info .horizontal-line {
+    border-top: 1.5px solid var(--bs-lightblue-og);
+    margin: 15px 0;
+}
+
+.ticket-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.ticket-details p {
+    margin: 0;
+}
+
+.age-info {
+    position: absolute;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    padding-left: 4.5%; 
+    
+}
+
+.age-info .divider {
+    height: 16px;
+    width: 1px;
+    background-color: var(--bs-white-og);
+    margin: 0 5px;
+}
+
+.icon-ticket::before {
+    margin: 0 !important;
+    color: var(--bs-white-og) !important;
+}
+
+/* Modal */
+.modal-info {
+    border-radius: 0 !important;
+}
+
+.horizontal-line {
+    border-top: 1.5px solid var(--bs-lightblue-og); 
+    margin: 15px 0; 
+}
+
+.paying-info {
+    margin-bottom: 2rem;
+}
+
+/* Botón */
+.btn-custom {
+    background: none;
+    border: none;
+    color: var(--bs-white-og);
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+.btn-custom:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn-custom:hover {
+    color: var(--bs-blue-lm); 
+}
+#quantity {
+    font-size: 1rem;
+    color: var(--bs-white-og);
+    padding: 0 1rem;
+}
+
+.modal-header {
+    position: relative; 
+}
+
+.modal-titles {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding-left: 1rem;
+}
+
+.vertical-custom {
+    border-right: 1.5px solid var(--bs-lightblue-og); 
+    padding-right: 1rem;
+    height: 100%; 
+}
+
+.download {
+    color: var(--bs-white-og);
+    font-size: 0.8rem; 
+    font-family: var(--bs-font-title);
+    padding-top: 1.1rem;
+}
+
+/* ------- MEDIA QUERIES RESPONSIVE ------- */
+@media (max-width: 1920px) {
+    .row-events {
+        height: 110vh;
+    }
+
+    #reservations {
+        padding: 23%;
+    }
+}
+
+@media (max-width: 1400px) {
+    #intro {
+        height: 70vh;
+    }
+
+    #intro .container {
+        width: 80%;
+    }
+
+    #history .container {
+        width: 90%;
+    }
+
+    .row-events {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1333px) {
+    .image-container-reserve {
+        height: 300px; 
+    }
+    
+    .image-container-reserve:hover {
+        height: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #intro {
+        height: 60vh;
+    }
+
+    .text-hist {
+        font-size: 1.5em !important;
+    }
+
+    h1 {
+        font-size: 3.7em !important;
+    }
+
+    .row-events {
+        height: 80vh;
+    }
+
+    .home-news-header {
+        height: 18em;
+    }
+}
+
+@media (max-width: 1080px) {
+    #logo-nav {
+        width: 9% !important;
+    }
+    .text-title {
+        font-size: 3em !important;
+    }
+}
+
+@media (max-width: 1068px) {
+    .image-container-reserve {
+        height: 250px; 
+    }
+    
+    .image-container-reserve:hover {
+        height: 355px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #intro {
+        height: 50vh;
+    }
+
+    .text-hist {
+        font-size: 1.2em !important;
+    }
+
+    .category:hover .img-pop {
+        flex: 0.3;
+    }
+}
+
+/* APROX MEDIDA TABLET */
+@media (max-width: 991px) {
+    #logo-nav {
+        width: 10% !important;
+    }
+
+    #history {
+        padding: 4em 0;
+    }
+
+    .card-pop .container .row {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .col-card {
+        width: 75% !important;
+    }
+
+    .row-events {
+        height: 60vh;
+    }
+
+    .masonry-column:nth-child(3) {
+      display: none;
+    }
+
+    .carousel-item img {
+        max-width: 100%; 
+        max-height: 90vh;  
+      }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 1em;
+    }
+    
+    .nyear {
+        padding: 1em;
+    }
+
+    .modal-dialog {
+        max-width: 600px !important;
+    }
+}
+
+@media (max-width: 950px) {    
+    .image-container-reserve:hover {
+        height: 330px;
+    }
+
+    #home-reservations-image {
+        margin-bottom: 4em !important;
+    }
+
+    #logo-footer {
+        width: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    #home-reviews {
+        padding: 4.5em 3em 3.5em 3em;
+    }
+
+    #circles {
+        padding-top: 26%;
+    }
+
+    .home-news-header {
+        height: 22em;
+    }
+
+    .text-overlay h1 {
+        font-size: 2.2em !important;
+    }
+
+    .text-overlay .btn {
+        width: 50% !important;
+    }
+
+    .home-reservations-header {
+        height: 28em;
+    }
+
+    .ticket-details {
+        margin-bottom: 0;
+    }
+
+    .ticket-info .horizontal-line {
+        border-top: 1px solid var(--bs-lightblue-og);
+        margin: 5px 0;
+    }
+
+    .horizontal-line {
+        border-top: 1px solid var(--bs-lightblue-og); 
+        margin: 5px 0; 
+    }
+}
+
+@media (max-width: 885px){
+    .image-container-reserve {
+        height: 220px; 
+    }
+    
+    .image-container-reserve:hover {
+        height: 300px;
+    }
+
+    .text-title-2 {
+        display: none;
+    }
+
+    .text-title {
+        font-size: 2em !important;
+    }
+}
+
+@media (max-width: 815px) {
+    .image-container-reserve {
+        height: 220px; 
+    }
+    
+    .image-container-reserve:hover {
+        height: 280px;
+    }
+
+    .ticket-info {
+        margin-top: 7rem;
+    }
+
+    .text-content {
+        top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-header {
+        font-size: 5.5em !important;
+    }
+    
+    .text-header {
+        font-size: 2.3em !important;
+    }
+
+    #history .container .row:first-child {
+        display: flex;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+    }
+
+    #history .container .row:last-child {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text {
+        width: 100% !important;
+    }
+
+    .img-hist {
+        width: 75% !important;
+    }
+
+    .image-h {
+        margin-bottom: 2em;
+    }
+
+    .img-hist-2 {
+        margin: 2.5em 0 !important;
+    }
+
+    .text-hist {
+        text-align: justify;
+    }
+
+    .cont-pop .category {
+        font-size: 2.7em;
+    }
+
+    h2 {
+        font-size: 3.7em !important;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    .category:hover .img-pop {
+        flex: 0.7;
+    }
+
+    .container {
+        max-width: 650px !important;
+    }
+
+    .carousel-item h1,
+    .text-overlay h1 {
+        font-size: 2em !important;
+    }
+
+    .home-reservations-header {
+        height: 22em;
+    }
+
+    .divider-ver {
+        width: 100% !important;
+        height: 1.5px;
+        margin-top: 1.2em !important;
+    }
+
+    .div-info-cont {
+        width: 100% !important;
+        padding-top: 1.7em !important;
+    }
+
+    h3 {
+        font-size: 3em !important;
+    }
+
+    .modal-info .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-info .col-8, .modal-info .col-4 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .modal-info .col-4 {
+        margin-top: 1rem;
+    }
+    
+    .image-container-reserve:hover {
+        height: 260px;
+    }
+
+    .ticket-info {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .row-intro {
+        justify-content: center !important;
+    }
+
+    #home-reviews {
+        padding: 4em 2.5em 3em 2.5em;
+    }
+
+    #circles {
+        padding-top: 30%;
+    }
+
+    .text-overlay h1 {
+        font-size: 1.7em !important;
+    }
+
+    .text-overlay p {
+        font-size: 0.8em !important;
+    }
+
+    .cargo-text h1 {
+        font-size: 2.7em !important;
+    }
+
+    .cont-buttons .fs-2 {
+        font-size: 1.5em !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .header-home {
+        background-image: url(../media/img/extras/extra-8.webp);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .titles-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .video-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: initial;
+        text-align: center;
+    }
+    
+    .title-header {
+        font-size: 6em !important;
+    }
+    
+    .text-header {
+        font-size: 2.5em !important;
+    }
+
+    .container {
+        max-width: 540px !important;
+    }
+
+    .home-news-header {
+        height: 20em;
+    }
+
+    #home-reservations-image {
+        margin-bottom: 3em !important;
+    }
+}
+
+@media (max-width: 600px) {  
+    #intro {
+        height: 100vh;
+        margin: 5em 0;
+    }
+
+    #intro .container .row-intro {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .row-intro h4 {
+        font-size: 2em !important;
+    }
+
+    #intro .container .row-intro .col-since {
+        text-align: start !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+        margin-top: 2em !important;
+        margin-bottom: 1.2em;
+    }
+
+    #intro .container .row-intro .col-lugar {
+        width: 75% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .break {
+        display: none !important;
+    }
+
+    .col-lugar h4 {
+        text-align: start !important;
+    }
+
+    #intro .container .row-intro .general-cont {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em !important;
+    }
+
+    #history .container {
+        max-width: 540px !important;
+        width: 85% !important;
+    }
+
+    .cont-pop .category {
+        font-size: 2em;
+    }
+
+    .category:hover .img-pop {
+        flex: 0.5;
+    }
+
+    h2 {
+        font-size: 3.3em !important;
+    }
+
+    .cargo-text h1 {
+        font-size: 2.3em !important;
+    }
+
+    .container {
+        max-width: 540px !important;
+    }
+
+    .row-events {
+        display: flex;
+        flex-direction: column !important;
+        height: 280vh !important;
+        flex-wrap: nowrap !important;
+        padding-top: 30px;
+    }
+
+    .row-events .col-4 {
+        align-self: center !important;
+        margin-bottom: 1.5em !important;
+        width: 75% !important;
+    }
+
+    .event-info h4 {
+        font-size: 1em ;
+    }
+
+    .event-info p {
+        font-size: 0.7em;
+    }
+
+    .row-events {
+        height: 250vh !important;
+    }
+
+    .carousel-item h1, .text-overlay h1 {
+        font-size: 1.7em !important;
+    }
+   
+    #circles {
+        padding-top: 35%;
+    }
+
+    #home-news-images {
+        flex-direction: column; 
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .div-info {
+        font-size: 1rem;
+    }
+
+    .bg-black-og {
+       padding-right: 10px;
+    }
+
+    #logo-footer {
+        width: 60%;
+    }
+}
+
+@media (max-width: 585px) {  
+
+    #reservations {
+        padding: 0 !important;
+    }
+
+    .text-title {
+        font-size: 1.6rem !important;
+    }
+
+    .text-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .age-info {
+        font-size: 0.8rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+      }
+}
+
+@media (max-width: 500px) {  
+
+    .break {
+        display: none !important;
+    }
+
+    .vertical-custom {
+        border-right: none !important;
+    }
+
+    .ticket-details {
+        font-size: 0.8rem !important;
+    }
+
+    .col-lugar h4 {
+        text-align: start !important;
+    }
+   
+
+    #intro .container .row-intro .general-cont {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em !important;
+    }
+
+    .image-container-reserve {
+       height: 160px !important;
+    }
+
+    .image-container-reserve:hover {
+        height: 220px !important;
+    }
+
+    .cargo-text h1 {
+        font-size: 2.3em !important;
+    }
+
+    .container {
+        max-width: 450px !important;
+    }
+
+    .row-events {
+        display: flex;
+        flex-direction: column !important;
+        height: 210vh !important;
+        flex-wrap: nowrap !important;
+        padding-top: 30px;
+    }
+
+    .row-events .col-4 {
+        align-self: center !important;
+        margin-bottom: 1.5em !important;
+        width: 75% !important;
+    }
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+   
+    #circles {
+        padding-top: 50%;
+    }
+
+    #home-news-images {
+        flex-direction: column; 
+    }
+
+    .modal-dialog {
+        max-width: var(--bs-modal-width) !important; 
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .event-info h4 {
+        font-size: 0.9em;
+    }
+
+    .div-info {
+        font-size: 1rem;
+    }
+
+   /*  .bg-black-og {
+       padding-right: 10px;
+    } */
+}
+
+
+@media (max-width: 500px) {  
+
+    #reservations {
+        padding: 0 !important;
+    }
+
+    .text-title {
+        font-size: 1.2rem !important;
+    }
+
+    .text-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .age-info {
+        font-size: 0.5rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+      }
+
+    .break {
+        display: none !important;
+    }
+
+    .vertical-custom {
+        border-right: none !important;
+    }
+
+    .ticket-details {
+        font-size: 0.8rem !important;
+    }
+
+    .col-lugar h4 {
+        text-align: start !important;
+    }
+
+    #intro .container .row-intro .general-cont {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em !important;
+    }
+
+    .image-container-reserve {
+       height: 140px !important;
+    }
+
+    .image-container-reserve:hover {
+        height: 180px !important;
+    }
+
+    .cargo-text h1 {
+        font-size: 2.3em !important;
+    }
+
+    .container {
+        max-width: 450px !important;
+    }
+
+    .row-events {
+        display: flex;
+        flex-direction: column !important;
+        height: 240vh !important;
+        flex-wrap: nowrap !important;
+        padding-top: 30px;
+    }
+
+    .row-events .col-4 {
+        align-self: center !important;
+        margin-bottom: 1.5em !important;
+        width: 75% !important;
+    }
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+   
+    #circles {
+        padding-top: 50%;
+    }
+
+    #home-news-images {
+        flex-direction: column; 
+    }
+
+    .modal-dialog {
+        max-width: var(--bs-modal-width) !important; 
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .event-info h4 {
+        font-size: 0.9em;
+    }
+
+    .div-info {
+        font-size: 1rem;
+    }
+
+   /*  .bg-black-og {
+       padding-right: 10px;
+    } */
+}
+
+
+@media (max-width: 450px) {
+    #intro {
+        height: 90vh;
+    }
+
+    .text-hist {
+        font-size: 1em !important;
+    }
+
+    .img-hist {
+        width: 85% !important;
+    }
+
+    #reservations {
+        padding: 0 !important;
+    }
+
+    .text-title {
+        font-size: 1rem !important;
+    }
+
+    .text-subtitle {
+        font-size: 0.6rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .cont-pop .category {
+        font-size: 1.7em;
+    }
+
+    .category:hover .img-pop {
+        flex: 0;
+    }
+
+    .col-card {
+        width: 100% !important;
+    }
+
+    .row-events {
+        height: 190vh !important;
+    }
+
+    #circles {
+        padding-top: 55%;
+
+    .age-info {
+        font-size: 0.5rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+      }
+    }
+
+    .break {
+        display: none !important;
+    }
+
+    .vertical-custom {
+        border-right: none !important;
+    }
+
+    .ticket-details {
+        font-size: 0.8rem !important;
+    }
+
+    .col-lugar h4 {
+        text-align: start !important;
+    }
+
+    #intro .container .row-intro .general-cont {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em !important;
+    }
+
+    .image-container-reserve {
+       height: 120px !important;
+    }
+
+    .image-container-reserve:hover {
+        height: 160px !important;
+    }
+
+    .home-news-header {
+        height: 40em;
+    }
+
+    .cargo-text h1 {
+        font-size: 2.3em !important;
+    }
+
+    .container {
+        max-width: 450px !important;
+    }
+
+    .row-events {
+        display: flex;
+        flex-direction: column !important;
+        height: 240vh !important;
+        flex-wrap: nowrap !important;
+        padding-top: 30px;
+    }
+
+    .row-events .col-4 {
+        align-self: center !important;
+        margin-bottom: 1.5em !important;
+        width: 75% !important;
+    }
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+   
+    #circles {
+        padding-top: 50%;
+    }
+
+    #home-news-images {
+        flex-direction: column; 
+    }
+
+    .modal-dialog {
+        max-width: var(--bs-modal-width) !important; 
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    #infoModalLabel {
+        font-size: 2.5em !important;
+    }
+
+    .div-info {
+        font-size: 0.6rem;
+    }
+
+    .bg-black-og {
+       padding-right: 10px;
+    }
+
+}
+
+
+   

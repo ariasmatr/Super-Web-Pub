@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mirage</title>
+    <link rel="icon" href="media/img/favicon-bueno.png">
+
+    <!-- TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->∫
+    <link href="./css/bs-styles.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS CSS 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="container m-0 p-0 position-fixed z-3">
+        <div class="pre-loader">
+          <div class="loader"></div>
+          <div class="loader-bg"></div>
+        </div>
+        <div class="loader-content position-fixed">
+          <div class="count"><p>0</p></div>
+          <div class="copy"><h1 class="ml16 text-nowrap">The Mirage</h1></div>
+        </div>
+      </div>
+  
+      <header id="reservations" class="d-flex flex-column align-items-center justify-content-center">
+        <nav class="w-100 d-flex z-2 position-fixed">
+          <div id="menuWindow" class="position-fixed d-flex flex-column w-100 h-100 justify-content-center align-items-center menuHidden">
+              <ul class="d-flex w-100 vh-100 flex-column ps-0 justify-content-around py-5 mt-5 mb-0">
+                <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="index.html#" class="navItem text-black-lm">Home</a></h1></li>
+              <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="index.html#history" class="navItem text-black-lm">About Us</a></h1></li>
+              <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="gallery.html" class="navItem text-black-lm">Gallery</a></h1></li>
+              <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="menu.html" class="navItem text-black-lm">Menu</a></h1></li>
+              <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="reservation.html" class="navItem text-black-lm">Reservation</a></h1></li>
+              <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="https://themirageblog.cargo.site/" class="navItem text-black-lm">Events</a></h1></li>
+              </ul>
+          </div>
+          <a href="index.html#"><img src="./media/img/logos/resp-blue.png" class="position-fixed top-0 start-0 ms-2 mt-2" alt="" id="logo-nav"></a>
+          <i id="switchMode" class="position-fixed top-0 end-0 mt-2 bi-brightness-low-fill fs-3"></i>
+          <div id="navButton" class="p-4 position-fixed top-0 end-0 mt-1 d-flex">
+              <label class="toggle">
+                  <input type="checkbox">
+                  <div>
+                      <div>
+                          <span></span>
+                          <span></span>
+                      </div>
+                      <svg>
+                          <use xlink:href="#path">
+                      </svg>
+                      <svg>
+                          <use xlink:href="#path">
+                      </svg>
+                  </div>
+              </label>   
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+                      <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+                  </symbol>
+              </svg>
+          </div>
+        </nav>
+
+        <div class="container text-center">
+            <h1 class="reservationstitle text-blue-lm mb-4">Reservations</h1>
+            <p class="reservatiosnsubtitle text-black-lm lead mb-4">Discover our upcoming events and book your table with the package of your choice. <br> Limited availability.</p>
+        </div>
+      </header>
+   
+
+    <section id="reservationscards" class="r-cards">
+        <div class="reservationimages">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Evento 1 -->
+                    <div class="col-12 p-0">
+                        <div class="image-container-reserve position-relative">
+                            <img src="media/img/reservation/reserve-1.webp" alt="Pump Gala" class="full-width-image">
+                            <div class="overlay d-flex align-items-start flex-column">
+                                <div class="text-content">
+                                    <h3 class="text-title text-blue-og mb-2">Pump Gala</h3>
+                                    <p class="text-subtitle text-white-og mb-3">December 17, 2024<br>12:00 - 6:00</p>
+                                </div>   
+                                <div class="ticket-info">
+                                    <h4 class="text-title-2 text-blue-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3"><p class="text-white-og">20€</p></span>
+                                            <div class="btn-outline-blue z-1" data-bs-toggle="modal" data-bs-target="#reservationModal1">
+                                                <i class="bi bi-arrow-right text-white-og icon-ticket"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                </div>
+                            </div>
+                            <div class="age-info text-white-og">
+                                <span>+18</span>
+                                <div class="divider"></div>
+                                <span>Casual</span>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- Evento 2 -->
+                    <div class="col-12 p-0">
+                        <div class="image-container-reserve position-relative">
+                            <img src="media/img/reservation/reserve-2.webp" alt="Juernes" class="full-width-image">
+                            <div class="overlay d-flex align-items-start flex-column">
+                                <div class="text-content">
+                                    <h3 class="text-title text-blue-og mb-2">Juernes</h3>
+                                    <p class="text-subtitle text-white-og mb-3">Every Thursday<br>19:00 - 2:00</p>
+                                </div>   
+                                <div class="ticket-info">
+                                    <h4 class="text-title-2  text-blue-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3"><p class="text-white-og">20€</p></span>
+                                            <div class="btn-outline-blue z-1" data-bs-toggle="modal" data-bs-target="#reservationModal2">
+                                                <i class="bi bi-arrow-right text-white-og icon-ticket"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                </div>
+                            </div>
+                            <div class="age-info text-white-og">
+                                <span>+18</span>
+                                <div class="divider"></div>
+                                <span>Casual</span>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- Evento 3 -->
+                    <div class="col-12 p-0">
+                        <div class="image-container-reserve position-relative">
+                            <img src="media/img/reservation/reserve-3.webp" alt="Fake Wedding" class="full-width-image">
+                            <div class="overlay d-flex align-items-start flex-column">
+                                <div class="text-content">
+                                    <h3 class="text-title  text-blue-og mb-2">It´s a Fake Wedding</h3>
+                                    <p class="text-subtitle text-white-og mb-3">January 7, 2025<br>12:00 - 6:00</p>
+                                </div>   
+                                <div class="ticket-info">
+                                    <h4 class="text-title-2  text-blue-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3"><p class="text-white-og">20€</p></span>
+                                            <div class="btn-outline-blue z-1" data-bs-toggle="modal" data-bs-target="#reservationModal3">
+                                                <i class="bi bi-arrow-right text-white-og icon-ticket"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                </div>
+                            </div>
+                            <div class="age-info text-white-og">
+                                <span>+25</span>
+                                <div class="divider"></div>
+                                <span>Cocktail</span>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- Evento 4 -->
+                    <div class="col-12 p-0">
+                        <div class="image-container-reserve position-relative">
+                            <img src="media/img/reservation/reserve-4.webp" alt="VFNO" class="full-width-image">
+                            <div class="overlay d-flex align-items-start flex-column">
+                                <div class="text-content">
+                                    <h3 class="text-title  text-blue-og mb-2">VFNO</h3>
+                                    <p class="text-subtitle text-white-og mb-3">January 20, 2025<br>12:00 - 6:00</p>
+                                </div>   
+                                <div class="ticket-info">
+                                    <h4 class="text-title-2  text-blue-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3"><p class="text-white-og">20€</p></span>
+                                            <div class="btn-outline-blue z-1" data-bs-toggle="modal" data-bs-target="#reservationModal4">
+                                                <i class="bi bi-arrow-right text-white-og icon-ticket"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                </div>
+                            </div>
+                            <div class="age-info text-white-og">
+                                <span>+18</span>
+                                <div class="divider"></div>
+                                <span>Casual</span>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- Evento 5 -->
+                    <div class="col-12 p-0">
+                        <div class="image-container-reserve position-relative">
+                            <img src="media/img/reservation/reserve-5.webp" alt="Los Javis" class="full-width-image">
+                            <div class="overlay d-flex align-items-start flex-column">
+                                <div class="text-content">
+                                    <h3 class="text-title  text-blue-og mb-2">Los Javis Wrap Party</h3>
+                                    <p class="text-subtitle text-white-og mb-3">February 4, 2025<br>12:00 - 6:00</p>
+                                </div>   
+                                <div class="ticket-info">
+                                    <h4 class="text-title-2  text-blue-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 1 drink</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3"><p class="text-white-og">35€</p></span>
+                                            <div class="btn-outline-blue z-1" data-bs-toggle="modal" data-bs-target="#reservationModal5">
+                                                <i class="bi bi-arrow-right text-white-og icon-ticket"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                </div>
+                            </div>
+                            <div class="age-info text-white-og">
+                                <span>+21</span>
+                                <div class="divider"></div>
+                                <span>Elegant</span>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="reservationModal1" tabindex="-1" aria-labelledby="reservationModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-titles">
+                        <h3 class="text-title-modal text-white-og mb-1">Pump Gala</h3>
+                        <p class="text-subtitle-modal text-white-og mb-0">December 17, 2024<br>12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row calculation">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h4 class="text-white-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3">
+                                                <p class="text-white-og">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white-og mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h4 class="text-white-og">Summary</h4>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white-og">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white-og">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white-og">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white-og">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-modal mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="reservationModal2" tabindex="-1" aria-labelledby="reservationModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-titles">
+                        <h3 class="text-title-modal text-white-og mb-1">Juernes</h3>
+                        <p class="text-subtitle-modal text-white-og mb-0">12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row calculation">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h4 class="text-white-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3">
+                                                <p class="text-white-og">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white-og mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h4 class="text-white-og">Summary</h4>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white-og">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white-og">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white-og">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white-og">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-modal mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="reservationModal3" tabindex="-1" aria-labelledby="reservationModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-titles">
+                        <h3 class="text-title-modal text-white-og mb-1">It´s a Fake Wedding</h3>
+                        <p class="text-subtitle-modal text-white-og mb-0">January 7, 2025<br>12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row calculation">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h4 class="text-white-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3">
+                                                <p class="text-white-og">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white-og mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h4 class="text-white-og">Summary</h4>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white-og">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white-og">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white-og">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white-og">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-modal mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 4 -->
+    <div class="modal fade" id="reservationModal4" tabindex="-1" aria-labelledby="reservationModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-titles">
+                        <h3 class="text-title-modal text-white-og mb-1">VFNO</h3>
+                        <p class="text-subtitle-modal text-white-og mb-0">January 20, 2025<br>12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row calculation">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h4 class="text-white-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 2 drinks</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3">
+                                                <p class="text-white-og">20€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white-og mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h4 class="text-white-og">Summary</h4>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white-og">20€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white-og">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white-og">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white-og">20.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-modal mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 5 -->
+    <div class="modal fade" id="reservationModal5" tabindex="-1" aria-labelledby="reservationModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <div class="modal-titles">
+                        <h3 class="text-title-modal text-white-og mb-1">Los Javis Wrap Party</h3>
+                        <p class="text-subtitle-modal text-white-og mb-0">February 4, 2025<br>12:00 - 6:00</p>
+                    </div>
+                </div>
+                <div class="pt-4 mt-3"> 
+                    <div class="container-fluid">
+                        <div class="modal-body">
+                        <div class="row calculation">
+                            <!-- Zona del 70% -->
+                            <div class="col-8 pe-4 vertical-custom">
+                                <div class="paying-info">
+                                    <h4 class="text-white-og">Ticket</h4>
+                                    <div class="horizontal-line"></div>
+                                    <div class="ticket-details">
+                                        <p class="text-white-og">Ticket to event + 1 drink</p>
+                                        <div class="price-and-btn d-flex align-items-center">
+                                            <span class="price text-white-og me-3">
+                                                <p class="text-white-og">35€</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="quantity-details d-flex justify-content-between">
+                                        <p class="text-white-og mt-3">Select your quantity:</p>
+                                        <div class="d-flex align-items-center">
+                                            <button class="btn-custom" id="decrease-btn">-</button>
+                                            <span id="quantity">1</span>
+                                            <button class="btn-custom" id="increase-btn">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="download">* Download your tickets after purchase.</p>
+                                </div>
+                            </div>
+
+                            <!-- Zona del 30% -->
+                            <div class="col-4 ps-4">
+                                <div class="summary">
+                                    <h4 class="text-white-og">Summary</h4>
+                                    <div class="summary-details mt-3">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Tickets to event:</p>
+                                            <p id="ticketTotal" class="text-white-og">35€</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="text-white-og">Booking fees:</p>
+                                            <p id="booking-fee" class="text-white-og">0.75€</p>
+                                        </div>
+                                    </div>
+                                    <div class="horizontal-line"></div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-white-og">TOTAL:</p>
+                                        <p id="totalAmount" class="text-white-og">35.75€</p>
+                                    </div>
+                                    <button id="pay-button" class="btn btn-modal mt-3 w-100" data-bs-dismiss="modal">PAY</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
+        <div id="logo-footer" class="">
+            <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
+            <img id="logo-dark" src="media/img/logos/logo-skyblue.png" alt="Logo Skyblue" style="display: none;">
+        </div>
+        <div class="divider-footer w-100 bg-blue-lm"></div>
+        <div class="container text-center">
+            <div class="row my-5">
+              <div class="col-6 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm btn-i" data-bs-toggle="modal" data-bs-target="#infoModal">Request Information</button>
+              </div>
+              <div class="col-6 fs-2 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm btn-i">Join the Team</button>
+              </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-blue-lm text-center mb-4 fs-5">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
+        </div>
+
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <h3 class="modal-title text-white-og" id="infoModalLabel">Let's Get in Touch</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-8 p-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-info" id="name-info" placeholder="Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control form-info" id="email-info" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control form-info" id="message-info" rows="4" placeholder="Message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-modal w-100">SEND</button>
+                                </form>
+                            </div>
+                            <div class="col-1 divider-ver bg-blue-og mx-2"></div>
+                            <div class="col-3 px-3 text-center d-flex flex-column justify-content-center">
+                                <div class="div-info text-white-og mb-4">
+                                    <p class="fs-5" style="font-family: var(--bs-font-title);">Our Address</p>
+                                    <p class="info-text">Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid.</p>
+                                </div>
+                                <div class="div-info text-white-og mb-3">
+                                    <p class="fs-5" style="font-family: var(--bs-font-title);">Our Contacts</p>
+                                    <p class="info-text">themirage@club.es</p>
+                                    <p class="info-text">+34 915 55 25 28</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+    </footer>
+
+    <!-- JQUERY -->
+    <script src="./libs/jquery.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+
+     <!-- AOS JS -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="./js/script-ale.js"></script>
+
+    <!-- GSAP LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- ANIME -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</body>
+</html>

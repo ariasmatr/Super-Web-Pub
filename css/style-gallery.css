@@ -64,7 +64,7 @@ section {
 }
 
 /* HEADER */
-.header-text {
+#header-text {
   min-height: 100vh;
 }
 
@@ -77,6 +77,11 @@ section {
 
 .img-gallery-1  img {
     padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery-1  img:hover {
+  transform: scale(1.03); 
 }
 
 /* MODAL NEW YEAR */
@@ -117,11 +122,21 @@ section {
 /* EVENT 2 SECTION */
 .img-gallery-2  img {
     padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery-2  img:hover {
+  transform: scale(1.03); 
 }
 
 /* EVENT 3 SECTION */
 .img-gallery-3  img {
     padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery-3  img:hover {
+  transform: scale(1.03); 
 }
 
 /* FOOTER */
