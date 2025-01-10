@@ -1624,6 +1624,20 @@ header {
     }
 }
 
+@media (max-width: 650px) {
+    .video-text-top-left {
+        top: 0px;
+        margin-top: 40%;  
+        text-align: centert;
+    }
+      
+    .video-text-bottom-right { 
+        text-align: center;
+    }
+   
+}
+
+
 @media (max-width: 600px) {  
     #intro {
         height: 100vh;
