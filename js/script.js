@@ -92,7 +92,7 @@ let menuOpener = document.getElementById('navButton');
 let menuWin = document.getElementById('menuWindow');
 let toggle = document.querySelector('.toggle input')
 let clickCount = 0;
-const menuItems = document.querySelectorAll("li.menuItem");
+let menuItems = document.querySelectorAll("li.menuItem");
 menuOpener.addEventListener('click',()=>{
     clickCount++;
     if (clickCount % 2 === 0) {
@@ -108,18 +108,26 @@ menuOpener.addEventListener('click',()=>{
             }
         }, 500);
     } else {
-        menuWin.classList.remove('menuShown');
-        menuWin.classList.add('menuHidden');
-        const animate = document.querySelectorAll("li.animate");
-        setTimeout(() => {
-            animate.forEach((item) => {
-                    item.classList.remove("animate");
-                    item.classList.add("menuItem");
-            });
-        }, 400);
+        closeMenu();
     }
     }
 });
+
+menuItems.forEach(item => {
+    item.addEventListener("click", closeMenu);
+});
+
+function closeMenu(){
+    menuWin.classList.remove('menuShown');
+    menuWin.classList.add('menuHidden');
+    const animate = document.querySelectorAll("li.animate");
+    setTimeout(() => {
+        animate.forEach((item) => {
+                item.classList.remove("animate");
+                item.classList.add("menuItem");
+        });
+    }, 400);
+}
 
 /* JS ALE */
 
