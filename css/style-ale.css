@@ -523,6 +523,10 @@ section {
 
 @media (max-width: 600px) {
 
+    h1 {
+        font-size: 1rem;
+    }
+
     #home-cargodivider {
         padding-top: 50%;
         padding-bottom: 50%;
