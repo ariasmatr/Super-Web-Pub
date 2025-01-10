@@ -4,6 +4,10 @@
     scroll-behavior: smooth;
 }
 
+.modal-dialog{
+    pointer-events:all !important;
+}
+
 /* FONT TITLES */
 @font-face {
     font-family: Bosch-display;

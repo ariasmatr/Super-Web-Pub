@@ -113,7 +113,7 @@ function updateIcon(theme) {
       switchModeIcon.classList.remove('bi-moon-fill','fs-4');
       switchModeIcon.classList.add('bi-brightness-low-fill','fs-3');
   }
-  updateLogoSrc(theme); // Llama a la función para actualizar las imágenes del logo
+  updateLogoSrc(theme); 
 }
 
 function updateLogoSrc(theme) {
@@ -121,11 +121,11 @@ function updateLogoSrc(theme) {
   const logoImageLight = document.getElementById('logo-light');
   
   if (theme === 'dark') {
-      logoImageFixed.src = './media/img/logos/resp-skyblue.png'; // Ruta del logo fijo para tema oscuro
-      logoImageLight.src = './media/img/logos/logo-skyblue.png'; // Ruta del logo light para tema oscuro
+      logoImageFixed.src = './media/img/logos/resp-skyblue.png'; 
+      logoImageLight.src = './media/img/logos/logo-skyblue.png'; 
   } else {
-      logoImageFixed.src = './media/img/logos/resp-blue.png'; // Ruta del logo fijo para tema claro
-      logoImageLight.src = './media/img/logos/logo-blue.png'; // Ruta del logo light para tema claro
+      logoImageFixed.src = './media/img/logos/resp-blue.png'; 
+      logoImageLight.src = './media/img/logos/logo-blue.png'; 
   }
 }
 
@@ -144,6 +144,7 @@ document.getElementById('switchMode').addEventListener('click', () => {
   updateIcon(newTheme);
   loadingScreen();
 });
+
 
 /* NAV BUTTON */
 let menuOpener = document.getElementById('navButton');
