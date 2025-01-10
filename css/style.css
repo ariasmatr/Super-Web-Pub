@@ -1866,8 +1866,6 @@ header {
         text-align: start !important;
     }
 
-   
-
     #intro .container .row-intro .general-cont {
         width: 90% !important;
         display: flex;
@@ -1945,42 +1943,106 @@ header {
 
 }
 
-@media (max-width: 450px) {
 
-    #home-cargodivider {
-        padding-top: 75%;
-        padding-bottom: 75%;
-    }
+@media (max-width: 450px) {  
 
-    .text-white-og {
-        font-size: 1.2rem;
+    #reservations {
+        padding: 0 !important;
     }
 
-    #home-reviews {
-        padding-top: 48%;
-        padding-bottom: 48%;
-        padding-right: 12%;
-        padding-left: 12%;
-    }
-    #circles {
-        padding-top: 75%;
+    .text-title {
+        font-size: 1rem !important;
     }
 
-    .container {
-        max-width: 400px !important;
+    .text-subtitle {
+        font-size: 0.6rem !important;
+        margin-bottom: 8px !important;
     }
-    .home-news-header {
-        height: 40em;
+
+    .age-info {
+        font-size: 0.5rem !important;
+        top: 5px; 
+        right: 8%; 
+        left: auto; 
+        transform: none; 
+        text-align: right; 
+      }
+
+    .break {
+        display: none !important;
+    }
+
+    .vertical-custom {
+        border-right: none !important;
+    }
+
+    .ticket-details {
+        font-size: 0.8rem !important;
+    }
+
+    .col-lugar h4 {
+        text-align: start !important;
+    }
+
+    #intro .container .row-intro .general-cont {
+        width: 90% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em !important;
+    }
+
+    .image-container-reserve {
+       height: 120px !important;
+    }
+
+    .image-container-reserve:hover {
+        height: 160px !important;
     }
 
     .cargo-text h1 {
-        padding-right: 10%;
-        padding-left: 10%;
+        font-size: 2.3em !important;
+    }
+
+    .container {
+        max-width: 450px !important;
+    }
+
+    .row-events {
+        display: flex;
+        flex-direction: column !important;
+        height: 240vh !important;
+        flex-wrap: nowrap !important;
+        padding-top: 30px;
+    }
+
+    .row-events .col-4 {
+        align-self: center !important;
+        margin-bottom: 1.5em !important;
+        width: 75% !important;
+    }
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+   
+    #circles {
+        padding-top: 50%;
+    }
+
+    #home-news-images {
+        flex-direction: column; 
+    }
+
+    .modal-dialog {
+        max-width: var(--bs-modal-width) !important; 
     }
 
     .box img {
         display: block;
-        width: 140%;
+        width: 100%;
         height: 100%;
         object-fit: cover;
     }
@@ -1990,7 +2052,14 @@ header {
     }
 
     .div-info {
-        font-size: 0.6rem;
+        font-size: 1rem;
+    }
+
+    .bg-black-og {
+       padding-right: 10px;
     }
 
 }
+
+
+   
