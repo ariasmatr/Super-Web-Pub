@@ -81,7 +81,6 @@ function loadingScreen() {
     });
 }
 
-/* LIGHT/DARK MODE SEGÚN NAVEGADOR Y SE GUARDA */
 function getInitialTheme() {
     const savedTheme = localStorage.getItem('data-bs-theme');
     if (savedTheme) {
@@ -103,15 +102,19 @@ function updateIcon(theme) {
         switchModeIcon.classList.remove('bi-moon-fill','fs-4');
         switchModeIcon.classList.add('bi-brightness-low-fill','fs-3');
     }
-    updateLogoSrc(theme); // Llama a la función para actualizar la imagen del logo
+    updateLogoSrc(theme); // Llama a la función para actualizar las imágenes del logo
 }
 
 function updateLogoSrc(theme) {
-    const logoImage = document.querySelector('img.position-fixed');
+    const logoImageFixed = document.querySelector('img.position-fixed');
+    const logoImageLight = document.getElementById('logo-light');
+    
     if (theme === 'dark') {
-        logoImage.src = './media/img/logos/resp-skyblue.png'; // Ruta del logo para tema oscuro
+        logoImageFixed.src = './media/img/logos/resp-skyblue.png'; // Ruta del logo fijo para tema oscuro
+        logoImageLight.src = './media/img/logos/logo-skyblue.png'; // Ruta del logo light para tema oscuro
     } else {
-        logoImage.src = './media/img/logos/resp-blue.png'; // Ruta del logo para tema claro
+        logoImageFixed.src = './media/img/logos/resp-blue.png'; // Ruta del logo fijo para tema claro
+        logoImageLight.src = './media/img/logos/logo-blue.png'; // Ruta del logo light para tema claro
     }
 }
 
