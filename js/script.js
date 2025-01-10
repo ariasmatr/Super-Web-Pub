@@ -1,5 +1,6 @@
 console.log("me mato, cosorro");
 
+
 /* LOADER SCREEN */
 function loadingScreen() {
     function startLoader() {
@@ -86,6 +87,8 @@ function loadingScreen() {
         delay: 4.5,
     });
 }
+
+AOS.init();
 
 /* NAV BUTTON */
 let menuOpener = document.getElementById('navButton');
