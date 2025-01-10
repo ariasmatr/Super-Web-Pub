@@ -63,9 +63,14 @@ section {
 }
 
 /* HEADER */
+
 #reservations {
     padding: 20%;
     height: 100vh;
+}
+
+.text-center {
+    padding: 20%;
 }
 
 /* EVENTOS */
@@ -343,9 +348,14 @@ section {
     }
 }
 
-@media (max-width: 1068px) {
+@media (min-width: 1068px) {
+
+    .text-title {
+        font-size: 2em !important;
+    }
+
     .image-container {
-        height: 250px; 
+        height: 450px; 
     }
     
     .image-container:hover {
@@ -353,9 +363,32 @@ section {
     }
 }
 
+@media (max-width: 1068px) {
+
+    .text-title {
+        font-size: 2em !important;
+    }
+
+    .image-container {
+        height: 450px; 
+    }
+    
+    .image-container:hover {
+        height: 355px;
+    }
+
+    .image-container-reserve:hover .ticket-info {
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 950px) {    
     .image-container:hover {
         height: 330px;
+    }
+
+    .image-container-reserve:hover .ticket-info {
+        margin-bottom: 40px;
     }
 }
 
@@ -373,20 +406,8 @@ section {
         border-top: 1px solid var(--bs-lightblue-og); 
         margin: 5px 0; 
     }
-}
 
-@media (max-width: 768px) {
-    .modal-info .modal-dialog {
-        margin: 1rem;
-    }
-
-    .modal-info .col-8, .modal-info .col-4 {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .modal-info .col-4 {
-        margin-top: 1rem;
+    .image-container-reserve:hover .ticket-info {
+        margin-bottom: 50px;
     }
 }
