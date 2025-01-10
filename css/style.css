@@ -130,6 +130,26 @@ section {
     height: 100%;
 }
 
+.video-text {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    font-size: 0.6rem;
+  }
+  
+  .video-text-top-left {
+    top: 80px; /* Ajusta el margen superior */
+    left: 20px; /* Ajusta el margen izquierdo */
+    text-align: left;
+  }
+  
+  .video-text-bottom-right {
+    bottom: 10px; /* Ajusta el margen inferior */
+    right: 20px; /* Ajusta el margen derecho */
+    text-align: right;
+  }
+
+
 @media (min-aspect-ratio: 16/9) {
     .bg-video > video {
         height: 300%;
@@ -263,13 +283,15 @@ header {
 .menuHidden {
     top: -100% !important;
     transition: 0.5s ease-in;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(30px);
+    background-color: rgba(var(--bs-bg-white-lm-rgb), 0.4);
     opacity: 0;
 }
 .menuShown {
     top: 0% !important;
     transition: 0.5s ease-in;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(30px);
+    background-color: rgba(var(--bs-bg-white-lm-rgb), 0.4);
     opacity: 1;
 }
 .menuItem {

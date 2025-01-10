@@ -69,6 +69,10 @@ section {
     height: 100vh;
 }
 
+li .text-center{
+    padding: 0 !important;
+}
+
 .text-center {
     padding: 20%;
 }
