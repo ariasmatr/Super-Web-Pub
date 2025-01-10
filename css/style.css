@@ -1367,6 +1367,42 @@ header {
     }
 }
 
+@media (max-width: 885px){
+    .image-container-reserve {
+        height: 220px; 
+    }
+    
+    .image-container-reserve:hover {
+        height: 300px;
+    }
+
+    .text-title-2 {
+        display: none;
+    }
+
+    .text-title {
+        font-size: 2em !important;
+    }
+}
+
+@media (max-width: 815px) {
+    .image-container-reserve {
+        height: 220px; 
+    }
+    
+    .image-container-reserve:hover {
+        height: 280px;
+    }
+
+    .ticket-info {
+        margin-top: 7rem;
+    }
+
+    .text-content {
+        top: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     #history .container .row:first-child {
         display: flex;
@@ -1455,6 +1491,14 @@ header {
 
     .modal-info .col-4 {
         margin-top: 1rem;
+    }
+    
+    .image-container-reserve:hover {
+        height: 260px;
+    }
+
+    .ticket-info {
+        margin-top: 6rem;
     }
 }
 
