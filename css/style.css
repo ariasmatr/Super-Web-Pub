@@ -1528,8 +1528,29 @@ header {
     }
 }
 
-@media (max-width: 600px) {  
+@media (max-width: 650px) {
+    .header-home {
+        background-image: url(../media/img/extras/extra-8.webp);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
 
+    .container {
+        max-width: 540px !important;
+    }
+
+    .home-news-header {
+        height: 20em;
+    }
+
+    #home-reservations-image {
+        margin-bottom: 3em !important;
+    }
+}
+
+@media (max-width: 600px) {  
     #intro {
         height: 100vh;
         margin: 5em 0;
@@ -1578,6 +1599,23 @@ header {
         margin-top: 2em !important;
     }
 
+    #history .container {
+        max-width: 540px !important;
+        width: 85% !important;
+    }
+
+    .cont-pop .category {
+        font-size: 2em;
+    }
+
+    .category:hover .img-pop {
+        flex: 0.5;
+    }
+
+    h2 {
+        font-size: 3.3em !important;
+    }
+
     .cargo-text h1 {
         font-size: 2.3em !important;
     }
@@ -1600,22 +1638,29 @@ header {
         width: 75% !important;
     }
 
-    #home-cargodivider {
-        padding-top: 50%;
-        padding-bottom: 50%;
+    .event-info h4 {
+        font-size: 1em ;
     }
 
-    .text-white-og {
-        font-size: 1.8rem;
+    .event-info p {
+        font-size: 0.7em;
+    }
+
+    .row-events {
+        height: 250vh !important;
+    }
+
+    .carousel-item h1, .text-overlay h1 {
+        font-size: 1.7em !important;
     }
    
     #circles {
-        padding-top: 40%;
+        padding-top: 35%;
     }
 
     #home-news-images {
         flex-direction: column; 
-      }
+    }
 
     .box img {
         display: block;
@@ -1636,16 +1681,6 @@ header {
        padding-right: 10px;
     }
 
-}
-
-@media (max-width: 650px) {
-    .header-home {
-        background-image: url(../media/img/extras/extra-8.webp);
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-    }
 }
 
 @media (max-width: 500px) {  
@@ -1704,7 +1739,11 @@ header {
 
     #home-news-images {
         flex-direction: column; 
-      }
+    }
+
+    .modal-dialog {
+        max-width: var(--bs-modal-width) !important; 
+    }
 
     .box img {
         display: block;
