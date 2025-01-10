@@ -130,6 +130,26 @@ section {
     height: 100%;
 }
 
+.video-text {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    font-size: 0.6rem;
+  }
+  
+  .video-text-top-left {
+    top: 80px; /* Ajusta el margen superior */
+    left: 20px; /* Ajusta el margen izquierdo */
+    text-align: left;
+  }
+  
+  .video-text-bottom-right {
+    bottom: 10px; /* Ajusta el margen inferior */
+    right: 20px; /* Ajusta el margen derecho */
+    text-align: right;
+  }
+
+
 @media (min-aspect-ratio: 16/9) {
     .bg-video > video {
         height: 300%;
