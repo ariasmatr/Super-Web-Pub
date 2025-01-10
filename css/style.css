@@ -14,22 +14,6 @@
     src: url(../types/Bosch-Display.otf) format("opentype");
 }
 
-/* VARIABLES COLOR & ESTILO WEB
-Los he metido en el archivo css de Bootstrap para facilitar lo del light/dark mode, así que les dejo aquí comentado las variables a usar para los colores. Solo tenemos que crear los html en light mode, ese es el default, así que solo les pondré los colores de ese modo :D 
-Los que terminan en 'lm' son los que cambian de color. 
-
-    --bs-bg-white-lm: #fffaf8;
-    --bs-black-lm: #1f2222;
-    --bs-blue-lm: #077488;
-    --bs-white-og: #fffaf8;
-    --bs-black-og: #1f2222;
-    --bs-darkblue-og: #077488;
-    --bs-lightblue-og: #69becd;
-    --bs-yellow-og: #faae45;
-    --bs-font-title: 'Bosch-display';
-    --bs-font-body: "Roboto", serif;
-*/
-
 img {
     width: 100%;
     vertical-align: middle;
