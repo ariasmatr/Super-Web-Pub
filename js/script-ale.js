@@ -64,7 +64,7 @@ function loadingScreen() {
         updateCounter();
     }
 
-    gsap.set(".loader-content", { display: "block" });
+    gsap.set(".loader-content", { display: "flex" });
     gsap.set(".count", { opacity: 1 });
     gsap.set(".pre-loader", { scale: 1, display: "block" });
     gsap.set(".loader", { height: "100%" });
