@@ -1638,38 +1638,17 @@ header {
 
 }
 
+@media (max-width: 650px) {
+    .header-home {
+        background-image: url(../media/img/extras/extra-8.webp);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
+}
+
 @media (max-width: 500px) {  
-
-    #intro {
-        height: 100vh;
-        margin: 5em 0;
-    }
-
-    #intro .container .row-intro {
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-
-    .row-intro h4 {
-        font-size: 2em !important;
-    }
-
-    #intro .container .row-intro .col-since {
-        text-align: start !important;
-        width: 100% !important;
-        justify-content: flex-start !important;
-        margin-top: 2em !important;
-        margin-bottom: 1.2em;
-    }
-
-    #intro .container .row-intro .col-lugar {
-        width: 75% !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
     .break {
         display: none !important;
