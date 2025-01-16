@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* FONT TITLES */
+@font-face {
+    font-family: Bosch-display;
+    src: url(../types/Bosch-Display.otf) format("opentype");
+}
+
+/* VARIABLES COLOR & ESTILO WEB
+Los he metido en el archivo css de Bootstrap para facilitar lo del light/dark mode, así que les dejo aquí comentado las variables a usar para los colores. Solo tenemos que crear los html en light mode, ese es el default, así que solo les pondré los colores de ese modo :D
+Los que terminan en 'lm' son los que cambian de color. 
+
+    --bs-bg-white-lm: #fffaf8;
+    --bs-black-lm: #1f2222;
+    --bs-blue-lm: #077488;
+    --bs-white-og: #fffaf8;
+    --bs-black-og: #1f2222;
+    --bs-darkblue-og: #077488;
+    --bs-lightblue-og: #69becd;
+    --bs-yellow-og: #faae45;
+    --bs-font-title: 'Bosch-display';
+    --bs-font-body: "Roboto", serif;
+*/
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--bs-font-title);
+}
+
+h1 {
+    font-size: 5em !important;
+}
+
+h2 {
+    font-size: 4.5em !important;
+}
+
+h3 {
+    font-size: 3.5em !important;
+}
+
+p {
+    font-family: var(--bs-font-body);
+    font-weight: 300;
+}
+
+body {
+    background-color: var(--bs-bg-white-lm) !important;
+}
+
+section {
+    margin: 0 auto;
+}
+
+/* HEADER */
+#header-text {
+  min-height: 100vh;
+}
+
+
+/* EVENT 1 SECTION NEW YEAR */
+.masonry-column {
+    padding: 0 1px;
+    padding-bottom: 2em;
+  }
+
+.img-gallery-1  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery-1  img:hover {
+  transform: scale(1.03); 
+}
+
+/* MODAL NEW YEAR */
+.modal-content {
+    overflow: hidden;
+    width: 100%;
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Imágenes del carrusel */
+  .carousel-item img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 90%; 
+    max-height: 80vh; 
+    object-fit: contain; 
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 1.5em;
+  }
+
+  .nyear {
+    padding: 1.5em;
+  }
+  
+
+/* EVENT 2 SECTION */
+.img-gallery-2  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery-2  img:hover {
+  transform: scale(1.03); 
+}
+
+/* EVENT 3 SECTION */
+.img-gallery-3  img {
+    padding-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.img-gallery-3  img:hover {
+  transform: scale(1.03); 
+}
+
+/* FOOTER */
+#logo-footer {
+  width: 30%;
+  margin: 1.2em 0;
+}
+
+.divider-footer {
+  height: 2px;
+}
+
+.btn {
+  position: relative;
+}
+
+.btn-i::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--bs-blue-lm);
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+.btn-i:hover::after {
+  transform: scale(1, 1);
+}
+
+.form-info {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: solid 1.5px var(--bs-lightblue-og) !important;
+  border-radius: 0 !important;
+  color: var(--bs-white-og) !important;
+  font-size: 0.9em !important;
+}
+
+.form-info::placeholder {
+  color: var(--bs-white-og) !important;
+  opacity: 0.8 !important;
+  font-family: var(--bs-font-body) !important;
+  font-size: 0.9em !important;
+}
+
+.divider-ver {
+  width: 2px !important;
+  padding: 0 !important;
+}
+
+.info-text {
+  font-size: 0.8em;
+}
+
+.btn-close {
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fffaf8' %3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 991px) {
+    .masonry-column:nth-child(3) {
+      display: none;
+    }
+
+    .carousel-item img {
+        max-width: 100%; 
+        max-height: 90vh;  
+      }
+    
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        padding: 1em;
+      }
+    
+      .nyear {
+        padding: 1em;
+      }
+  }
+
+  

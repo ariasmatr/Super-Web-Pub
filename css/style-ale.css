@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* FONT TITLES */
+@font-face {
+    font-family: Bosch-display;
+    src: url(../types/Bosch-Display.otf) format("opentype");
+}
+
+/* VARIABLES COLOR & ESTILO WEB
+Los he metido en el archivo css de Bootstrap para facilitar lo del light/dark mode, así que les dejo aquí comentado las variables a usar para los colores. Solo tenemos que crear los html en light mode, ese es el default, así que solo les pondré los colores de ese modo :D 
+Los que terminan en 'lm' son los que cambian de color. 
+
+    --bs-bg-white-lm: #fffaf8;
+    --bs-black-lm: #1f2222;
+    --bs-blue-lm: #077488;
+    --bs-white-og: #fffaf8;
+    --bs-black-og: #1f2222;
+    --bs-darkblue-og: #077488;
+    --bs-lightblue-og: #69becd;
+    --bs-yellow-og: #faae45;
+    --bs-font-title: 'Bosch-display';
+    --bs-font-body: "Roboto", serif;
+*/
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--bs-font-title);
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 4.5em;
+}
+
+h3 {
+    font-size: 3.5em;
+}
+
+p {
+    font-family: var(--bs-font-body);
+    font-weight: 300;
+}
+
+body {
+    background-color: var(--bs-bg-white-lm) !important;
+}
+
+section {
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+/* INTRO SECTION */
+
+/* HISTORY SECTION */
+
+/* DIVIDER/LINK TO CARGO SECTION */
+
+#home-cargodivider {
+    padding-top: 30%;
+    padding-bottom: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../media/img/home/home-5.webp);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+.cargo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Alinea el texto en el centro */
+    text-align: center; /* Centra el texto en el centro */
+}
+
+#home-cargo-button {
+    background: none; 
+    border: 1px solid var(--bs-white-og); 
+    border-radius: 0; 
+    color: var(--bs-white-og); 
+    font-family: var(--bs-font-title);
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease;  
+    text-align: center; 
+    display: inline-block; 
+  }
+  
+#home-cargo-button:hover {
+    background: var(--bs-white-og); 
+    border: 1px solid var(--bs-white-og); 
+    color: var(--bs-blue-lm); 
+  }
+
+
+
+/* DRINKS SECTION */
+
+/* EVENTS SECTION */
+
+/* REVIEWS SECTION */
+
+/* Sección principal de Reviews */
+#home-reviews {
+    padding: 5%;
+    text-align: center;
+}
+
+/* Contenedor de las reviews y los puntos */
+.project-page-reviews {
+    max-width: 900px;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px 0;
+}
+
+/* Texto del carousel */
+.carousel-item h1 {
+    font-size: 1.8em;
+    color: var(--bs-blue-lm);
+    margin-bottom: 10px;
+}
+
+.carousel-item h3 {
+    font-size: 1.2em;
+}
+
+/* Puntos indicadores */
+#circles {
+    display: flex;
+    justify-content: center;
+    padding-top: 18%;
+    gap: 10px;
+}
+
+#circles div {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#circles div.active {
+    background-color: var(--bs-blue-lm);
+}
+
+
+
+/* DIVIDER 2 SECTION */
+
+.parent {
+	width: 100%;
+    height: 50%;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-column-gap: 64px;
+	grid-row-gap: 80px;
+}
+.parent img {
+	width: 100%;
+	object-fit: cover;
+	transition: transform .2s;
+}
+
+.project-page-title {
+	grid-area: 2 / 1 / 5 / 10;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 140px;
+	padding: 0px;
+	z-index: 1;
+    
+}
+
+.logo-image {
+    position: absolute; /* Permite posicionar el elemento con top, left */
+    padding-left: 35%;
+}
+
+.project-image-hero {
+	grid-area: 4 / 1 / 8 / 13; 
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: var(--bs-blue-lm);
+	transition: 0.5s ease-in;
+  transform: background-image 0.25s ease-in;
+	animation-name: StartAnimationBottom;
+	animation-duration: 1s;
+	z-index: 2;
+	min-height: 100%;
+  overflow: hidden;
+}
+.project-image-hero img {
+	width: 100%;
+	height: 100%;
+	object-position: top;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+/* LATEST NEWS SECTION */
+
+.home-news-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+}
+
+.home-news-header-title {
+    color: var(--bs-blue-lm);
+}
+
+#home-news-button {
+    background: none; 
+    border: 1px solid var(--bs-blue-lm); 
+    border-radius: 0; 
+    color: var(--bs-blue-lm); 
+    font-family: var(--bs-font-title);
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: 100%; 
+    text-align: center; 
+    display: inline-block; 
+  }
+  
+#home-news-button:hover {
+    background: var(--bs-blue-lm); 
+    border: 1px solid var(--bs-blue-lm); 
+    color: var(--bs-white-og); 
+  }
+
+
+
+
+  #home-news-images {
+    display: flex;
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .box {
+    position: relative;
+    flex: 1 1 100%; 
+    border-radius: 0px;
+    overflow: hidden;
+    border: none;
+    transition: all 500ms ease;
+    height: 500px; 
+  }
+  
+  .box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  /* Información sobre la imagen que solo se muestra cuando se hace hover */
+  .text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1; 
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s 0.3s; 
+  }
+  
+  /* Efectos al hacer hover en las cajas */
+  .box:hover {
+    cursor: pointer;
+    flex: 1 1 300%; 
+    height: 500px; 
+  }
+
+  /* Añadir el fondo degradado al contenedor de la imagen */
+.box:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    z-index: 0; 
+  }
+  
+  /* Mostrar la información al hacer hover sobre la caja */
+  .box:hover .text-overlay {
+    opacity: 1; 
+    visibility: visible; 
+    transition: opacity 0.3s ease, visibility 0s 0s; 
+  }
+
+  #home-newscard-button {
+    background: none; 
+    border: 1px solid var(--bs-white-og); 
+    border-radius: 0; 
+    color: var(--bs-white-og); 
+    font-family: var(--bs-font-title);
+    cursor: pointer; 
+    transition: all 0.3s ease;  
+    text-align: center; 
+    display: inline-block; 
+  }
+  
+#home-newscard-button:hover {
+    background: var(--bs-white-og); 
+    border: 1px solid var(--bs-white-og); 
+    color: var(--bs-blue-lm); 
+  }
+
+  
+  @media (max-width: 600px) {
+    #home-news-images {
+      flex-direction: column; 
+    }
+  }
+
+
+
+
+/* RESERVATION SECTION */
+
+.home-reservations-header {
+    background-color: var(--bs-blue-lm);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+}
+
+#home-reservations-button {
+    background: none; 
+    border: 1px solid var(--bs-white-og); 
+    border-radius: 0; 
+    color: var(--bs-white-og); 
+    font-family: var(--bs-font-title);
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: 100%; 
+    text-align: center; 
+    display: inline-block; 
+  }
+  
+#home-reservations-button:hover {
+    background: var(--bs-white-og); 
+    border: 1px solid var(--bs-white-og); 
+    color: var(--bs-blue-lm); 
+  }
+
+#home-reservations-image {
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.home-reservations-image-container {
+    width: 100%; 
+    height: 400px; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.home-reservations-image-background {
+    background-image: url('../media/img/home/home-17.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: 100%; 
+}
+
+/* MENU TITLE SECTION */
+
+
+
+
+
+/* FOOTER */
+#logo-footer {
+    width: 30%;
+    margin: 1.2em 0;
+}
+
+.divider-footer {
+    height: 2px;
+}
+
+.btn {
+    position: relative;
+}
+
+.btn-i::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bs-blue-lm);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+.btn-i:hover::after {
+    transform: scale(1, 1);
+}
+
+.form-info {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: solid 1.5px var(--bs-lightblue-og) !important;
+    border-radius: 0 !important;
+    color: var(--bs-white-og) !important;
+    font-size: 0.9em !important;
+}
+
+.form-info::placeholder {
+    color: var(--bs-white-og) !important;
+    opacity: 0.8 !important;
+    font-family: var(--bs-font-body) !important;
+    font-size: 0.9em !important;
+}
+
+.divider-ver {
+    width: 2px !important;
+    padding: 0 !important;
+}
+
+.info-text {
+    font-size: 0.8em;
+}
+
+.btn-close {
+    --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fffaf8' %3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+}
+
+/* MEDIA QUERIES */
+
+/* Estilos específicos para pantallas mayores a 1600px */
+
+
+/* Estilos para pantallas menores a 800px */
+@media (max-width: 900px) {
+    #home-reviews {
+        padding-top: 15%;
+        padding-bottom: 15%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+
+    #circles {
+        padding-top: 26%;
+    }
+
+    .home-news-header {
+        height: 32em;
+    }
+
+    .home-reservations-header {
+
+        height: 32em;
+    }
+}
+
+/* Estilos para pantallas menores a 800px */
+@media (max-width: 700px) {
+    #home-reviews {
+        padding-top: 15%;
+        padding-bottom: 15%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+
+    #circles {
+        padding-top: 30%;
+    }
+
+    .home-news-header {
+        height: 32em;
+    }
+
+    .home-reservations-header {
+
+        height: 32em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    #home-cargodivider {
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+
+    .text-white-og {
+        font-size: 1.8rem;
+    }
+
+    #home-reviews {
+        padding-top: 30%;
+        padding-top: 30%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+    #circles {
+        padding-top: 40%;
+    }
+
+    .home-news-header {
+        height: 40em;
+    }
+
+    .box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .div-info {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #home-cargodivider {
+        padding-top: 75%;
+        padding-bottom: 75%;
+    }
+
+    .text-white-og {
+        font-size: 1.2rem;
+    }
+
+    #home-reviews {
+        padding-top: 48%;
+        padding-bottom: 48%;
+        padding-right: 12%;
+        padding-left: 12%;
+    }
+    #circles {
+        padding-top: 75%;
+    }
+
+    .home-news-header {
+        height: 40em;
+    }
+
+    .box img {
+        display: block;
+        width: 140%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-reservations-header {
+        height: 42em;
+    }
+
+    .div-info {
+        font-size: 0.6rem;
+    }
+
+}

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mirage</title>
+    <link rel="icon" href="media/img/favicon-bueno.png">
+
+    <!-- TYPOGRAPHY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+   <!-- CUSTOM CSS -->
+   <link href="./css/style.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="./css/bs-styles.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container m-0 p-0 position-fixed z-3">
+        <div class="pre-loader">
+          <div class="loader"></div>
+          <div class="loader-bg"></div>
+        </div>
+        <div class="loader-content position-fixed">
+          <div class="count"><p>0</p></div>
+          <div class="copy"><h1 class="ml16 text-nowrap">The Mirage</h1></div>
+        </div>
+      </div>
+    
+        <nav class="w-100 d-flex z-2 position-fixed">
+          <div id="menuWindow" class="position-fixed d-flex flex-column w-100 h-100 justify-content-center align-items-center menuHidden">
+              <ul class="d-flex w-100 vh-100 flex-column ps-0 justify-content-around py-5 mt-5 mb-0">
+                <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="index.html#" class="navItem text-black-lm">Home</a></h1></li>
+                <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="index.html#history" class="navItem text-black-lm">About Us</a></h1></li>
+                <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="gallery.html" class="navItem text-black-lm">Gallery</a></h1></li>
+                <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="menu.html" class="navItem text-black-lm">Menu</a></h1></li>
+                <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="reservation.html" class="navItem text-black-lm">Reservation</a></h1></li>
+                <li class="menuItem"><h1 class="w-auto menuOption text-center mb-0"><a href="https://themirageblog.cargo.site/" class="navItem text-black-lm">Events</a></h1></li>
+              </ul>
+          </div>
+          <a href="index.html#"><img src="./media/img/logos/resp-blue.png" class="position-fixed top-0 start-0 ms-2 mt-2" alt="" id="logo-nav"></a>
+          <i id="switchMode" class="position-fixed top-0 end-0 mt-2 bi-brightness-low-fill fs-3"></i>
+          <div id="navButton" class="p-4 position-fixed top-0 end-0 mt-1 d-flex">
+              <label class="toggle">
+                  <input type="checkbox">
+                  <div>
+                      <div>
+                          <span></span>
+                          <span></span>
+                      </div>
+                      <svg>
+                          <use xlink:href="#path">
+                      </svg>
+                      <svg>
+                          <use xlink:href="#path">
+                      </svg>
+                  </div>
+              </label>   
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" id="path">
+                      <path d="M22,22 L2,22 C2,11 11,2 22,2 C33,2 42,11 42,22"></path>
+                  </symbol>
+              </svg>
+          </div>
+        </nav>
+
+    <section id="title">
+        <div class="menu-header d-flex flex-column align-items-center justify-content-center">
+            <div class="header-text d-flex flex-column justify-content-center align-items-center">
+                <h1 class="text-white-og">Our Menu</h1>
+                <p class="text-white-og fs-4">Flavor and style in every sip!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-accordion">
+        <div class="container cont-menu">
+            <div class="item item-1" data-bs-toggle="collapse" href="#collapseAppetizers" role="button" aria-expanded="false" aria-controls="collapseAppetizers">
+                <div class="word w1 text-black-lm">APPETIZERS</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-2.webp" alt="">
+                </div>
+            </div>
+            <div class="collapse" id="collapseAppetizers">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Truffle Parmesan Fries</h4>
+                                        <h4><i>6€</i></h4>
+                                    </div>
+                                    <p>Hand-cut fries tossed with truffle oil, grated Parmesan, and fresh parsley.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Mini Beef Sliders (3pz)</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>Juicy mini burgers with melted cheddar, caramelized onions, and a tangy house sauce, served on soft brioche buns.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Crispy Calamari</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>Lightly breaded calamari rings served with a spicy aioli and lemon wedges.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Bruschetta Trio</h4>
+                                        <h4><i>8€</i></h4>
+                                    </div>
+                                    <p>Toasted baguette slices topped with classic tomato-basil, roasted red pepper-goat cheese, and smoked salmon-dill cream cheese.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Crispy Shrimp Tacos</h4>
+                                        <h4><i>8€</i></h4>
+                                    </div>
+                                    <p>Mini soft tacos filled with crispy shrimp, avocado, spicy slaw, and a tangy lime crema.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Honey Garlic Chicken Lollipops</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>Sweet and savory chicken drumettes coated in honey garlic sauce and sesame seeds.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-8.webp" alt="Appetizers"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-2" data-bs-toggle="collapse" href="#collapseSP" role="button" aria-expanded="false" aria-controls="collapseSP">
+                <div class="word w1 text-black-lm">SHARING</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-3.webp" alt="">
+                </div>
+                <div class="word w2 text-black-lm">PLATES</div>
+            </div>
+            <div class="collapse" id="collapseSP">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Charcuterie Board</h4>
+                                        <h4><i>25€</i></h4>
+                                    </div>
+                                    <p>A selection of cured meats, cheeses, olives, and crackers. Perfect for sharing and pairing with a glass of wine.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Mediterranean Mezze Platter</h4>
+                                        <h4><i>16€</i></h4>
+                                    </div>
+                                    <p>Hummus, baba ganoush, tzatziki, grilled pita, and marinated olives. A delicious variety of bold Mediterranean flavors.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>BBQ Chicken Wings</h4>
+                                        <h4><i>16€</i></h4>
+                                    </div>
+                                    <p>Chicken wings marinated in barbecue sauce, served with a creamy garlic and herb dipping sauce.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Flatbread Pizza</h4>
+                                        <h4><i>15€</i></h4>
+                                    </div>
+                                    <p>A selection of flatbreads, including margherita, prosciutto and arugula, and four-cheese. Light and tasty bites to share.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Tuna Tartare</h4>
+                                        <h4><i>20€</i></h4>
+                                    </div>
+                                    <p>Fresh tuna, avocado, and crispy wontons, drizzled with a soy-lime dressing. Light, fresh, and flavorful.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Pork Fried Dumplings</h4>
+                                        <h4><i>15€</i></h4>
+                                    </div>
+                                    <p>Pan-seared Japanese dumplings filled with ground pork, cabbage, and ginger, served with a soy-based dipping sauce.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-9.webp" alt="Appetizers"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-3" data-bs-toggle="collapse" href="#collapseDrinks" role="button" aria-expanded="false" aria-controls="collapseDrinks">
+                <div class="word w1 text-black-lm">DRINKS</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-4.webp" alt="">
+                </div>
+            </div>
+            <div class="collapse" id="collapseDrinks">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Soft Drinks</h4>
+                                        <h4><i>3.5€</i></h4>
+                                    </div>
+                                    <p>Coca-Cola, Fanta, Sprite, Aquarius, Nestea.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Water</h4>
+                                        <h4><i>2.5€</i></h4>
+                                    </div>
+                                    <p>Mineral water or sparkling water.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Lemonade</h4>
+                                        <h4><i>3€</i></h4>
+                                    </div>
+                                    <p>Lemon, Strawberry or Mango. Enjoy our different lemonade flavors.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Beer</h4>
+                                        <h4><i>3€</i></h4>
+                                    </div>
+                                    <p>Estrella Damn, Heineken, Mahou, Amstel, Estrella Galicia, Corona Extra, Budweiser.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Tinto de Verano</h4>
+                                        <h4><i>3.5€</i></h4>
+                                    </div>
+                                    <p>Made with red wine and lemon soda, served over ice with a slice of lemon.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-10.webp" alt="Appetizers"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-4" data-bs-toggle="collapse" href="#collapseCocktails" role="button" aria-expanded="false" aria-controls="collapseCocktails">
+                <div class="word w1 text-black-lm">COCKTAILS</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-5.webp" alt="">
+                </div>
+            </div>
+            <div class="collapse" id="collapseCocktails">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Aperol Spritz</h4>
+                                        <h4><i>8€</i></h4>
+                                    </div>
+                                    <p>A refreshing and vibrant cocktail made with Aperol, Prosecco, and a splash of soda, garnished with an orange slice.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Espresso Martini</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>A rich and smooth cocktail made with vodka, freshly brewed espresso, and coffee liqueur, shaken to perfection and garnished with coffee beans.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Piña Colada</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>A tropical classic made with creamy coconut milk, pineapple juice, and white rum.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Negroni</h4>
+                                        <h4><i>8€</i></h4>
+                                    </div>
+                                    <p>A bold and sophisticated cocktail crafted with equal parts gin, Campari, and sweet vermouth, stirred over ice and garnished with an orange twist.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Maracuyá Sour</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>A tropical twist on the classic pisco sour, made with passion fruit, pisco, lime juice, and a touch of simple syrup, finished with a frothy egg white topping.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Classic Daiquiri</h4>
+                                        <h4><i>8€</i></h4>
+                                    </div>
+                                    <p>A classic cocktail made with rum, fresh lime juice, and simple syrup, shaken and served chilled.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-11.webp" alt="Appetizers"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-5" data-bs-toggle="collapse" href="#collapseSD" role="button" aria-expanded="false" aria-controls="collapseSD">
+                <div class="word w1 text-black-lm">SIGNATURE</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-6.webp" alt="">
+                </div>
+                <div class="word w2">DRINKS</div>
+            </div>
+            <div class="collapse" id="collapseSD">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Tropical Golden Passion</h4>
+                                        <h4><i>14€</i></h4>
+                                    </div>
+                                    <p>A tropical blend of passion fruit purée, vodka, and elderflower liqueur, topped with sparkling wine and garnished with an edible gold rim.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Ruby Berry Smash</h4>
+                                        <h4><i>12€</i></h4>
+                                    </div>
+                                    <p>A mix of muddled red berries, gin, lemon juice, and a hint of rosemary syrup, served over crushed ice and topped with soda.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Velvet Orchid</h4>
+                                        <h4><i>14€</i></h4>
+                                    </div>
+                                    <p>A silky concoction of gin, crème de violette, lemon juice, and a splash of lavender syrup, garnished with an edible flower.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Smoky Sunset</h4>
+                                        <h4><i>12€</i></h4>
+                                    </div>
+                                    <p>A bold blend of mezcal, blood orange juice, and a touch of agave syrup, garnished with a smoked rosemary sprig.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Midnight Glow</h4>
+                                        <h4><i>14€</i></h4>
+                                    </div>
+                                    <p>A dark and mysterious mix of blackberry liqueur, vodka, activated charcoal, and lime, served with a glowing ice cube for an enchanting effect.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-12.webp" alt="Appetizers"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-6" data-bs-toggle="collapse" href="#collapseShots" role="button" aria-expanded="false" aria-controls="collapseShots">
+                <div class="word w1 text-black-lm">SHOTS &</div>
+                <div class="img-menu">
+                    <img src="media/img/menu/menu-7.webp" alt="">
+                </div>
+                <div class="word w2 text-black-lm">MIXERS</div>
+            </div>
+            <div class="collapse" id="collapseShots">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Spicy Tequila Shot</h4>
+                                        <h4><i>5€</i></h4>
+                                    </div>
+                                    <p>Tequila with a chili salt rim. Bold, spicy, and a perfect kick-start to the night.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Lemon Drop Shot</h4>
+                                        <h4><i>6€</i></h4>
+                                    </div>
+                                    <p>Vodka, triple sec, and a sugared lemon wedge. Sweet and tangy with a smooth finish.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Sex on the Beach Shot</h4>
+                                        <h4><i>6€</i></h4>
+                                    </div>
+                                    <p>Vodka, peach schnapps, cranberry juice, and orange juice. Sweet, fruity, and tropical.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Blazing Mirage</h4>
+                                        <h4><i>6€</i></h4>
+                                    </div>
+                                    <p>Spiced rum, a touch of cinnamon schnapps, and a splash of overproof rum, topped with a flame that dances like a desert mirage.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Rum and Cola</h4>
+                                        <h4><i>7€</i></h4>
+                                    </div>
+                                    <p>A simple yet classic mix of aged rum and cola, served over ice with a squeeze of fresh lime.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-13.webp" alt="Appetizers"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item item-7" data-bs-toggle="collapse" href="#collapseMartini" role="button" aria-expanded="false" aria-controls="collapseMartini">
+                <div class="word w1 text-black-lm">MARTINIS</div>
+                <div class="img-menu">
+                    <img src="media/img/home/popular-4.webp" alt="">
+                </div>
+            </div>
+            <div class="collapse" id="collapseMartini">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Classic Dry Martini</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>Refined blend of gin or vodka and dry vermouth, stirred or shaken to perfection and served ice-cold in a chilled martini glass.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>French Martini</h4>
+                                        <h4><i>9€</i></h4>
+                                    </div>
+                                    <p>A delightful fusion of vodka, raspberry liqueur, and pineapple juice, offering a sweet yet tart taste.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Lychee Martini </h4>
+                                        <h4><i>11€</i></h4>
+                                    </div>
+                                    <p>An exotic mix of vodka, lychee liqueur, and fresh lychee juice, served with a lychee fruit garnish.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Chocolate Martini </h4>
+                                        <h4><i>9€</i></h4>
+                                    </div>
+                                    <p>A dessert-inspired cocktail blending vodka, chocolate liqueur, and cream, topped with a cocoa dusting.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Dirty Martini </h4>
+                                        <h4><i>9€</i></h4>
+                                    </div>
+                                    <p>A savory twist with gin, vermouth, and olive brine, served with an olive garnish for that perfect salty kick.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-pop-02.webp" alt="Martini"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item item-8" data-bs-toggle="collapse" href="#collapseG" role="button" aria-expanded="false" aria-controls="collapseG">
+                <div class="word w1 text-black-lm">GINS</div>
+                <div class="img-menu">
+                    <img src="media/img/home/popular-2.webp" alt="">
+                </div>
+            </div>
+            <div class="collapse" id="collapseG">
+                <div class="card card-body card-menu">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 p-5 d-flex flex-column justify-content-center">
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Classic Gin & Tonic</h4>
+                                        <h4><i>10€</i></h4>
+                                    </div>
+                                    <p>Premium gin with tonic water, served over ice and garnished with a twist of lime or a sprig of fresh herbs to elevate the aroma.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Hendrick's Delight</h4>
+                                        <h4><i>11€</i></h4>
+                                    </div>
+                                    <p>Hendrick's Gin with cucumber slices and a splash of elderflower tonic for a crisp, floral experience.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Citrus Zest </h4>
+                                        <h4><i>9€</i></h4>
+                                    </div>
+                                    <p>A lively combination of gin, grapefruit tonic, and fresh orange peel, creating a zesty burst of flavor.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Berry Bliss</h4>
+                                        <h4><i>9€</i></h4>
+                                    </div>
+                                    <p>Gin infused with mixed berries, paired with Mediterranean tonic and garnished with fresh mint.</p>
+                                </div>
+                                <div class="food d-flex flex-column mt-3 text-black-lm">
+                                    <div class="price d-flex flex-row align-items-center justify-content-between w-100">
+                                        <h4>Pink Paradise</h4>
+                                        <h4><i>11€</i></h4>
+                                    </div>
+                                    <p>A fruity and vibrant gin cocktail with strawberry gin, rose tonic, and a hint of hibiscus.</p>
+                                </div>
+                            </div>
+                            <div class="col-6 p-5 d-flex align-items-center justify-content-center col-img-menu">
+                                <div class="img-food"><img src="media/img/menu/menu-14.webp" alt="GinTonic"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </section>
+
+    <section id="cards-pop">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="text-center mb-5">
+              <h2 class="text-blue-lm">Most Popular</h2>
+              <p class="subtitle text-black-lm fs-4">More than a culinary experience</p>
+            </div>
+    
+            <div class="row">
+              <div class="col-6 col-lg-3 mt-4">
+                <div class="popular-img">
+                  <div class="gradient"></div>
+                  <img src="media/img/menu/menu-pop-01.webp" alt="">
+                  <div class="item-info text-white-og">
+                    <h4 class="mb-0">Truffle Parmesan Fries</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3 mt-4">
+                <div class="popular-img">
+                  <div class="gradient"></div>
+                  <img src="media/img/menu/menu-pop-02.webp" alt="">
+                  <div class="item-info text-white-og">
+                    <h4 class="mb-0">Classic Martini</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3 mt-4">
+                <div class="popular-img">
+                  <div class="gradient"></div>
+                  <img src="media/img/menu/menu-pop-03.webp" alt="">
+                  <div class="item-info text-white-og">
+                    <h4 class="mb-0">Aperol Spritz</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3 mt-4">
+                <div class="popular-img">
+                  <div class="gradient"></div>
+                  <img src="media/img/gallery/Pink Party/pink-2.webp" alt="">
+                  <div class="item-info text-white-og">
+                    <h4 class="mb-0">Ruby Berry Smash</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
+
+    <footer class="px-5 d-flex flex-column justify-content-center align-items-center">
+        <div id="logo-footer" class="">
+            <img id="logo-light" src="media/img/logos/logo-blue.png" alt="Logo Blue">
+        </div>
+        <div class="divider-footer w-100 bg-blue-lm"></div>
+        <div class="container text-center cont-buttons">
+            <div class="row my-5">
+              <div class="col-6 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm btn-i" data-bs-toggle="modal" data-bs-target="#infoModal">Request Information</button>
+              </div>
+              <div class="col-6 text-blue-lm" style="font-family: var(--bs-font-title);">
+                <button type="button" class="btn fs-2 text-blue-lm btn-i">Join the Team</button>
+              </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-blue-lm text-center mb-4 fs-5">The Mirage® <br> By day, a sophisticated refuge. <br> By night, the epicenter of entertainment.</h4>
+        </div>
+  
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content modal-info p-3 bg-black-og">
+                <div class="modal-header pb-0 border-bottom-0 d-flex align-items-start justify-content-between">
+                    <h3 class="modal-title text-white-og" id="infoModalLabel">Let's Get in Touch</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-8 p-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control form-info" id="name-info" placeholder="Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control form-info" id="email-info" placeholder="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control form-info" id="message-info" rows="4" placeholder="Message"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-modal w-100">SEND</button>
+                                </form>
+                            </div>
+                            <div class="col-1 divider-ver bg-blue-og mx-2"></div>
+                            <div class="col-3 px-3 text-center d-flex flex-column justify-content-center div-info-cont">
+                                <div class="div-info text-white-og mb-4">
+                                    <p class="fs-5" style="font-family: var(--bs-font-title);">Our Address</p>
+                                    <p class="info-text">Av. de Alfonso XIII, 97, Chamartín, 28016 Madrid.</p>
+                                </div>
+                                <div class="div-info text-white-og mb-3">
+                                    <p class="fs-5" style="font-family: var(--bs-font-title);">Our Contacts</p>
+                                    <p class="info-text">themirage@club.es</p>
+                                    <p class="info-text">+34 915 55 25 28</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+      </footer>
+
+    <!-- JQUERY -->
+    <script src="./libs/jquery.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="./js/script.js"></script>
+
+    <!-- GSAP LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- ANIME -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</body>
+</html>
